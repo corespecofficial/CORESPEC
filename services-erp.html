@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Corespec | ERP Solutions</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#2563EB", // Electric Blue
+            "on-primary": "#ffffff",
+            "background": "#ffffff",
+            "on-background": "#1A3A6B", // Deep Navy for Headlines
+            "surface": "#F8FAFC",
+            "on-surface": "#1A3A6B",
+            "on-surface-variant": "#475569",
+            "outline": "#E2E8F0",
+            "surface-container-low": "#F1F5F9",
+            "surface-container": "#F8FAFC",
+            "secondary-container": "#DBEAFE",
+            "on-secondary-container": "#1E40AF"
+          },
+          fontFamily: {
+            "headline": ["Space Grotesk", "sans-serif"],
+            "body": ["Plus Jakarta Sans", "sans-serif"],
+          },
+          borderRadius: {
+            "DEFAULT": "0.75rem",
+            "lg": "1.5rem",
+            "xl": "2.5rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+  <style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    .font-headline {
+      font-family: 'Space Grotesk', sans-serif;
+    }
+
+    .glass-card {
+      background: rgba(255, 255, 255, 0.82);
+      -webkit-backdrop-filter: blur(20px);
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .text-deep-navy {
+      color: #1A3A6B;
+    }
+
+    .bg-deep-navy {
+      background-color: #1A3A6B;
+    }
+  </style>
+</head>
+
+<body class="bg-background text-on-surface selection:bg-primary/20">
+  <!-- TopNavBar -->
+  <nav
+    class="fixed top-0 left-0 right-0 z-50 flex justify-between items-center px-8 py-3 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl rounded-full mt-6 mx-auto max-w-5xl border border-slate-100/20 shadow-[0_8px_48px_rgba(37,99,235,0.15)]">
+    <a href="index.html"
+      class="text-2xl font-black text-blue-600 dark:text-blue-400 font-['Space_Grotesk'] tracking-tight">Corespec</a>
+    <div class="hidden md:flex gap-8 items-center">
+      <div class="relative group">
+        <button
+          class="flex items-center gap-1 text-slate-600 dark:text-slate-400 font-medium font-['Space_Grotesk'] tracking-tight hover:text-blue-500 transition-colors py-2">
+          Services <span class="material-symbols-outlined text-[18px]">keyboard_arrow_down</span>
+        </button>
+        <div
+          class="absolute top-full left-0 mt-1 w-64 bg-white dark:bg-slate-900 rounded-2xl shadow-xl border border-slate-100/10 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 p-4 space-y-2 z-50">
+          <a href="services-ai.html"
+            class="block p-3 rounded-xl hover:bg-blue-50 dark:hover:bg-blue-900/30 transition-colors">
+            <p class="font-bold text-sm text-slate-900 dark:text-white">AI Implementation</p>
+            <p class="text-xs text-slate-500">Custom ML & LLM pipelines</p>
+          </a>
+          <a href="services-cloud.html"
+            class="block p-3 rounded-xl hover:bg-blue-50 dark:hover:bg-blue-900/30 transition-colors">
+            <p class="font-bold text-sm text-slate-900 dark:text-white">Cloud Migration</p>
+            <p class="text-xs text-slate-500">Scalable cloud infrastructure</p>
+          </a>
+          <a href="services-cybersecurity.html"
+            class="block p-3 rounded-xl hover:bg-blue-50 dark:hover:bg-blue-900/30 transition-colors">
+            <p class="font-bold text-sm text-slate-900 dark:text-white">Cybersecurity</p>
+            <p class="text-xs text-slate-500">Threat mitigation & training</p>
+          </a>
+          <a href="services-engineering.html"
+            class="block p-3 rounded-xl hover:bg-blue-50 dark:hover:bg-blue-900/30 transition-colors">
+            <p class="font-bold text-sm text-slate-900 dark:text-white">Engineering Consultancy</p>
+            <p class="text-xs text-slate-500">Strategic technical direction</p>
+          </a>
+          <a href="services-erp.html"
+            class="block p-3 rounded-xl hover:bg-blue-50 dark:hover:bg-blue-900/30 transition-colors">
+            <p class="font-bold text-sm text-slate-900 dark:text-white">ERP Solutions</p>
+            <p class="text-xs text-slate-500">Business logic automation</p>
+          </a>
+        </div>
+      </div>
+      <a class="text-slate-600 dark:text-slate-400 font-medium font-['Space_Grotesk'] tracking-tight hover:text-blue-500 transition-colors"
+        href="portfolio.html">Portfolio</a>
+      <a class="text-slate-600 dark:text-slate-400 font-medium font-['Space_Grotesk'] tracking-tight hover:text-blue-500 transition-colors"
+        href="process.html">Process</a>
+      <a class="text-slate-600 dark:text-slate-400 font-medium font-['Space_Grotesk'] tracking-tight hover:text-blue-500 transition-colors"
+        href="about.html">About</a>
+      <a class="text-slate-600 dark:text-slate-400 font-medium font-['Space_Grotesk'] tracking-tight hover:text-blue-500 transition-colors"
+        href="insights.html">Insights</a>
+    </div>
+    <a href="contact.html"
+      class="bg-primary-container text-on-primary-container px-6 py-2 rounded-full font-bold hover:scale-95 transition-all duration-200">Book
+      a Call</a>
+  </nav>
+  <main>
+    <!-- Hero Section: Bold, Left-Aligned Editorial Style -->
+    <section class="relative min-h-screen flex items-center pt-32 pb-20 px-6 md:px-16 overflow-hidden">
+      <!-- Geometric Background Element -->
+      <div class="absolute top-0 right-0 w-1/3 h-full bg-slate-50 -z-10 rounded-l-[15rem]"></div>
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-16 items-center w-full max-w-7xl mx-auto">
+        <div class="md:col-span-6 z-10">
+          <span class="inline-block text-primary font-bold tracking-[0.25em] uppercase text-[10px] mb-6">Redefining
+            Enterprise Systems</span>
+          <h1 class="text-5xl md:text-8xl font-bold text-deep-navy tracking-tight leading-[0.95] mb-8">
+            Enterprise Efficiency, <br /><span class="text-primary italic">Refined.</span>
+          </h1>
+          <p class="text-lg md:text-xl text-on-surface-variant max-w-lg mb-12 leading-relaxed font-medium">
+            Precision-engineered ERP implementation for the Nigerian powerhouse. We bridge the gap between global
+            technology and local market complexities.
+          </p>
+          <div class="flex flex-wrap gap-6 items-center">
+            <button
+              class="bg-primary text-white rounded-full px-10 py-5 font-bold hover:bg-blue-700 transition-all shadow-xl shadow-primary/20">Start
+              Discovery Call</button>
+            <button class="text-primary font-bold flex items-center gap-2 group">
+              View Solutions
+              <span
+                class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+            </button>
+          </div>
+        </div>
+        <div class="md:col-span-6 relative">
+          <!-- High-quality Imagery and Floating Cards -->
+          <div class="relative w-full aspect-[4/5] md:aspect-square">
+            <div class="absolute inset-0 bg-slate-200 rounded-3xl overflow-hidden shadow-2xl">
+              <img alt="Modern Architecture Office"
+                class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBz1uhQXzxFXVO02hQhEGhnbcKap-yLjsPTeCDplJXiuaHJQfO5RwmGFcpB28jChLUPNl2bXNmROwQ06Sw2smgYFxVCnedh5z5rsyyALHpIo6sZbEJxOOUdfy4MAvTSYDdsYK471MujXA-6YU2iYgd_vq1MKz_hQfc8vYEbgCMg9nVPYq-amEZFYX1X41ge3DDCIAEd1PX9XqDlbsoCT28qRsIuo8BIpjPn7IjcZEC0AUaPxZK6gkHd8SKeYk-vDisJwUdeWnaWZwsa" />
+            </div>
+            <!-- Floating Data Card -->
+            <div
+              class="absolute -bottom-6 -left-12 glass-card p-8 rounded-2xl shadow-2xl max-w-[260px] animate-bounce-slow">
+              <div class="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center mb-6 text-primary">
+                <span class="material-symbols-outlined text-xl">analytics</span>
+              </div>
+              <h3 class="font-headline text-lg font-bold text-deep-navy mb-1">99.8% Uptime</h3>
+              <p class="text-xs text-on-surface-variant leading-relaxed">Guaranteed operational continuity for critical
+                infrastructure.</p>
+            </div>
+            <!-- Floating Support Card -->
+            <div class="absolute top-1/4 -right-8 glass-card py-3 px-5 rounded-full shadow-xl flex items-center gap-3">
+              <div class="flex -space-x-2">
+                <img alt="User" class="w-8 h-8 rounded-full border-2 border-white object-cover"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6lAOoEMW_5HxKJk2anaiMPKWmehEbOqCAzc5cXUvVtfAtJWG486U1tXjp7zDbpL2CZW81Wc-6bQ-m6-yeoT8eNWRgPu3zsn5YMFU5VSSpefJAurMZcOnT41F6jgVPiHKT543Y3SuyoMbnDHKH2xBG608T6Q1MIdnGyqC4JswRqgD7okDm7x8wDfaKFN1serol6i_2ys2Q3b19ciVP2aMQRcEaN2qElUH6vlNq6RVFFvYcLb7K26aq6prDyCBj9jZ_YrBkU8XREA7u" />
+                <img alt="User" class="w-8 h-8 rounded-full border-2 border-white object-cover"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuABtpyDz--p8Jzrw6307gynFo553GQNa5BC9S3gGP2YysDO6fHvQYBMzuSfNODLSeKPzc5kSwl9nX2qyR1OZG5LldaU5Z3uIejd3jAPLu8Prn_CLhz1JLw5LfWpO1EmpvBDAXTrJBssU_xISu63gg4Fc1Baebc2mi7JFi5oO2KEfrgeQW5ZgjS4t8QA780Ni7SlWyEjgHvu3vrB301cgf_nD3AmT2-l0QmN4SegD4fHX9JgkWnzQra6Wlf-HjyBMoDYRUonb96oLTsm" />
+              </div>
+              <span class="text-[10px] font-bold text-deep-navy uppercase tracking-wider">Live Architect Support</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Solutions Section: Asymmetric 'Tier-1 Ecosystems' -->
+    <section class="py-32 px-6 md:px-16 bg-white">
+      <div class="max-w-7xl mx-auto">
+        <div class="mb-24">
+          <span class="text-primary font-bold tracking-widest text-[10px] uppercase">Platforms</span>
+          <h2 class="text-4xl md:text-6xl font-bold tracking-tight mt-4 text-deep-navy">Tier-1 Ecosystems.</h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12 items-start">
+          <!-- SAP Card: Shifted up slightly -->
+          <div
+            class="group bg-surface-container-low p-12 rounded-3xl hover:bg-white hover:shadow-2xl hover:shadow-slate-200/50 transition-all duration-500 border border-transparent hover:border-slate-100">
+            <span
+              class="text-5xl font-bold text-slate-200 mb-12 block group-hover:text-primary/20 transition-colors">01</span>
+            <h3 class="text-3xl font-bold text-deep-navy mb-6">SAP S/4HANA</h3>
+            <p class="text-on-surface-variant mb-12 leading-relaxed">Next-gen ERP for massive scale banking and
+              financial operations in Lagos &amp; Abuja.</p>
+            <div
+              class="w-12 h-12 rounded-xl bg-primary/5 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all">
+              <span class="material-symbols-outlined">database</span>
+            </div>
+          </div>
+          <!-- Oracle Card: Shifted down (Asymmetric) -->
+          <div
+            class="group bg-surface-container-low p-12 rounded-3xl hover:bg-white hover:shadow-2xl hover:shadow-slate-200/50 transition-all duration-500 border border-transparent hover:border-slate-100 md:mt-16">
+            <span
+              class="text-5xl font-bold text-slate-200 mb-12 block group-hover:text-primary/20 transition-colors">02</span>
+            <h3 class="text-3xl font-bold text-deep-navy mb-6">Oracle Fusion</h3>
+            <p class="text-on-surface-variant mb-12 leading-relaxed">Cloud-first business applications tailored for
+              high-compliance energy sectors.</p>
+            <div
+              class="w-12 h-12 rounded-xl bg-primary/5 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all">
+              <span class="material-symbols-outlined">cloud_done</span>
+            </div>
+          </div>
+          <!-- Odoo Card: Shifted further down (Asymmetric) -->
+          <div
+            class="group bg-surface-container-low p-12 rounded-3xl hover:bg-white hover:shadow-2xl hover:shadow-slate-200/50 transition-all duration-500 border border-transparent hover:border-slate-100 md:mt-32">
+            <span
+              class="text-5xl font-bold text-slate-200 mb-12 block group-hover:text-primary/20 transition-colors">03</span>
+            <h3 class="text-3xl font-bold text-deep-navy mb-6">Odoo Enterprise</h3>
+            <p class="text-on-surface-variant mb-12 leading-relaxed">Agile, modular solutions for the fast-paced retail
+              and logistics landscapes.</p>
+            <div
+              class="w-12 h-12 rounded-xl bg-primary/5 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all">
+              <span class="material-symbols-outlined">dashboard_customize</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Industry Section: Built for Nigerian Industry -->
+    <section class="py-32 bg-slate-50 overflow-hidden">
+      <div class="max-w-7xl mx-auto px-6 md:px-16">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-24 items-center">
+          <div>
+            <h2 class="text-4xl md:text-7xl font-bold tracking-tight text-deep-navy leading-tight mb-16">
+              Built for <br /> <span class="text-primary italic">Nigerian</span> Industry.
+            </h2>
+            <div class="space-y-12">
+              <div class="flex gap-8 group">
+                <div
+                  class="shrink-0 w-px h-16 bg-slate-300 group-hover:bg-primary group-hover:w-1 transition-all duration-300">
+                </div>
+                <div>
+                  <h4 class="text-xl font-bold text-deep-navy mb-2">Banking &amp; Finance</h4>
+                  <p class="text-on-surface-variant text-sm leading-relaxed max-w-sm">Core banking integrations,
+                    regulatory compliance, and high-frequency transaction management.</p>
+                </div>
+              </div>
+              <div class="flex gap-8 group">
+                <div
+                  class="shrink-0 w-px h-16 bg-slate-300 group-hover:bg-primary group-hover:w-1 transition-all duration-300">
+                </div>
+                <div>
+                  <h4 class="text-xl font-bold text-deep-navy mb-2">Energy &amp; Infrastructure</h4>
+                  <p class="text-on-surface-variant text-sm leading-relaxed max-w-sm">Asset lifecycle management and
+                    supply chain optimization for the upstream/downstream oil sector.</p>
+                </div>
+              </div>
+              <div class="flex gap-8 group">
+                <div
+                  class="shrink-0 w-px h-16 bg-slate-300 group-hover:bg-primary group-hover:w-1 transition-all duration-300">
+                </div>
+                <div>
+                  <h4 class="text-xl font-bold text-deep-navy mb-2">Omnichannel Retail</h4>
+                  <p class="text-on-surface-variant text-sm leading-relaxed max-w-sm">Real-time inventory sync across
+                    hundreds of locations with localized tax processing.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="relative h-[700px] w-full bg-slate-200 rounded-3xl overflow-hidden shadow-2xl">
+            <img alt="Industrial Facility" class="w-full h-full object-cover"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuAtpgFnfr5GSpMfrFB6-99ZUCBmjDKvmO3wSK0ji695Usvjz_P20AlSL0Zx9h9k7vy_G5pXV73eNE9z9ERQNFgIPQtoaju0vi20fktvdhoZqph2sH_9VUqL7s406f_D2cDyziZFt1UN7hC4FyKqyFsg7OwOYWMM7xZApWHQCJ8UeB5P4b5J1QhOv7x6YfeafGfEuXeIX3A1725rz-WoYD6SIqgWjTXnC1UtbTpnvOdG2d4eMTM9rw8CTCteaiUrtD8Oc3Nk0fhABipt" />
+            <div class="absolute inset-0 bg-deep-navy/10 mix-blend-multiply"></div>
+            <div class="absolute bottom-10 inset-x-10 glass-card p-10 rounded-2xl">
+              <p class="text-[10px] font-bold tracking-[0.2em] uppercase mb-4 text-primary">Strategic Advantage</p>
+              <p class="text-2xl font-bold text-deep-navy leading-tight">Leveraging local context for global results.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Final CTA Section -->
+    <section class="py-48 px-6 md:px-16 text-center bg-white">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-5xl md:text-8xl font-bold tracking-tight text-deep-navy mb-16">Ready to scale?</h2>
+        <div class="flex flex-col md:flex-row items-center justify-center gap-10">
+          <a class="bg-primary text-white px-16 py-6 rounded-full font-bold text-lg hover:bg-blue-700 transition-all shadow-xl shadow-primary/20"
+            href="#">Book Discovery Call</a>
+          <div class="flex items-center gap-5 text-left">
+            <div class="w-12 h-12 rounded-full bg-slate-100 flex items-center justify-center text-primary">
+              <span class="material-symbols-outlined">call</span>
+            </div>
+            <div>
+              <p class="text-[10px] font-bold text-on-surface-variant uppercase tracking-widest">Talk to an Architect
+              </p>
+              <p class="font-bold text-deep-navy">+234 (0) 800 CORESPEC</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <!-- Footer -->
+  <footer class="bg-[#1A3A6B] dark:bg-slate-950 text-white pt-20 pb-10 font-['Plus_Jakarta_Sans']">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-8 md:px-20 w-full mb-20">
+      <div class="col-span-1 md:col-span-1">
+        <div class="text-3xl font-black text-white mb-6">Corespec</div>
+        <p class="text-white/60 text-sm leading-relaxed">The pinnacle of technical training and AI solutions in Nigeria.
+          Empowering the next generation of global tech leaders.</p>
+      </div>
+      <div>
+        <h4 class="font-bold mb-6">Company</h4>
+        <ul class="space-y-4 text-white/60 text-sm">
+          <li><a class="hover:text-blue-400 transition-colors" href="about.html">About Us</a></li>
+          <li><a class="hover:text-blue-400 transition-colors" href="process.html">Our Process</a></li>
+          <li><a class="hover:text-blue-400 transition-colors" href="portfolio.html">Portfolio</a></li>
+          <li><a class="hover:text-blue-400 transition-colors" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-bold mb-6">Services</h4>
+        <ul class="space-y-4 text-white/60 text-sm">
+          <li><a class="hover:text-blue-400 transition-colors" href="services-ai.html">AI Implementation</a></li>
+          <li><a class="hover:text-blue-400 transition-colors" href="services-cloud.html">Cloud Migration</a></li>
+          <li><a class="hover:text-blue-400 transition-colors" href="services-cybersecurity.html">Cybersecurity</a></li>
+          <li><a class="hover:text-blue-400 transition-colors" href="services-engineering.html">Engineering
+              Consultancy</a></li>
+          <li><a class="hover:text-blue-400 transition-colors" href="services-erp.html">ERP Solutions</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-bold mb-6">Legal</h4>
+        <ul class="space-y-4 text-white/60 text-sm">
+          <li><a class="hover:text-blue-400 transition-opacity" href="privacy.html">Privacy Policy</a></li>
+          <li><a class="hover:text-blue-400 transition-opacity" href="#terms">Terms of Service</a></li>
+          <li><a class="hover:text-blue-400 transition-opacity" href="design-system.html">Design System</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="border-t border-white/10 px-8 md:px-20 pt-10 flex flex-col md:row justify-between items-center gap-6">
+      <p class="text-white/40 text-xs">© 2024 Corespec. All rights reserved.</p>
+      <div class="flex gap-6">
+        <a class="text-white/40 hover:text-white transition-colors" href="#"><span
+            class="material-symbols-outlined text-sm">share</span></a>
+        <a class="text-white/40 hover:text-white transition-colors" href="#"><span
+            class="material-symbols-outlined text-sm">alternate_email</span></a>
+      </div>
+    </div>
+  </footer>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+      const navLinks = document.querySelectorAll('nav a');
+      navLinks.forEach(link => {
+        if (link.getAttribute('href') === currentPath) {
+          link.classList.remove('text-slate-600', 'dark:text-slate-400', 'font-medium');
+          link.classList.add('text-blue-600', 'dark:text-blue-400', 'font-bold');
+          const parentGroup = link.closest('.relative.group');
+          if (parentGroup) {
+            const serviceBtn = parentGroup.querySelector('button');
+            serviceBtn.classList.remove('text-slate-600', 'dark:text-slate-400', 'font-medium');
+            serviceBtn.classList.add('text-blue-600', 'dark:text-blue-400', 'font-bold');
+          }
+        }
+      });
+    });
+  </script>
+  <style>
+    @keyframes bounce-slow {
+
+      0%,
+      100% {
+        transform: translateY(-5%);
+      }
+
+      50% {
+        transform: translateY(0);
+      }
+    }
+
+    .animate-bounce-slow {
+      animation: bounce-slow 4s ease-in-out infinite;
+    }
+  </style>
+</body>
+
+</html>

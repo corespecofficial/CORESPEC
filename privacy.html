@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Privacy Policy | Corespec Engineering</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#004ac6",
+                        "on-primary": "#ffffff",
+                        "background": "#f7f9fb",
+                        "on-background": "#191c1e",
+                        "surface": "#f7f9fb",
+                        "on-surface": "#191c1e",
+                        "surface-variant": "#e0e3e5",
+                        "on-surface-variant": "#434655",
+                        "outline": "#737686",
+                        "outline-variant": "#c3c6d7",
+                    },
+                    fontFamily: {
+                        "headline": ["Space Grotesk"],
+                        "body": ["Plus Jakarta Sans"],
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+
+<body class="bg-background font-body text-on-background selection:bg-primary/20">
+    <!-- TopNavBar -->
+    <header class="fixed top-0 left-0 right-0 z-50 flex justify-center w-full">
+        <nav
+            class="bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl rounded-full mt-6 mx-auto w-fit px-6 py-3 border border-slate-200/50 dark:border-slate-800/50 shadow-[0_8px_48px_rgba(37,99,235,0.15)] flex items-center gap-8">
+            <a href="index.html"
+                class="text-xl font-bold text-blue-900 dark:text-blue-50 font-['Space_Grotesk'] tracking-tight">Corespec</a>
+            <div class="hidden md:flex items-center gap-6">
+                <div class="relative group">
+                    <button
+                        class="text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors font-['Space_Grotesk'] font-bold tracking-tight flex items-center gap-1">
+                        Services
+                        <span
+                            class="material-symbols-outlined text-sm transition-transform group-hover:rotate-180">expand_more</span>
+                    </button>
+                    <div
+                        class="absolute top-full left-0 mt-2 w-64 bg-white dark:bg-slate-900 rounded-2xl border border-slate-200/50 dark:border-slate-800/50 shadow-xl opacity-0 translate-y-2 pointer-events-none group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto transition-all duration-200 z-[60]">
+                        <div class="p-2 space-y-1">
+                            <a href="services-ai.html"
+                                class="flex items-center gap-3 p-3 rounded-xl hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-colors group/item">
+                                <span class="material-symbols-outlined text-blue-600">psychology</span>
+                                <div>
+                                    <div class="text-sm font-bold text-slate-900 dark:text-white">AI & Automation</div>
+                                    <div class="text-[10px] text-slate-500">Intelligent Workflows</div>
+                                </div>
+                            </a>
+                            <a href="services-cloud.html"
+                                class="flex items-center gap-3 p-3 rounded-xl hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-colors group/item">
+                                <span class="material-symbols-outlined text-blue-600">cloud</span>
+                                <div>
+                                    <div class="text-sm font-bold text-slate-900 dark:text-white">Cloud Infrastructure
+                                    </div>
+                                    <div class="text-[10px] text-slate-500">Hyper-scalable Systems</div>
+                                </div>
+                            </a>
+                            <a href="services-cybersecurity.html"
+                                class="flex items-center gap-3 p-3 rounded-xl hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-colors group/item">
+                                <span class="material-symbols-outlined text-blue-600">shield</span>
+                                <div>
+                                    <div class="text-sm font-bold text-slate-900 dark:text-white">Cybersecurity</div>
+                                    <div class="text-[10px] text-slate-500">Enterprise Protection</div>
+                                </div>
+                            </a>
+                            <a href="services-engineering.html"
+                                class="flex items-center gap-3 p-3 rounded-xl hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-colors group/item">
+                                <span class="material-symbols-outlined text-blue-600">code</span>
+                                <div>
+                                    <div class="text-sm font-bold text-slate-900 dark:text-white">Engineering</div>
+                                    <div class="text-[10px] text-slate-500">Custom Development</div>
+                                </div>
+                            </a>
+                            <a href="services-erp.html"
+                                class="flex items-center gap-3 p-3 rounded-xl hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-colors group/item">
+                                <span class="material-symbols-outlined text-blue-600">database</span>
+                                <div>
+                                    <div class="text-sm font-bold text-slate-900 dark:text-white">ERP Solutions</div>
+                                    <div class="text-[10px] text-slate-500">Seamless Integration</div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <a class="text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors font-['Space_Grotesk'] font-bold tracking-tight"
+                    href="portfolio.html">Portfolio</a>
+                <a class="text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors font-['Space_Grotesk'] font-bold tracking-tight"
+                    href="process.html">Process</a>
+                <a class="text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors font-['Space_Grotesk'] font-bold tracking-tight"
+                    href="about.html">About</a>
+                <a class="text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors font-['Space_Grotesk'] font-bold tracking-tight"
+                    href="insights.html">Insights</a>
+            </div>
+            <a href="contact.html"
+                class="bg-primary text-on-primary px-6 py-2 rounded-full font-bold transition-transform scale-95 duration-200 hover:scale-100">Consultation</a>
+        </nav>
+    </header>
+
+    <main class="pt-32 pb-24">
+        <section class="max-w-4xl mx-auto px-6">
+            <h1 class="text-5xl md:text-6xl font-headline font-bold text-blue-900 mb-8 tracking-tighter">Privacy Policy
+            </h1>
+            <p class="text-sm text-slate-500 mb-12 font-headline font-bold tracking-widest uppercase">Last Updated:
+                October 2024</p>
+
+            <div class="prose prose-slate max-w-none space-y-8 text-slate-700 leading-relaxed font-body">
+                <section>
+                    <h2 class="text-2xl font-headline font-bold text-slate-900 mb-4">1. Introduction</h2>
+                    <p>At Corespec Engineering, your privacy is a priority. This Privacy Policy explains how we collect,
+                        use, and protect your personal information when you use our website and services.</p>
+                </section>
+
+                <section>
+                    <h2 class="text-2xl font-headline font-bold text-slate-900 mb-4">2. Information We Collect</h2>
+                    <p>We may collect information you provide directly, such as your name, email, and project details
+                        via our contact forms. We also collect technical data like IP addresses and browsing behavior
+                        using cookies to improve your experience.</p>
+                </section>
+
+                <section>
+                    <h2 class="text-2xl font-headline font-bold text-slate-900 mb-4">3. How We Use Informtion</h2>
+                    <p>Your information is used to provide our services, communicate with you about your projects, and
+                        analyze website performance for optimization.</p>
+                </section>
+
+                <section>
+                    <h2 class="text-2xl font-headline font-bold text-slate-900 mb-4">4. Data Security</h2>
+                    <p>We implement industry-standard security measures to protect your data from unauthorized access or
+                        disclosure. However, no method of transmission over the Internet is 100% secure.</p>
+                </section>
+
+                <section>
+                    <h2 class="text-2xl font-headline font-bold text-slate-900 mb-4">5. Your Rights</h2>
+                    <p>You have the right to access, correct, or request the deletion of your personal data. Please
+                        contact us at hello@corespec.engineering for any privacy-related inquiries.</p>
+                </section>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-[#1A3A6B] dark:bg-slate-950 rounded-t-[3rem] w-full mt-0">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-12 py-24 max-w-7xl mx-auto">
+            <div class="md:col-span-1">
+                <span class="text-3xl font-black text-white mb-8 block font-headline tracking-tighter">Corespec</span>
+                <p class="text-slate-300 font-body text-sm leading-relaxed">
+                    Engineering excellence for the modern digital era. We build systems that scale with your ambition.
+                </p>
+            </div>
+            <div class="md:col-span-1">
+                <h4 class="text-white font-bold mb-6 font-headline">Navigation</h4>
+                <ul class="space-y-4">
+                    <li><a href="services-ai.html"
+                            class="text-slate-400 hover:text-white transition-colors font-body text-sm hover:translate-x-1 inline-block transition-transform duration-200">Services</a>
+                    </li>
+                    <li><a href="portfolio.html"
+                            class="text-slate-400 hover:text-white transition-colors font-body text-sm hover:translate-x-1 inline-block transition-transform duration-200">Portfolio</a>
+                    </li>
+                    <li><a href="process.html"
+                            class="text-slate-400 hover:text-white transition-colors font-body text-sm hover:translate-x-1 inline-block transition-transform duration-200">Process</a>
+                    </li>
+                    <li><a href="about.html"
+                            class="text-slate-400 hover:text-white transition-colors font-body text-sm hover:translate-x-1 inline-block transition-transform duration-200">About</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="md:col-span-1">
+                <h4 class="text-white font-bold mb-6 font-headline">Legal</h4>
+                <ul class="space-y-4">
+                    <li><a href="privacy.html"
+                            class="text-slate-400 hover:text-white transition-colors font-body text-sm hover:translate-x-1 inline-block transition-transform duration-200">Privacy
+                            Policy</a></li>
+                    <li><a href="contact.html"
+                            class="text-slate-400 hover:text-white transition-colors font-body text-sm hover:translate-x-1 inline-block transition-transform duration-200">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="md:col-span-1">
+                <h4 class="text-white font-bold mb-6 font-headline">Social</h4>
+                <div class="flex gap-4">
+                    <a href="#"
+                        class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-white hover:bg-primary transition-colors focus:ring-2 focus:ring-blue-500 outline-none">
+                        <span class="material-symbols-outlined text-lg">public</span>
+                    </a>
+                    <a href="#"
+                        class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-white hover:bg-primary transition-colors focus:ring-2 focus:ring-blue-500 outline-none">
+                        <span class="material-symbols-outlined text-lg">terminal</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div
+            class="px-12 py-8 border-t border-slate-800/50 max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+            <p class="text-slate-400 font-body text-[11px] tracking-wider uppercase">© 2024 Corespec Engineering. All
+                rights reserved.</p>
+            <div class="flex items-center gap-2">
+                <div class="w-2 h-2 rounded-full bg-emerald-500"></div>
+                <span class="text-slate-400 font-body text-[11px] tracking-wider uppercase">System Operational</span>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+            const navLinks = document.querySelectorAll('nav a, footer a');
+
+            navLinks.forEach(link => {
+                const href = link.getAttribute('href');
+                if (href === currentPath) {
+                    if (link.closest('nav')) {
+                        link.classList.remove('text-slate-600', 'dark:text-slate-400');
+                        link.classList.add('text-blue-600', 'dark:text-blue-400');
+                    }
+                    if (link.closest('footer')) {
+                        link.classList.remove('text-slate-400');
+                        link.classList.add('text-white', 'font-bold');
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

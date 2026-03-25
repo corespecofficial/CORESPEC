@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "on-surface-variant": "#434655",
+            "on-error": "#ffffff",
+            "error": "#ba1a1a",
+            "on-secondary-fixed-variant": "#284678",
+            "on-secondary-fixed": "#001b3f",
+            "surface-tint": "#0053db",
+            "surface-container-highest": "#e0e3e5",
+            "on-background": "#191c1e",
+            "surface-container-low": "#f2f4f6",
+            "background": "#f7f9fb",
+            "surface-container-lowest": "#ffffff",
+            "secondary-fixed-dim": "#abc7ff",
+            "primary": "#004ac6",
+            "on-surface": "#191c1e",
+            "on-primary": "#ffffff",
+            "surface-container": "#eceef0",
+            "secondary": "#415e91",
+            "on-tertiary-container": "#e4f2ff",
+            "outline-variant": "#c3c6d7",
+            "surface-container-high": "#e6e8ea",
+            "on-secondary-container": "#335083",
+            "tertiary-fixed": "#c9e6ff",
+            "inverse-surface": "#2d3133",
+            "primary-fixed": "#dbe1ff",
+            "on-primary-container": "#eeefff",
+            "error-container": "#ffdad6",
+            "surface-bright": "#f7f9fb",
+            "secondary-fixed": "#d7e2ff",
+            "tertiary-container": "#0074a6",
+            "on-error-container": "#93000a",
+            "outline": "#737686",
+            "secondary-container": "#a7c4fe",
+            "primary-fixed-dim": "#b4c5ff",
+            "tertiary": "#005a82",
+            "on-secondary": "#ffffff",
+            "on-tertiary": "#ffffff",
+            "surface-variant": "#e0e3e5",
+            "inverse-primary": "#b4c5ff",
+            "inverse-on-surface": "#eff1f3",
+            "on-tertiary-fixed": "#001e2f",
+            "on-primary-fixed": "#00174b",
+            "primary-container": "#2563eb",
+            "surface-dim": "#d8dadc",
+            "on-tertiary-fixed-variant": "#004c6e",
+            "on-primary-fixed-variant": "#003ea8",
+            "tertiary-fixed-dim": "#89ceff",
+            "surface": "#f7f9fb"
+          },
+          fontFamily: {
+            "headline": ["Space Grotesk"],
+            "body": ["Plus Jakarta Sans"],
+            "label": ["Plus Jakarta Sans"]
+          },
+          borderRadius: { "DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px" },
+        },
+      },
+    }
+  </script>
+  <style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+
+    .editorial-grid {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+    }
+  </style>
+</head>
+
+<body class="bg-background font-body text-on-background selection:bg-primary-fixed selection:text-on-primary-fixed">
+  <!-- TopNavBar -->
+  <header class="fixed top-0 left-0 right-0 z-50 flex justify-center w-full">
+    <nav
+      class="bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl rounded-full mt-6 mx-auto w-fit px-6 py-3 border border-slate-200/50 dark:border-slate-800/50 shadow-[0_8px_48px_rgba(37,99,235,0.15)] flex items-center gap-8">
+      <a href="index.html"
+        class="text-xl font-bold text-blue-900 dark:text-blue-50 font-['Space_Grotesk'] tracking-tight">Corespec</a>
+      <div class="hidden md:flex items-center gap-6">
+        <div class="relative group">
+          <button
+            class="text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors font-['Space_Grotesk'] font-bold tracking-tight flex items-center gap-1">
+            Services
+            <span
+              class="material-symbols-outlined text-sm transition-transform group-hover:rotate-180">expand_more</span>
+          </button>
+          <div
+            class="absolute top-full left-0 mt-2 w-64 bg-white dark:bg-slate-900 rounded-2xl border border-slate-200/50 dark:border-slate-800/50 shadow-xl opacity-0 translate-y-2 pointer-events-none group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto transition-all duration-200 z-[60]">
+            <div class="p-2 space-y-1">
+              <a href="services-ai.html"
+                class="flex items-center gap-3 p-3 rounded-xl hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-colors group/item">
+                <span class="material-symbols-outlined text-blue-600">psychology</span>
+                <div>
+                  <div class="text-sm font-bold text-slate-900 dark:text-white">AI & Automation</div>
+                  <div class="text-[10px] text-slate-500">Intelligent Workflows</div>
+                </div>
+              </a>
+              <a href="services-cloud.html"
+                class="flex items-center gap-3 p-3 rounded-xl hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-colors group/item">
+                <span class="material-symbols-outlined text-blue-600">cloud</span>
+                <div>
+                  <div class="text-sm font-bold text-slate-900 dark:text-white">Cloud Infrastructure</div>
+                  <div class="text-[10px] text-slate-500">Hyper-scalable Systems</div>
+                </div>
+              </a>
+              <a href="services-cybersecurity.html"
+                class="flex items-center gap-3 p-3 rounded-xl hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-colors group/item">
+                <span class="material-symbols-outlined text-blue-600">shield</span>
+                <div>
+                  <div class="text-sm font-bold text-slate-900 dark:text-white">Cybersecurity</div>
+                  <div class="text-[10px] text-slate-500">Enterprise Protection</div>
+                </div>
+              </a>
+              <a href="services-engineering.html"
+                class="flex items-center gap-3 p-3 rounded-xl hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-colors group/item">
+                <span class="material-symbols-outlined text-blue-600">code</span>
+                <div>
+                  <div class="text-sm font-bold text-slate-900 dark:text-white">Engineering</div>
+                  <div class="text-[10px] text-slate-500">Custom Development</div>
+                </div>
+              </a>
+              <a href="services-erp.html"
+                class="flex items-center gap-3 p-3 rounded-xl hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-colors group/item">
+                <span class="material-symbols-outlined text-blue-600">database</span>
+                <div>
+                  <div class="text-sm font-bold text-slate-900 dark:text-white">ERP Solutions</div>
+                  <div class="text-[10px] text-slate-500">Seamless Integration</div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <a class="text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors font-['Space_Grotesk'] font-bold tracking-tight"
+          href="portfolio.html">Portfolio</a>
+        <a class="text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors font-['Space_Grotesk'] font-bold tracking-tight"
+          href="process.html">Process</a>
+        <a class="text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors font-['Space_Grotesk'] font-bold tracking-tight"
+          href="about.html">About</a>
+        <a class="text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors font-['Space_Grotesk'] font-bold tracking-tight"
+          href="insights.html">Insights</a>
+      </div>
+      <a href="contact.html"
+        class="bg-primary text-on-primary px-6 py-2 rounded-full font-bold transition-transform scale-95 duration-200 hover:scale-100">Consultation</a>
+    </nav>
+  </header>
+  <main class="pt-32">
+    <!-- Hero Section: Editorial Staggered Layout -->
+    <section class="px-8 md:px-16 mb-32 overflow-hidden">
+      <div class="editorial-grid gap-8 items-end">
+        <div class="col-span-12 md:col-span-7">
+          <span class="label-md uppercase tracking-[0.2em] text-primary font-bold mb-6 block">Resource Library</span>
+          <h1
+            class="text-5xl md:text-7xl font-headline font-bold text-on-background leading-tight tracking-tighter mb-8">
+            Insights from the <br />Frontier of <span class="text-primary">African Tech</span>
+          </h1>
+          <p class="text-xl text-on-surface-variant max-w-xl leading-relaxed">
+            Navigating the complex digital landscape of the continent through rigorous engineering analysis and local
+            market intelligence.
+          </p>
+        </div>
+        <div class="col-span-12 md:col-span-5 relative">
+          <div
+            class="aspect-[4/5] bg-surface-container-low rounded-xl overflow-hidden shadow-2xl transform md:rotate-3">
+            <img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
+              alt="Modern high-tech architecture with glass reflections"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuCsZ4RSQwAfPOhHe9tiqcsHmMaN-1UJp61WXLmUdyzocsHFwQIep8LDIfnhMDOYPbdq02kMHbYCsxu6YQ9gn7s1_NyLMcdlTJSk4YGahRSIE5SsuqfGiW6ofSxSbtZ7NVbqt-rLCUPEyk0cTgjq6_4qlHOt3MFUsqT7YkmtHEblP4eESzyIQnu6bjTvEAmlhz8578yBAVpbAGMCrNzY8Ishcy1nLq1CAH_VyV7CVGpIAEBXlNpNCU4Brh1r3rY8F07xSUgxUfj7tKJO" />
+          </div>
+          <!-- Floating Stat Card -->
+          <div
+            class="absolute -bottom-8 -left-8 bg-surface-container-lowest p-8 rounded-xl shadow-[0_8px_48px_rgba(37,99,235,0.15)] max-w-[240px] hidden md:block border border-outline-variant/10">
+            <span class="material-symbols-outlined text-primary mb-4"
+              style="font-variation-settings: 'FILL' 1;">trending_up</span>
+            <p class="text-sm font-bold text-on-background uppercase tracking-wider mb-2">Growth Metric</p>
+            <p class="text-2xl font-headline font-bold text-primary">+240%</p>
+            <p class="text-xs text-on-surface-variant">Infrastructure adoption across Sub-Saharan enterprise clusters.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Lead Magnets: Kinetic Layering Section -->
+    <section class="bg-surface-container-low py-24 px-8 md:px-16 mb-32">
+      <div class="flex justify-between items-end mb-16">
+        <div>
+          <h2 class="text-3xl font-headline font-bold text-on-background tracking-tight">Strategic Briefings</h2>
+          <p class="text-on-surface-variant">Proprietary research and actionable roadmaps.</p>
+        </div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Lead Magnet 1 -->
+        <div
+          class="group relative bg-surface-container-lowest p-10 rounded-xl transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_20px_60px_rgba(0,0,0,0.05)]">
+          <div
+            class="w-12 h-12 bg-tertiary-fixed rounded-full flex items-center justify-center mb-8 text-on-tertiary-fixed">
+            <span class="material-symbols-outlined">shield_lock</span>
+          </div>
+          <h3 class="text-2xl font-headline font-bold mb-4">Enterprise Risk Report</h3>
+          <p class="text-on-surface-variant mb-8 line-clamp-3">A comprehensive 2024 analysis of cybersecurity threats
+            facing the Lagos financial corridor.</p>
+          <a class="flex items-center gap-2 text-primary font-bold group/link" href="#">
+            Download PDF
+            <span
+              class="material-symbols-outlined transition-transform group-hover/link:translate-x-1">arrow_forward</span>
+          </a>
+        </div>
+        <!-- Lead Magnet 2 -->
+        <div
+          class="group relative bg-surface-container-lowest p-10 rounded-xl transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_20px_60px_rgba(0,0,0,0.05)] border-l-4 border-primary">
+          <div
+            class="w-12 h-12 bg-primary-fixed rounded-full flex items-center justify-center mb-8 text-on-primary-fixed">
+            <span class="material-symbols-outlined">verified_user</span>
+          </div>
+          <h3 class="text-2xl font-headline font-bold mb-4">Certification Guide</h3>
+          <p class="text-on-surface-variant mb-8 line-clamp-3">The ultimate pathway to globally recognized cloud and
+            security certifications for Nigerian engineers.</p>
+          <a class="flex items-center gap-2 text-primary font-bold group/link" href="#">
+            Access Guide
+            <span
+              class="material-symbols-outlined transition-transform group-hover/link:translate-x-1">arrow_forward</span>
+          </a>
+        </div>
+        <!-- Lead Magnet 3 -->
+        <div
+          class="group relative bg-surface-container-lowest p-10 rounded-xl transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_20px_60px_rgba(0,0,0,0.05)]">
+          <div
+            class="w-12 h-12 bg-tertiary-fixed rounded-full flex items-center justify-center mb-8 text-on-tertiary-fixed">
+            <span class="material-symbols-outlined">psychology</span>
+          </div>
+          <h3 class="text-2xl font-headline font-bold mb-4">AI Career Roadmap</h3>
+          <p class="text-on-surface-variant mb-8 line-clamp-3">Transitioning into AI Engineering within the local market
+            ecosystem. Skills, tools, and networks.</p>
+          <a class="flex items-center gap-2 text-primary font-bold group/link" href="#">
+            Get Roadmap
+            <span
+              class="material-symbols-outlined transition-transform group-hover/link:translate-x-1">arrow_forward</span>
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- SEO-Optimized Article Grid -->
+    <section class="px-8 md:px-16 mb-40">
+      <div class="mb-16">
+        <h2 class="text-4xl font-headline font-bold text-on-background mb-4">Latest Insights</h2>
+        <div class="w-20 h-1 bg-primary"></div>
+      </div>
+      <div class="grid grid-cols-12 gap-y-20 md:gap-x-12">
+        <!-- Large Featured Article (Asymmetric) -->
+        <article class="col-span-12 md:col-span-8 group cursor-pointer">
+          <div class="aspect-[16/9] overflow-hidden rounded-xl mb-8">
+            <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+              alt="Digital blue circuit pattern representing cybersecurity"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuCokPKdr0AQtPuvzR5RZcK454Ivps5GL6qVArHpHzrSbmiY1lNIqVRKxaYKwr4J0L9DD1FhauakiHpeZzwdqdzObnUdv2amYTT2J2oU-NaG5d_CaMmoXSdq33lN7TEGF97HIiEQB0icA5Jh7d-NV8KF3WUOimEGFekVZqP5yDz2T-hRvREvNqmb_Y0EyBC02AAVDe4FIXesOMO3DoGUDffUXja5Sp-gblHoGxVYpxx9oB3fNsQWzYP3T6VNJSgH1D1_IoilVUD19thn" />
+          </div>
+          <div class="flex gap-4 mb-4">
+            <span
+              class="bg-tertiary-fixed px-4 py-1 rounded-full text-xs font-bold text-on-tertiary-fixed uppercase">Cybersecurity</span>
+            <span class="text-xs text-on-surface-variant font-bold flex items-center gap-1">
+              <span class="material-symbols-outlined text-[14px]">schedule</span> 12 Min Read
+            </span>
+          </div>
+          <h3 class="text-4xl font-headline font-bold mb-4 group-hover:text-primary transition-colors leading-tight">
+            Advanced Cybersecurity Training Lagos: Securing the Next Generation of FinTech</h3>
+          <p class="text-lg text-on-surface-variant leading-relaxed max-w-2xl">
+            As Lagos cements its position as Africa's premier FinTech hub, the demand for specialized security
+            engineering has outpaced available talent. We break down the required curriculum for 2024.
+          </p>
+        </article>
+        <!-- Side Articles -->
+        <div class="col-span-12 md:col-span-4 flex flex-col gap-12">
+          <article class="group cursor-pointer">
+            <div class="aspect-video overflow-hidden rounded-xl mb-4">
+              <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                alt="Abstract visualization of neural networks for AI"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuC060qanb5qTjET1F74OAc49wZPnO6I40MYHuQz7Ln7U5Pcj7jVuntZsfh4AYdVxen2NmOQJs03ze0UpoMOvRPjqgTd7Y82KG1Rw55v4-S13mC9t4AlIX8zSClQ6jPsTRSnETDbXA6oXEs00E4d4hl3ddSgzr8aMJCKBVwQNhzY7BS5dZG5CRH_-T-36BbYfVJ0kJwNnuZHlvf1BfJhWgVts2EJ0i5nWtNOW_sBAbZMvKqz31QF7G73MYkIyYmEg9jfTw9-pGgvDLBL" />
+            </div>
+            <span class="text-primary text-xs font-bold uppercase tracking-widest block mb-2">Artificial
+              Intelligence</span>
+            <h3 class="text-xl font-headline font-bold mb-2 group-hover:text-primary transition-colors">AI Automation
+              Nigeria: Efficiency Gains in Supply Chain Logistics</h3>
+          </article>
+          <article class="group cursor-pointer">
+            <div class="aspect-video overflow-hidden rounded-xl mb-4">
+              <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                alt="Global satellite connections and cloud data"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPjQWZyyQwbosB1O3UjsdMqwPTtmXdLTFbpL4Dz-1wzIPy8K9kW6rvHe2ZFP4MN4s2OlfQ8s5V0mkg1AebDRTv5xPyrbNojkTHUrdu0CzaDjokIuTKe0OrIpJDWEsRzoQmXx6Tr2HOXeZ2XpjijvDBAu1x8-T6-m7kAUHZYz_A5MHv9e6_gTfVJkyICc6noniXTBb6nmEUk3sSwklrgniW2jAY5mS_nHU9AS0zwZCLnaR3IJEzlOlsp6yxvmiYTmGv-X8fXUamlIwY" />
+            </div>
+            <span class="text-primary text-xs font-bold uppercase tracking-widest block mb-2">Cloud
+              Infrastructure</span>
+            <h3 class="text-xl font-headline font-bold mb-2 group-hover:text-primary transition-colors">Cloud Computing
+              Nigeria: Scaling Operations via Local Data Residency</h3>
+          </article>
+        </div>
+      </div>
+    </section>
+    <!-- Newsletter Opt-in: Bleed & Shadow Layout -->
+    <section class="px-8 md:px-16 mb-32">
+      <div
+        class="bg-primary-container rounded-[3rem] p-12 md:p-24 relative overflow-hidden flex flex-col md:flex-row items-center gap-12">
+        <!-- Abstract Glow -->
+        <div class="absolute top-0 right-0 w-96 h-96 bg-white/10 rounded-full blur-[100px] -mr-48 -mt-48"></div>
+        <div class="relative z-10 md:w-1/2">
+          <h2 class="text-white text-4xl md:text-5xl font-headline font-bold leading-tight mb-6">Stay Ahead of the
+            <br />Digital Curve
+          </h2>
+          <p class="text-white/80 text-lg mb-0">Join 5,000+ technology leaders receiving our weekly engineering
+            deep-dives.</p>
+        </div>
+        <div class="relative z-10 md:w-1/2 w-full">
+          <form class="flex flex-col sm:flex-row gap-4">
+            <input
+              class="flex-grow bg-white/10 border-white/20 text-white placeholder:text-white/50 rounded-full px-8 py-4 focus:ring-2 focus:ring-white/50 focus:border-transparent transition-all outline-none"
+              placeholder="Professional Email" type="email" />
+            <button
+              class="bg-white text-primary px-10 py-4 rounded-full font-bold hover:bg-opacity-90 transition-colors whitespace-nowrap"
+              type="submit">
+              Subscribe Now
+            </button>
+          </form>
+          <p class="text-white/40 text-[10px] mt-4 uppercase tracking-[0.2em] text-center md:text-left">No Spam.
+            Engineering-First Content Only.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="bg-[#1A3A6B] dark:bg-slate-950 rounded-t-[3rem] w-full mt-0">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-12 py-24 max-w-7xl mx-auto">
+      <div class="md:col-span-1">
+        <span class="text-3xl font-black text-white mb-8 block font-headline tracking-tighter">Corespec</span>
+        <p class="text-slate-300 font-body text-sm leading-relaxed">
+          Engineering excellence for the modern digital era. We build systems that scale with your ambition.
+        </p>
+      </div>
+      <div class="md:col-span-1">
+        <h4 class="text-white font-bold mb-6 font-headline">Navigation</h4>
+        <ul class="space-y-4">
+          <li><a href="services-ai.html"
+              class="text-slate-400 hover:text-white transition-colors font-body text-sm hover:translate-x-1 inline-block transition-transform duration-200">Services</a>
+          </li>
+          <li><a href="portfolio.html"
+              class="text-slate-400 hover:text-white transition-colors font-body text-sm hover:translate-x-1 inline-block transition-transform duration-200">Portfolio</a>
+          </li>
+          <li><a href="process.html"
+              class="text-slate-400 hover:text-white transition-colors font-body text-sm hover:translate-x-1 inline-block transition-transform duration-200">Process</a>
+          </li>
+          <li><a href="about.html"
+              class="text-slate-400 hover:text-white transition-colors font-body text-sm hover:translate-x-1 inline-block transition-transform duration-200">About</a>
+          </li>
+        </ul>
+      </div>
+      <div class="md:col-span-1">
+        <h4 class="text-white font-bold mb-6 font-headline">Legal</h4>
+        <ul class="space-y-4">
+          <li><a href="privacy.html"
+              class="text-slate-400 hover:text-white transition-colors font-body text-sm hover:translate-x-1 inline-block transition-transform duration-200">Privacy
+              Policy</a></li>
+          <li><a href="contact.html"
+              class="text-slate-400 hover:text-white transition-colors font-body text-sm hover:translate-x-1 inline-block transition-transform duration-200">Contact</a>
+          </li>
+        </ul>
+      </div>
+      <div class="md:col-span-1">
+        <h4 class="text-white font-bold mb-6 font-headline">Social</h4>
+        <div class="flex gap-4">
+          <a href="#"
+            class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-white hover:bg-primary transition-colors focus:ring-2 focus:ring-blue-500 outline-none">
+            <span class="material-symbols-outlined text-lg">public</span>
+          </a>
+          <a href="#"
+            class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-white hover:bg-primary transition-colors focus:ring-2 focus:ring-blue-500 outline-none">
+            <span class="material-symbols-outlined text-lg">terminal</span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div
+      class="px-12 py-8 border-t border-slate-800/50 max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+      <p class="text-slate-400 font-body text-[11px] tracking-wider uppercase">© 2024 Corespec Engineering. All rights
+        reserved.</p>
+      <div class="flex items-center gap-2">
+        <div class="w-2 h-2 rounded-full bg-emerald-500"></div>
+        <span class="text-slate-400 font-body text-[11px] tracking-wider uppercase">System Operational</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+      const navLinks = document.querySelectorAll('nav a, footer a');
+
+      navLinks.forEach(link => {
+        const href = link.getAttribute('href');
+        if (href === currentPath) {
+          if (link.closest('nav')) {
+            link.classList.remove('text-slate-600', 'dark:text-slate-400');
+            link.classList.add('text-blue-600', 'dark:text-blue-400');
+          }
+          if (link.closest('footer')) {
+            link.classList.remove('text-slate-400');
+            link.classList.add('text-white', 'font-bold');
+          }
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>

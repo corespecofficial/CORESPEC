@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Corespec | Nigeria's #1 AI &amp; Tech Solutions</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+
+    .glass-card {
+      background: rgba(255, 255, 255, 0.8);
+      -webkit-backdrop-filter: blur(20px);
+      backdrop-filter: blur(20px);
+    }
+
+    .text-gradient-blue {
+      background: linear-gradient(to right, #2563EB, #0EA5E9);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  </style>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "inverse-surface": "#2d3133",
+            "secondary-container": "#a7c4fe",
+            "tertiary-container": "#0074a6",
+            "tertiary-fixed": "#c9e6ff",
+            "tertiary-fixed-dim": "#89ceff",
+            "inverse-on-surface": "#eff1f3",
+            "on-tertiary": "#ffffff",
+            "on-primary-container": "#eeefff",
+            "error": "#ba1a1a",
+            "on-secondary-fixed": "#001b3f",
+            "surface-container-highest": "#e0e3e5",
+            "on-surface": "#191c1e",
+            "outline": "#737686",
+            "error-container": "#ffdad6",
+            "on-primary-fixed-variant": "#003ea8",
+            "outline-variant": "#c3c6d7",
+            "primary-fixed": "#dbe1ff",
+            "on-background": "#191c1e",
+            "on-tertiary-fixed": "#001e2f",
+            "surface-variant": "#e0e3e5",
+            "on-error-container": "#93000a",
+            "on-tertiary-fixed-variant": "#004c6e",
+            "surface": "#f7f9fb",
+            "surface-container-low": "#f2f4f6",
+            "surface-container-lowest": "#ffffff",
+            "secondary-fixed-dim": "#abc7ff",
+            "on-secondary-container": "#335083",
+            "surface-container-high": "#e6e8ea",
+            "on-secondary-fixed-variant": "#284678",
+            "surface-bright": "#f7f9fb",
+            "on-tertiary-container": "#e4f2ff",
+            "inverse-primary": "#b4c5ff",
+            "on-error": "#ffffff",
+            "primary-fixed-dim": "#b4c5ff",
+            "surface-dim": "#d8dadc",
+            "tertiary": "#005a82",
+            "secondary": "#415e91",
+            "on-primary-fixed": "#00174b",
+            "surface-container": "#eceef0",
+            "on-secondary": "#ffffff",
+            "primary-container": "#2563eb",
+            "background": "#f7f9fb",
+            "on-surface-variant": "#434655",
+            "secondary-fixed": "#d7e2ff",
+            "primary": "#004ac6",
+            "on-primary": "#ffffff",
+            "surface-tint": "#0053db"
+          },
+          fontFamily: {
+            "headline": ["Space Grotesk"],
+            "body": ["Plus Jakarta Sans"],
+            "label": ["Plus Jakarta Sans"]
+          },
+          borderRadius: { "DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px" },
+        },
+      },
+    }
+  </script>
+</head>
+
+<body class="bg-background font-body text-on-background">
+  <!-- TopNavBar -->
+  <nav
+    class="fixed top-0 left-0 right-0 z-50 flex justify-between items-center px-8 py-3 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl rounded-full mt-6 mx-auto max-w-5xl border border-slate-100/20 shadow-[0_8px_48px_rgba(37,99,235,0.15)]">
+    <a href="index.html"
+      class="text-2xl font-black text-blue-600 dark:text-blue-400 font-['Space_Grotesk'] tracking-tight">Corespec</a>
+    <div class="hidden md:flex gap-8 items-center">
+      <div class="relative group">
+        <button
+          class="flex items-center gap-1 text-blue-600 dark:text-blue-400 font-bold font-['Space_Grotesk'] tracking-tight hover:text-blue-500 transition-colors py-2">
+          Services <span class="material-symbols-outlined text-[18px]">keyboard_arrow_down</span>
+        </button>
+        <div
+          class="absolute top-full left-0 mt-1 w-64 bg-white dark:bg-slate-900 rounded-2xl shadow-xl border border-slate-100/10 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 p-4 space-y-2 z-50">
+          <a href="services-ai.html"
+            class="block p-3 rounded-xl hover:bg-blue-50 dark:hover:bg-blue-900/30 transition-colors">
+            <p class="font-bold text-sm text-slate-900 dark:text-white">AI Implementation</p>
+            <p class="text-xs text-slate-500">Custom ML & LLM pipelines</p>
+          </a>
+          <a href="services-cloud.html"
+            class="block p-3 rounded-xl hover:bg-blue-50 dark:hover:bg-blue-900/30 transition-colors">
+            <p class="font-bold text-sm text-slate-900 dark:text-white">Cloud Migration</p>
+            <p class="text-xs text-slate-500">Scalable cloud infrastructure</p>
+          </a>
+          <a href="services-cybersecurity.html"
+            class="block p-3 rounded-xl hover:bg-blue-50 dark:hover:bg-blue-900/30 transition-colors">
+            <p class="font-bold text-sm text-slate-900 dark:text-white">Cybersecurity</p>
+            <p class="text-xs text-slate-500">Threat mitigation & training</p>
+          </a>
+          <a href="services-engineering.html"
+            class="block p-3 rounded-xl hover:bg-blue-50 dark:hover:bg-blue-900/30 transition-colors">
+            <p class="font-bold text-sm text-slate-900 dark:text-white">Engineering Consultancy</p>
+            <p class="text-xs text-slate-500">Strategic technical direction</p>
+          </a>
+          <a href="services-erp.html"
+            class="block p-3 rounded-xl hover:bg-blue-50 dark:hover:bg-blue-900/30 transition-colors">
+            <p class="font-bold text-sm text-slate-900 dark:text-white">ERP Solutions</p>
+            <p class="text-xs text-slate-500">Business logic automation</p>
+          </a>
+        </div>
+      </div>
+      <a class="text-slate-600 dark:text-slate-400 font-medium font-['Space_Grotesk'] tracking-tight hover:text-blue-500 transition-colors"
+        href="portfolio.html">Portfolio</a>
+      <a class="text-slate-600 dark:text-slate-400 font-medium font-['Space_Grotesk'] tracking-tight hover:text-blue-500 transition-colors"
+        href="process.html">Process</a>
+      <a class="text-slate-600 dark:text-slate-400 font-medium font-['Space_Grotesk'] tracking-tight hover:text-blue-500 transition-colors"
+        href="about.html">About</a>
+      <a class="text-slate-600 dark:text-slate-400 font-medium font-['Space_Grotesk'] tracking-tight hover:text-blue-500 transition-colors"
+        href="insights.html">Insights</a>
+    </div>
+    <a href="contact.html"
+      class="bg-primary-container text-on-primary-container px-6 py-2 rounded-full font-bold hover:scale-95 transition-all duration-200">Book
+      a Call</a>
+  </nav>
+  <!-- Hero Section -->
+  <section class="pt-40 pb-20 px-8 md:px-20 max-w-[1440px] mx-auto overflow-hidden">
+    <div class="flex flex-col md:flex-row items-start gap-12 lg:gap-20">
+      <!-- Left Side: 58% -->
+      <div class="w-full md:w-[58%]">
+        <span
+          class="inline-block bg-tertiary-fixed text-on-tertiary-fixed px-4 py-1 rounded-full text-[12px] font-bold tracking-widest uppercase mb-8">Nigeria's
+          #1 AI</span>
+        <h1 class="font-headline font-bold text-[56px] md:text-[88px] leading-[1] text-on-background mb-8">
+          Architecting the Future of <span class="text-gradient-blue">AI</span>
+        </h1>
+        <p class="text-on-surface-variant text-lg max-w-[480px] mb-12 leading-relaxed">
+          We bridge the gap between complex engineering and human-centric design, delivering enterprise-grade AI
+          solutions for the West African market.
+        </p>
+        <div
+          class="bg-white border border-outline-variant/30 rounded-[12px] p-2 flex items-center mb-12 shadow-sm max-w-md">
+          <input class="flex-1 border-none focus:ring-0 text-sm px-4" placeholder="Enter your business email"
+            type="email" />
+          <button class="bg-primary text-white px-6 py-3 rounded-[8px] font-bold text-sm whitespace-nowrap">Get
+            Started</button>
+        </div>
+        <div class="flex gap-4">
+          <div
+            class="glass-card border border-white p-4 rounded-xl flex items-center gap-3 shadow-[0_8px_32px_rgba(37,99,235,0.08)]">
+            <span class="material-symbols-outlined text-primary" data-icon="rocket_launch">rocket_launch</span>
+            <div class="text-[12px] font-bold">120+ Deployments</div>
+          </div>
+          <div
+            class="glass-card border border-white p-4 rounded-xl flex items-center gap-3 shadow-[0_8px_32px_rgba(37,99,235,0.08)]">
+            <span class="material-symbols-outlined text-primary" data-icon="group" data-weight="fill">group</span>
+            <div class="text-[12px] font-bold">Nigeria's Top Talent</div>
+          </div>
+        </div>
+      </div>
+      <!-- Right Side: 42% -->
+      <div class="w-full md:w-[42%] relative">
+        <div class="aspect-[4/5] rounded-[28px] overflow-hidden rotate-[1.5deg] relative shadow-2xl">
+          <img class="w-full h-full object-cover" alt="Nigerian AI engineer working on futuristic terminal interface"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtCLhn3nfGRxxkEa0aRM3GtuZvzrETcz9VKIJ9gn1JwD3A1mUfBMrRbRLaZYcqvbbOaUxx8NlU3sXRpWnXAjhOV-Tee7jSgQIcHeXhwiIqrcmuv38Ozgm7O108Nor3koYijNE1xYMctOjCwJgUL8035_OcSFeh3K_grgjoWGY0OyCa6BGjp6KIQ7flNEapmDEkujIkJHru9KXd_Dp9_3GZu0vMLJ9q9LTa6DrhiQvVB0hCR2gV_vjl4cfaiyud36-pM-h7lLeMIfBB" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+        </div>
+        <!-- Overlapping Card -->
+        <div
+          class="absolute -bottom-8 -left-8 glass-card border border-white p-6 rounded-2xl shadow-xl max-w-[240px] z-10">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="w-2 h-2 bg-red-500 rounded-full animate-pulse"></span>
+            <span class="text-[10px] font-extrabold uppercase tracking-tighter">Live: AI Workshop</span>
+          </div>
+          <p class="text-sm font-bold mb-4">Mastering LLMs for Enterprise</p>
+          <div class="flex -space-x-2">
+            <img class="w-8 h-8 rounded-full border-2 border-white object-cover" alt="User avatar 1"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuCVOdNuTFwVKY26fbHoWITK0cRQIaK-KZj6j6FcCbzxEO7NiD_Nn0ASDHAiT-kMjfcDsFxdinv0HCoHUa4o-U5QNvFXH0W-9EynPntAMz28J5GQQnxnc6d61isqzBXXq-MVp76GFQHa-9gV5eycrwh4DzkqrRmK0OqVhwiZvncKXjjzpx3aZrKZVmGY5NGmTm4m6A8WIkhFePuEemcaLZQmiFsrT9APD4ohY8QCrQ1urWTpIXcQz3xd6R-imhq02kahQpNnSVvgUVHD" />
+            <img class="w-8 h-8 rounded-full border-2 border-white object-cover" alt="User avatar 2"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuAfZ9LzQL7yxTgBMI3qYJnmjEEZylDs3Yrmy7WRUFLpsFHaudblhw2enJk8L4MTviB3TyvrpR2AN1TJTQTNbJIhBpIBfqANqb8e8OllIoxgfo76dQTyz2Kw159uh5iQD7B6_6BADxfBumvkbXzQevJqZxzqsRd5qNCPBPC944iAeOiBz69CA02jfeH8tKTSQF_cKGAOKc-DCDAPHjqhV7NyCn68soS3VBmfkha9w2ZromkAxwLEZbETqpj1Ot-xNJmdYu35RQP0WyeJ" />
+            <div class="w-8 h-8 rounded-full bg-primary-fixed flex items-center justify-center text-[10px] font-bold">
+              +12</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Trust Bar -->
+  <section class="bg-white py-12 px-8 overflow-hidden border-y border-gray-100">
+    <div class="max-w-[1440px] mx-auto flex flex-wrap justify-between items-center gap-8 md:gap-4">
+      <div
+        class="grayscale hover:grayscale-0 transition-all opacity-60 hover:opacity-100 px-6 border-r border-gray-200 last:border-0 h-8 flex items-center">
+        <span class="font-black text-xl text-slate-400">CompTIA</span>
+      </div>
+      <div
+        class="grayscale hover:grayscale-0 transition-all opacity-60 hover:opacity-100 px-6 border-r border-gray-200 last:border-0 h-8 flex items-center">
+        <span class="font-black text-xl text-slate-400">EC-Council</span>
+      </div>
+      <div
+        class="grayscale hover:grayscale-0 transition-all opacity-60 hover:opacity-100 px-6 border-r border-gray-200 last:border-0 h-8 flex items-center">
+        <span class="font-black text-xl text-slate-400">NITDA</span>
+      </div>
+      <div
+        class="grayscale hover:grayscale-0 transition-all opacity-60 hover:opacity-100 px-6 border-r border-gray-200 last:border-0 h-8 flex items-center">
+        <span class="font-black text-xl text-slate-400">Microsoft</span>
+      </div>
+      <div
+        class="grayscale hover:grayscale-0 transition-all opacity-60 hover:opacity-100 px-6 border-r border-gray-200 last:border-0 h-8 flex items-center">
+        <span class="font-black text-xl text-slate-400">Google</span>
+      </div>
+    </div>
+  </section>
+  <!-- Build the Skills Section (01) -->
+  <section class="py-24 px-8 md:px-20 max-w-[1440px] mx-auto">
+    <div class="flex flex-col md:flex-row items-center gap-20">
+      <!-- Left: 40% -->
+      <div class="w-full md:w-[40%] relative">
+        <div
+          class="absolute -top-20 -left-10 text-[180px] font-headline font-bold text-surface-container-high opacity-40 select-none">
+          01</div>
+        <div class="relative z-10">
+          <h2 class="font-headline font-bold text-5xl leading-tight mb-6 text-on-background">Empowering Nigeria's Tech
+            Ecosystem</h2>
+          <p class="text-[#94A3B8] text-[15px] leading-relaxed max-w-sm">
+            From bootcamps to custom corporate training, we build the workforce that drives the digital revolution
+            across the continent.
+          </p>
+        </div>
+      </div>
+      <!-- Right: 60% -->
+      <div class="w-full md:w-[60%] flex flex-col gap-6">
+        <!-- Testimonial 1 -->
+        <div class="bg-white p-8 rounded-[2rem] shadow-sm flex items-start gap-6 ml-0">
+          <img class="w-16 h-16 rounded-full object-cover shrink-0" alt="Headshot of Adebayo"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBP2d7uJQiKzA9PrKWhd6Tch4j-hyCaXReLcGz-QABdNcTkocblBeCwTwr8vcrlF4Uqz5XN4ZBO62Acw87oiXMBS_LzvALA6GM6_SLcTnBf_HfqKHQY71P9FPIQnwwqqPDW_zOlfwyLb9JFt1P_rHuyeeKwKMvq3RZRV9hqTHxtUCQbJGATdGIRstzxNW0eE1Wu8UcVbjIJP6paZWvGSfQOfueOEVBASqiacr3WEGSqH2XWMojwOFsLugpV8dzOb0e0UsGR2LDqklUi" />
+          <div>
+            <div
+              class="bg-primary/10 text-primary px-3 py-1 rounded-full text-[10px] font-bold uppercase mb-2 inline-block">
+              Engineering Lead</div>
+            <p class="text-on-background font-medium italic mb-2">"Corespec's AI training transformed our entire data
+              team in 12 weeks."</p>
+            <div class="font-bold text-sm">Adebayo O.</div>
+          </div>
+        </div>
+        <!-- Testimonial 2 -->
+        <div class="bg-white p-8 rounded-[2rem] shadow-sm flex items-start gap-6 ml-6">
+          <img class="w-16 h-16 rounded-full object-cover shrink-0" alt="Headshot of Ngozi"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPT7GBLHCTymgDF9JHdDRcsTVZgGQe1jnVpRqmLchfGy8mRX0dR4vqivFMtkIXfmhxElHQrIpc4h5toX5bcYqQVY4o9h95nxcMQ4Nns2sgoCB1nSn3MGkh0Lhf-dG-5h1mB9wzDSc_VsrHD0DHihQz2T8WXcWK3wxj0HTuEJdofifpr9oTRs6NYmXIMkstkZ42OYOSLeTe5JN99QyAAzxh6cfgKpwqS7oGRcEr2Oc2YWZY6ps2hCodDgtsL5LZ1LooFSGibB80J4It" />
+          <div>
+            <div
+              class="bg-primary/10 text-primary px-3 py-1 rounded-full text-[10px] font-bold uppercase mb-2 inline-block">
+              Product Manager</div>
+            <p class="text-on-background font-medium italic mb-2">"The most rigorous and industry-aligned curriculum
+              I've seen in Lagos."</p>
+            <div class="font-bold text-sm">Ngozi A.</div>
+          </div>
+        </div>
+        <!-- Testimonial 3 -->
+        <div class="bg-white p-8 rounded-[2rem] shadow-sm flex items-start gap-6 ml-12">
+          <img class="w-16 h-16 rounded-full object-cover shrink-0" alt="Headshot of Emeka"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCpEQ3-GF5uTNVyYsTezDvP9pEtExcu-aNYZDrhkmdZ7H3Nsi8poMrAz-ywDbMwtVf-rYBeSk4WVSjI1pBLblvwUGe1stmmDkmV4ADpzEUfYIV0wDrxHiqhWNAp58s6_uWM_Q1KY5EdUkhE3l1aE3hvqfNZBYSNsPQclgup-A3zPi1BFLhrRhxC5inZV4Y6qSKyTfbmR-OP1AeHieftZRDFAYu0rB720Dr_3N-pNpMztqYypJuTkwUuXIqoURp9XdlZ6pVOCjYjXB1h" />
+          <div>
+            <div
+              class="bg-primary/10 text-primary px-3 py-1 rounded-full text-[10px] font-bold uppercase mb-2 inline-block">
+              CTO, Fintech</div>
+            <p class="text-on-background font-medium italic mb-2">"We don't just hire talent; we hire Corespec
+              graduates."</p>
+            <div class="font-bold text-sm">Emeka K.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Dark Navy Section -->
+  <section class="bg-[#1A3A6B] py-32 px-8 relative overflow-hidden">
+    <div class="max-w-[1440px] mx-auto flex flex-col items-center text-center relative z-10">
+      <span
+        class="bg-white/10 text-white border border-white/20 px-5 py-2 rounded-full text-xs font-bold uppercase tracking-widest mb-8">Why
+        Corespec</span>
+      <h2 class="font-headline font-bold text-5xl md:text-6xl text-white mb-20 max-w-3xl leading-tight">
+        Global Standards, <span class="text-primary-container">Corespec</span> Local Expertise.
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-16 w-full max-w-5xl">
+        <div class="flex flex-col items-center">
+          <div class="text-white text-6xl font-headline font-bold mb-4">98%</div>
+          <p class="text-white/60 font-medium uppercase text-xs tracking-widest">Client Retention</p>
+        </div>
+        <div class="flex flex-col items-center border-x border-white/10 px-8">
+          <div class="text-white text-6xl font-headline font-bold mb-4">40k+</div>
+          <p class="text-white/60 font-medium uppercase text-xs tracking-widest">Certified Students</p>
+        </div>
+        <div class="flex flex-col items-center">
+          <div class="text-white text-6xl font-headline font-bold mb-4">500+</div>
+          <p class="text-white/60 font-medium uppercase text-xs tracking-widest">Enterprise Solutions</p>
+        </div>
+      </div>
+    </div>
+    <!-- Bleeding Photos -->
+    <div
+      class="absolute -left-20 top-20 w-80 h-96 rounded-3xl overflow-hidden opacity-50 rotate-[-12deg] hidden xl:block">
+      <img class="w-full h-full object-cover" alt="Corespec team collaborating in a modern Lagos office"
+        src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8eUlPKq17TphELxOLwKL8tyJKrMHNn_3E1H-YmV64DgUk6lUq3NTdp5BmktWVqCNoUlet3H8D5aRsXbb10je1snBIqoO_l7ovHCEYKAIP8RrS8X6hsZsfetpdeCOuOOFYqBKX0Zso4-3O__ORYYI2IbG_eiocRUWRzaApKMRz6Kp7ZKPR1ABJYjqxtB1JJmjWw9LfMuyFWXg5L5nOfhaXIb6cyF_Kq8IhaATPkJmskwZc0qyEMpG_nMn0Avw59FyoD9nrjqusXz1_" />
+    </div>
+    <div
+      class="absolute -right-20 bottom-20 w-96 h-80 rounded-3xl overflow-hidden opacity-50 rotate-[8deg] hidden xl:block">
+      <img class="w-full h-full object-cover" alt="Close up of AI developer screens and hands"
+        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDdeZvjPlZkvf-60s5VzVXx9RRYAfTyzghaEbgSJFcmPPA1xNCJ5CeV49ur3NQjCudw7GIr-Ry_UAc1uFrrOw2o14ROa3akra2Kw9cEbUUeGPqwM_xkR2h8T5tvSNwqVClVPR8ZsZGU85Xr4XpAOhaYuZSXLCTQoEOl3sm6r1m19vHL3Q9nUsSUiXmmxZZe7nABDyfuBCekaTxEENvVe1QTVI7S8AjhpfQMV5UIwu9Qqbq4ZthWQhnvzLIMgmMgCNlgsfMSheEntK2L" />
+    </div>
+  </section>
+  <!-- Services Grid -->
+  <section class="bg-[#F8FAFC] py-32 px-8 md:px-20">
+    <div class="max-w-[1440px] mx-auto">
+      <div class="mb-20">
+        <h2 class="font-headline font-bold text-4xl text-on-background mb-4">Our Core Competencies</h2>
+        <div class="w-24 h-1 bg-primary"></div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Service 1 -->
+        <div class="bg-white p-10 rounded-[28px] border border-[#E5E7EB] hover:shadow-xl transition-all group">
+          <div class="w-16 h-16 bg-[#EFF6FF] rounded-2xl flex items-center justify-center mb-8">
+            <span class="material-symbols-outlined text-primary text-3xl" data-icon="neurology">neurology</span>
+          </div>
+          <h3 class="text-2xl font-bold mb-4">AI Implementation</h3>
+          <p class="text-on-surface-variant mb-10 leading-relaxed">End-to-end integration of Large Language Models and
+            custom machine learning pipelines.</p>
+          <a class="inline-flex items-center gap-2 text-primary font-bold transition-transform group-hover:-translate-y-1.5"
+            href="services-ai.html">
+            Learn more <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+          </a>
+        </div>
+        <!-- Service 2 -->
+        <div class="bg-white p-10 rounded-[28px] border border-[#E5E7EB] hover:shadow-xl transition-all group">
+          <div class="w-16 h-16 bg-[#EFF6FF] rounded-2xl flex items-center justify-center mb-8">
+            <span class="material-symbols-outlined text-primary text-3xl" data-icon="terminal">terminal</span>
+          </div>
+          <h3 class="text-2xl font-bold mb-4">Software Engineering</h3>
+          <p class="text-on-surface-variant mb-10 leading-relaxed">High-performance web and mobile applications built
+            for scale and security.</p>
+          <a class="inline-flex items-center gap-2 text-primary font-bold transition-transform group-hover:-translate-y-1.5"
+            href="services-engineering.html">
+            Learn more <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+          </a>
+        </div>
+        <!-- Service 3 -->
+        <div class="bg-white p-10 rounded-[28px] border border-[#E5E7EB] hover:shadow-xl transition-all group">
+          <div class="w-16 h-16 bg-[#EFF6FF] rounded-2xl flex items-center justify-center mb-8">
+            <span class="material-symbols-outlined text-primary text-3xl" data-icon="security">security</span>
+          </div>
+          <h3 class="text-2xl font-bold mb-4">Cybersecurity</h3>
+          <p class="text-on-surface-variant mb-10 leading-relaxed">Comprehensive risk assessment and threat mitigation
+            for corporate infrastructure.</p>
+          <a class="inline-flex items-center gap-2 text-primary font-bold transition-transform group-hover:-translate-y-1.5"
+            href="services-cybersecurity.html">
+            Learn more <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+          </a>
+        </div>
+        <!-- Service 4 -->
+        <div class="bg-white p-10 rounded-[28px] border border-[#E5E7EB] hover:shadow-xl transition-all group">
+          <div class="w-16 h-16 bg-[#EFF6FF] rounded-2xl flex items-center justify-center mb-8">
+            <span class="material-symbols-outlined text-primary text-3xl" data-icon="school">school</span>
+          </div>
+          <h3 class="text-2xl font-bold mb-4">Corporate Training</h3>
+          <p class="text-on-surface-variant mb-10 leading-relaxed">Upskilling teams with certified programs in AI,
+            Cloud, and Data Science.</p>
+          <a class="inline-flex items-center gap-2 text-primary font-bold transition-transform group-hover:-translate-y-1.5"
+            href="portfolio.html">
+            Learn more <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+          </a>
+        </div>
+        <!-- Service 5 -->
+        <div class="bg-white p-10 rounded-[28px] border border-[#E5E7EB] hover:shadow-xl transition-all group">
+          <div class="w-16 h-16 bg-[#EFF6FF] rounded-2xl flex items-center justify-center mb-8">
+            <span class="material-symbols-outlined text-primary text-3xl" data-icon="cloud">cloud</span>
+          </div>
+          <h3 class="text-2xl font-bold mb-4">Cloud Migration</h3>
+          <p class="text-on-surface-variant mb-10 leading-relaxed">Safe and efficient transition of legacy systems to
+            modern cloud environments.</p>
+          <a class="inline-flex items-center gap-2 text-primary font-bold transition-transform group-hover:-translate-y-1.5"
+            href="services-cloud.html">
+            Learn more <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+          </a>
+        </div>
+        <!-- Service 6 -->
+        <div class="bg-white p-10 rounded-[28px] border border-[#E5E7EB] hover:shadow-xl transition-all group">
+          <div class="w-16 h-16 bg-[#EFF6FF] rounded-2xl flex items-center justify-center mb-8">
+            <span class="material-symbols-outlined text-primary text-3xl" data-icon="bar_chart">bar_chart</span>
+          </div>
+          <h3 class="text-2xl font-bold mb-4">Data Analytics</h3>
+          <p class="text-on-surface-variant mb-10 leading-relaxed">Converting raw data into actionable insights for
+            strategic decision making.</p>
+          <a class="inline-flex items-center gap-2 text-primary font-bold transition-transform group-hover:-translate-y-1.5"
+            href="services-ai.html">
+            Learn more <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- AI Feature Section -->
+  <section class="py-32 px-8 md:px-20 max-w-[1440px] mx-auto overflow-hidden">
+    <div class="flex flex-col md:flex-row items-center gap-20">
+      <!-- Left: Mock UI -->
+      <div class="w-full md:w-1/2 relative">
+        <div class="bg-[#191C1E] rounded-[24px] p-8 rotate-[-1.5deg] shadow-2xl border border-white/10 text-white">
+          <div class="flex justify-between items-center mb-10">
+            <div class="flex gap-2">
+              <div class="w-3 h-3 rounded-full bg-red-400"></div>
+              <div class="w-3 h-3 rounded-full bg-yellow-400"></div>
+              <div class="w-3 h-3 rounded-full bg-green-400"></div>
+            </div>
+            <span class="text-xs font-mono text-white/40">AI Agent Console</span>
+          </div>
+          <div class="space-y-6">
+            <div class="space-y-2">
+              <div class="flex justify-between text-xs"><span>Analyzing Document</span><span
+                  class="text-primary-container">84%</span></div>
+              <div class="w-full h-1.5 bg-white/10 rounded-full overflow-hidden">
+                <div class="w-[84%] h-full bg-primary-container"></div>
+              </div>
+            </div>
+            <div class="flex items-center gap-3">
+              <span class="material-symbols-outlined text-green-400 text-lg"
+                data-icon="check_circle">check_circle</span>
+              <span class="text-sm font-medium">Neural Engine initialized</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <span class="material-symbols-outlined text-green-400 text-lg"
+                data-icon="check_circle">check_circle</span>
+              <span class="text-sm font-medium">Contextual mapping complete</span>
+            </div>
+            <div class="p-4 bg-white/5 rounded-xl border border-white/5">
+              <p class="text-xs text-white/60 mb-2 font-mono">// Output recommendation</p>
+              <p class="text-sm">"Strategy optimized for Lagos logistics corridor based on real-time traffic data..."
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Right: Copy -->
+      <div class="w-full md:w-1/2">
+        <span
+          class="bg-primary-container text-white px-4 py-1 rounded-full text-[10px] font-bold tracking-widest uppercase mb-6 inline-block">AI
+          SERVICES</span>
+        <h2 class="font-headline font-bold text-4xl md:text-5xl text-on-background mb-8 leading-tight">Next-Gen
+          Intelligence for African Enterprise.</h2>
+        <p class="text-on-surface-variant text-lg mb-10 leading-relaxed">
+          We don't just use AI; we build tailored models that understand the nuances of your industry and region.
+        </p>
+        <button
+          class="bg-primary text-white px-8 py-4 rounded-full font-bold flex items-center gap-3 hover:scale-95 transition-transform">
+          Book Free AI Assessment <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+        </button>
+      </div>
+    </div>
+  </section>
+  <!-- Social Proof Mosaic -->
+  <section class="py-32 px-8 md:px-20 max-w-[1440px] mx-auto relative overflow-hidden">
+    <div class="relative z-10">
+      <h2 class="font-headline font-bold text-5xl md:text-[56px] text-on-background max-w-2xl leading-[1.1]">
+        Join the <span class="text-primary italic">Community</span> of Nigerian Tech Visionaries.
+      </h2>
+    </div>
+    <!-- Overlapping Circles -->
+    <img
+      class="absolute top-10 right-20 w-[120px] h-[120px] rounded-full object-cover shadow-xl hidden md:block border-4 border-white"
+      alt="Nigerian professional smiling"
+      src="https://lh3.googleusercontent.com/aida-public/AB6AXuCsy_L7SZtD52o227duDLre9SFAwTIjaDbEBC6vC7_UpOwtUPFu-vQnJb72ObazHAEYzQx8Lpcg0o4xlYkMRTpXA54bDQDs6jCIiK4XEnP0vfCYXlst1teTsshwB-Ip97mKSxJ_Ly-cjvVgLatyqRvop9JiCAvLtaqqLaBSCyHjuDmKlyNXyhtBp6l9jUP_E6oLaTGJOprZSFHbWLvrKeUseNBxndMZumYJg604ijD5oCcfIJeJkwxk4E0wJ7CBEGneZDavkMl1g7dF" />
+    <img
+      class="absolute bottom-10 right-60 w-[96px] h-[96px] rounded-full object-cover shadow-xl hidden lg:block border-4 border-white"
+      alt="Tech leader headshot"
+      src="https://lh3.googleusercontent.com/aida-public/AB6AXuAgq4cII15bRsjP0ZSERYRApURiv8FiP2i9JQE-yauuI--Iyvyx-Pr8XJ1SHD01RZ1Lk7RUTKSRbNvrrLzjC-4dpy-WapSPAel8RRAsLZWEZjuxLdjktPjmQ78yof1dcsFrVdk0RBzZmLC8mb8XUwxLUxd0Hnvts3FZlpjZtfJIJUlv57Ng8Zvc5TeIiEV1YEHrpZy3NNQCAgFt4DmU78kD0I4XVBzAP-UjToJQpRhi500Nr4TAvzXZW_QsDEE7PfwQ48OrRtOL2rZw" />
+    <img
+      class="absolute top-40 right-[400px] w-[80px] h-[80px] rounded-full object-cover shadow-xl hidden lg:block border-4 border-white"
+      alt="Startup founder portrait"
+      src="https://lh3.googleusercontent.com/aida-public/AB6AXuA7VcL3LpVpdC7qEpjvEjuDFV3RGPrfsdutAvxZHYe2osEiHIJ_RmAp0_XHWmoadTDTGNJ_L1sdnKRDgyq5sxsBAEKGfLxjTsYprtYlnoRv4jvONHZMmiIH-xKhac_9Y-TYGghVY4B3HQf9PDBKI1Dy80EJ2CBkCX2eGaPc9cvRfldQ1uxEFshz_RFeSXSqYxWl31OEV0ATH6row5ex2nCSVCOEo8KzBw-SNO9cvkKvMEeh7_ZAvY919UzBUaQy4sAqiipHnnaHsx5s" />
+  </section>
+  <!-- FAQ Section -->
+  <section class="bg-[#F8FAFC] py-32 px-8 md:px-20">
+    <div class="max-w-[1440px] mx-auto">
+      <h2 class="font-headline font-bold text-4xl mb-16">Common Questions</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6">
+        <!-- FAQ Item 1 -->
+        <div
+          class="bg-white p-6 rounded-2xl border border-gray-100 flex justify-between items-center group cursor-pointer hover:border-primary/30 transition-colors">
+          <span class="font-bold text-lg">What industries do you specialize in?</span>
+          <span class="material-symbols-outlined text-primary" data-icon="add">add</span>
+        </div>
+        <!-- FAQ Item 2 -->
+        <div
+          class="bg-white p-6 rounded-2xl border border-gray-100 flex justify-between items-center group cursor-pointer hover:border-primary/30 transition-colors">
+          <span class="font-bold text-lg">Are your certifications globally recognized?</span>
+          <span class="material-symbols-outlined text-primary" data-icon="add">add</span>
+        </div>
+        <!-- FAQ Item 3 -->
+        <div
+          class="bg-white p-6 rounded-2xl border border-gray-100 flex justify-between items-center group cursor-pointer hover:border-primary/30 transition-colors">
+          <span class="font-bold text-lg">How long is the AI implementation cycle?</span>
+          <span class="material-symbols-outlined text-primary" data-icon="add">add</span>
+        </div>
+        <!-- FAQ Item 4 -->
+        <div
+          class="bg-white p-6 rounded-2xl border border-gray-100 flex justify-between items-center group cursor-pointer hover:border-primary/30 transition-colors">
+          <span class="font-bold text-lg">Do you offer post-deployment support?</span>
+          <span class="material-symbols-outlined text-primary" data-icon="add">add</span>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Final CTA Section -->
+  <section class="pt-40 pb-32 px-8 md:px-20 relative">
+    <div class="bg-[#1E40AF] rounded-[3rem] px-8 py-20 text-center relative overflow-visible">
+      <!-- Bleeding Boardroom Photo -->
+      <div
+        class="absolute -top-12 left-1/2 -translate-x-1/2 w-4/5 max-w-2xl h-64 rounded-2xl overflow-hidden shadow-2xl hidden md:block">
+        <img class="w-full h-full object-cover" alt="Corporate boardroom meeting with diverse tech leaders"
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuCcOKePv7XYYXEsQAXFEFiR-UPJ8RIikMiaZA8Mxdwku_bIQ78DVpIMZjOCRPHUEQrXjXS7nAfIaq4FfjZSSujt-PYbV5_d9ImuI35TAndy4Lrdn38N26kQonl-3BumwYffXpiSl3ppPGwccus9vP5oxZ1X7cB3wnsdsTATCMPxMCNvkWxLFMtQripvKJtACEvXQjF-0K71Mq7PQJheZjfoOUW77DeP6cnLrsuJwv8WEqiASxUdcG69AtrjbMg2Jr3fIy2CoPNV9DTJ" />
+      </div>
+      <div class="mt-40 md:mt-52">
+        <h2 class="font-headline font-bold text-4xl md:text-6xl text-white mb-10 max-w-4xl mx-auto leading-tight">Ready
+          to build the future of Nigerian tech?</h2>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <button
+            class="bg-white text-[#1E40AF] px-10 py-4 rounded-full font-bold hover:scale-105 transition-transform">Schedule
+            a Consultation</button>
+          <button
+            class="bg-transparent border-2 border-white text-white px-10 py-4 rounded-full font-bold hover:bg-white/10 transition-colors">View
+            All Services</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Footer -->
+  <footer class="bg-[#1A3A6B] dark:bg-slate-950 text-white pt-20 pb-10 font-['Plus_Jakarta_Sans']">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-8 md:px-20 w-full mb-20">
+      <div class="col-span-1 md:col-span-1">
+        <div class="text-3xl font-black text-white mb-6">Corespec</div>
+        <p class="text-white/60 text-sm leading-relaxed">The pinnacle of technical training and AI solutions in Nigeria.
+          Empowering the next generation of global tech leaders.</p>
+      </div>
+      <div>
+        <h4 class="font-bold mb-6">Company</h4>
+        <ul class="space-y-4 text-white/60 text-sm">
+          <li><a class="hover:text-blue-400 transition-colors" href="about.html">About Us</a></li>
+          <li><a class="hover:text-blue-400 transition-colors" href="process.html">Our Process</a></li>
+          <li><a class="hover:text-blue-400 transition-colors" href="portfolio.html">Portfolio</a></li>
+          <li><a class="hover:text-blue-400 transition-colors" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-bold mb-6">Services</h4>
+        <ul class="space-y-4 text-white/60 text-sm">
+          <li><a class="hover:text-blue-400 transition-colors" href="services-ai.html">AI Implementation</a></li>
+          <li><a class="hover:text-blue-400 transition-colors" href="services-cloud.html">Cloud Migration</a></li>
+          <li><a class="hover:text-blue-400 transition-colors" href="services-cybersecurity.html">Cybersecurity</a></li>
+          <li><a class="hover:text-blue-400 transition-colors" href="services-engineering.html">Engineering
+              Consultancy</a></li>
+          <li><a class="hover:text-blue-400 transition-colors" href="services-erp.html">ERP Solutions</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-bold mb-6">Legal</h4>
+        <ul class="space-y-4 text-white/60 text-sm">
+          <li><a class="hover:text-blue-400 transition-opacity" href="privacy.html">Privacy Policy</a></li>
+          <li><a class="hover:text-blue-400 transition-opacity" href="#terms">Terms of Service</a></li>
+          <li><a class="hover:text-blue-400 transition-opacity" href="design-system.html">Design System</a></li>
+        </ul>
+      </div>
+    </div>
+    <div
+      class="border-t border-white/10 px-8 md:px-20 pt-10 flex flex-col md:flex-row justify-between items-center gap-4">
+      <p class="text-white/40 text-xs">© 2024 Corespec. All rights reserved.</p>
+      <div class="flex gap-6">
+        <a class="text-white/40 hover:text-white transition-colors" href="#"><span
+            class="material-symbols-outlined text-sm">share</span></a>
+        <a class="text-white/40 hover:text-white transition-colors" href="#"><span
+            class="material-symbols-outlined text-sm">alternate_email</span></a>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

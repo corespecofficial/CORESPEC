@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Our Process | Corespec Engineering</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "background": "#f7f9fb",
+            "on-secondary": "#ffffff",
+            "on-tertiary-fixed-variant": "#004c6e",
+            "on-primary-container": "#eeefff",
+            "on-surface": "#191c1e",
+            "inverse-surface": "#2d3133",
+            "surface-variant": "#e0e3e5",
+            "secondary-container": "#a7c4fe",
+            "error": "#ba1a1a",
+            "outline-variant": "#c3c6d7",
+            "surface-bright": "#f7f9fb",
+            "primary-fixed": "#dbe1ff",
+            "on-tertiary-container": "#e4f2ff",
+            "tertiary-fixed-dim": "#89ceff",
+            "surface-container-low": "#f2f4f6",
+            "on-error-container": "#93000a",
+            "primary-container": "#2563eb",
+            "surface-container-highest": "#e0e3e5",
+            "surface-container": "#eceef0",
+            "on-secondary-container": "#335083",
+            "surface-container-high": "#e6e8ea",
+            "on-surface-variant": "#434655",
+            "on-secondary-fixed-variant": "#284678",
+            "on-background": "#191c1e",
+            "outline": "#737686",
+            "tertiary-fixed": "#c9e6ff",
+            "on-primary-fixed": "#00174b",
+            "surface-container-lowest": "#ffffff",
+            "on-error": "#ffffff",
+            "tertiary-container": "#0074a6",
+            "secondary-fixed-dim": "#abc7ff",
+            "inverse-on-surface": "#eff1f3",
+            "inverse-primary": "#b4c5ff",
+            "error-container": "#ffdad6",
+            "surface-dim": "#d8dadc",
+            "on-primary-fixed-variant": "#003ea8",
+            "surface-tint": "#0053db",
+            "secondary-fixed": "#d7e2ff",
+            "on-primary": "#ffffff",
+            "primary-fixed-dim": "#b4c5ff",
+            "tertiary": "#005a82",
+            "surface": "#f7f9fb",
+            "primary": "#004ac6",
+            "on-tertiary-fixed": "#001e2f",
+            "on-tertiary": "#ffffff",
+            "on-secondary-fixed": "#001b3f",
+            "secondary": "#415e91"
+          },
+          fontFamily: {
+            "headline": ["Space Grotesk"],
+            "body": ["Plus Jakarta Sans"],
+            "label": ["Plus Jakarta Sans"]
+          },
+          borderRadius: { "DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px" },
+        },
+      },
+    }
+  </script>
+  <style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+
+    .editorial-text-stroke {
+      -webkit-text-stroke: 1px #e0e3e5;
+      color: transparent;
+    }
+  </style>
+</head>
+
+<body class="bg-surface-container-lowest font-body text-on-surface antialiased">
+  <!-- TopNavBar -->
+  <nav
+    class="fixed top-0 left-0 right-0 z-50 flex justify-between items-center px-8 py-3 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl rounded-full mt-6 mx-auto max-w-5xl border border-slate-100/20 shadow-[0_8px_48_rgba(37,99,235,0.15)]">
+    <a href="index.html"
+      class="text-2xl font-black text-blue-600 dark:text-blue-400 font-['Space_Grotesk'] tracking-tight">Corespec</a>
+    <div class="hidden md:flex gap-8 items-center">
+      <div class="relative group">
+        <button
+          class="flex items-center gap-1 text-slate-600 dark:text-slate-400 font-medium font-['Space_Grotesk'] tracking-tight hover:text-blue-500 transition-colors py-2">
+          Services <span class="material-symbols-outlined text-[18px]">keyboard_arrow_down</span>
+        </button>
+        <div
+          class="absolute top-full left-0 mt-1 w-64 bg-white dark:bg-slate-900 rounded-2xl shadow-xl border border-slate-100/10 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 p-4 space-y-2 z-50">
+          <a href="services-ai.html"
+            class="block p-3 rounded-xl hover:bg-blue-50 dark:hover:bg-blue-900/30 transition-colors">
+            <p class="font-bold text-sm text-slate-900 dark:text-white">AI Implementation</p>
+            <p class="text-xs text-slate-500">Custom ML & LLM pipelines</p>
+          </a>
+          <a href="services-cloud.html"
+            class="block p-3 rounded-xl hover:bg-blue-50 dark:hover:bg-blue-900/30 transition-colors">
+            <p class="font-bold text-sm text-slate-900 dark:text-white">Cloud Migration</p>
+            <p class="text-xs text-slate-500">Scalable cloud infrastructure</p>
+          </a>
+          <a href="services-cybersecurity.html"
+            class="block p-3 rounded-xl hover:bg-blue-50 dark:hover:bg-blue-900/30 transition-colors">
+            <p class="font-bold text-sm text-slate-900 dark:text-white">Cybersecurity</p>
+            <p class="text-xs text-slate-500">Threat mitigation & training</p>
+          </a>
+          <a href="services-engineering.html"
+            class="block p-3 rounded-xl hover:bg-blue-50 dark:hover:bg-blue-900/30 transition-colors">
+            <p class="font-bold text-sm text-slate-900 dark:text-white">Engineering Consultancy</p>
+            <p class="text-xs text-slate-500">Strategic technical direction</p>
+          </a>
+          <a href="services-erp.html"
+            class="block p-3 rounded-xl hover:bg-blue-50 dark:hover:bg-blue-900/30 transition-colors">
+            <p class="font-bold text-sm text-slate-900 dark:text-white">ERP Solutions</p>
+            <p class="text-xs text-slate-500">Business logic automation</p>
+          </a>
+        </div>
+      </div>
+      <a class="text-slate-600 dark:text-slate-400 font-medium font-['Space_Grotesk'] tracking-tight hover:text-blue-500 transition-colors"
+        href="portfolio.html">Portfolio</a>
+      <a class="text-slate-600 dark:text-slate-400 font-medium font-['Space_Grotesk'] tracking-tight hover:text-blue-500 transition-colors"
+        href="process.html">Process</a>
+      <a class="text-slate-600 dark:text-slate-400 font-medium font-['Space_Grotesk'] tracking-tight hover:text-blue-500 transition-colors"
+        href="about.html">About</a>
+      <a class="text-slate-600 dark:text-slate-400 font-medium font-['Space_Grotesk'] tracking-tight hover:text-blue-500 transition-colors"
+        href="insights.html">Insights</a>
+    </div>
+    <a href="contact.html"
+      class="bg-primary-container text-on-primary-container px-6 py-2 rounded-full font-bold hover:scale-95 transition-all duration-200">Book
+      a Call</a>
+  </nav>
+  <main class="pt-32">
+    <!-- Hero Section -->
+    <section class="max-w-7xl mx-auto px-8 mb-32">
+      <div class="grid grid-cols-12 gap-8 items-end">
+        <div class="col-span-12 md:col-span-8">
+          <span class="label-md uppercase tracking-[0.2em] text-primary font-bold mb-6 block">Our Methodology</span>
+          <h1
+            class="text-6xl md:text-8xl font-headline font-bold text-on-surface tracking-tighter leading-[0.9] max-w-2xl">
+            How We Deliver <span class="text-primary-container">Precision.</span>
+          </h1>
+        </div>
+        <div class="col-span-12 md:col-span-4 pb-4">
+          <p class="text-lg text-on-surface-variant leading-relaxed font-light">
+            Engineering excellence isn't accidental. It's the result of a rigorous, four-stage framework designed to
+            transform complex challenges into high-performance solutions.
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- Process Strips -->
+    <div class="space-y-0">
+      <!-- Step 01 -->
+      <section class="relative min-h-[716px] flex items-center overflow-hidden border-t border-outline-variant/10">
+        <div
+          class="absolute left-10 top-1/2 -translate-y-1/2 text-[24rem] font-headline font-black editorial-text-stroke opacity-30 pointer-events-none select-none">
+          01</div>
+        <div class="max-w-7xl mx-auto px-8 w-full relative z-10 grid grid-cols-12 gap-8 items-center">
+          <div class="col-span-12 md:col-span-5 order-2 md:order-1">
+            <div
+              class="bg-surface-container-lowest/40 backdrop-blur-xl p-10 rounded-xl shadow-[0_8px_48px_rgba(37,99,235,0.1)] border border-white/20">
+              <h2 class="text-4xl font-headline font-bold text-on-surface mb-6">Discovery &amp; Strategy</h2>
+              <p class="text-on-surface-variant text-lg mb-8 leading-relaxed">
+                We begin by deep-diving into your business logic and technical constraints. This phase defines the
+                blueprint for scalability and long-term success.
+              </p>
+              <ul class="space-y-4">
+                <li class="flex items-center gap-3 text-primary font-medium">
+                  <span class="material-symbols-outlined text-sm">check_circle</span>
+                  <span>Stakeholder Alignment Workshops</span>
+                </li>
+                <li class="flex items-center gap-3 text-primary font-medium">
+                  <span class="material-symbols-outlined text-sm">check_circle</span>
+                  <span>Technical Audit &amp; Feasibility</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-span-12 md:col-span-7 order-1 md:order-2">
+            <div class="relative group">
+              <div
+                class="absolute -inset-4 bg-primary/5 rounded-xl blur-2xl group-hover:bg-primary/10 transition-colors">
+              </div>
+              <img alt="Strategic planning session"
+                class="relative rounded-xl w-full h-[500px] object-cover shadow-2xl grayscale hover:grayscale-0 transition-all duration-700"
+                alt="Strategic planning session with diverse engineering team"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDB928xGlx0QjXE-y-9r74WDEW197ezfWrY4WfHnMVkPb0GljAvtBcAIsPcMhKTygBbiMJ9NcvQw__h6exq4M3I2_sGS_J8fQSB8CnPdc-6sQ08JzWkhJu8uTp_CZ0Xga3dRUcJkscN0_2yZ_40seHN1j-ZnnI45vQUOUZGtzl3SJ8-NfmaZcBxV8upPsjip9adDVSf0tXsR67-C3WKZtFVmGGqEUnKTXpou3hcJQsEnfZARaYYsY3DA_vnanwu2xizWT33a48dnBQJ" />
+              <!-- Floating UI Element -->
+              <div
+                class="absolute -bottom-10 -left-10 bg-white p-6 rounded-xl shadow-2xl hidden md:block max-w-xs border border-surface-container-high">
+                <div class="flex items-center gap-4 mb-4">
+                  <div class="w-10 h-10 rounded-full bg-tertiary-fixed flex items-center justify-center">
+                    <span class="material-symbols-outlined text-on-tertiary-fixed">lightbulb</span>
+                  </div>
+                  <span class="font-headline font-bold">Insight Engine</span>
+                </div>
+                <p class="text-sm text-on-surface-variant">Converting raw requirements into actionable architectural
+                  sprints.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Step 02 -->
+      <section
+        class="relative min-h-[716px] flex items-center overflow-hidden bg-surface-container-low border-t border-outline-variant/10">
+        <div
+          class="absolute right-10 top-1/2 -translate-y-1/2 text-[24rem] font-headline font-black editorial-text-stroke opacity-30 pointer-events-none select-none">
+          02</div>
+        <div class="max-w-7xl mx-auto px-8 w-full relative z-10 grid grid-cols-12 gap-8 items-center">
+          <div class="col-span-12 md:col-span-7">
+            <div class="relative group">
+              <div
+                class="absolute -inset-4 bg-primary/5 rounded-xl blur-2xl group-hover:bg-primary/10 transition-colors">
+              </div>
+              <img alt="Engineering and design workflow"
+                class="relative rounded-xl w-full h-[500px] object-cover shadow-2xl transition-all duration-700"
+                alt="Professional engineer working on complex digital blueprint"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuANI4Y3g_FSKawAAibTjHUYjbPA2nLutyE2KGjRtco3d72GZQfX8F-fAFzIc-XWGaZ5qhAX7sJ3zKdc7BxdM5m-3-T7Q3TLeO1wBSlhqbDM-k4BxtPxD4Espt5uP-4NR6X39hZNoZfg1enyc3h0dnTF48KsFwBo3XVaK_vi5ZeEB_rQnxIaes2exVv3JkkaC3b6le08-IMQ5oKB0hjCeYNL3jWq-WMVfJOddJDU5svIHcXmaZSDF1GM_rLP4gIlyMFWedIqz4iFb_y2" />
+            </div>
+          </div>
+          <div class="col-span-12 md:col-span-5">
+            <div class="bg-surface-container-lowest p-10 rounded-xl shadow-[0_8px_48px_rgba(37,99,235,0.1)]">
+              <h2 class="text-4xl font-headline font-bold text-on-surface mb-6">Design &amp; Engineering</h2>
+              <p class="text-on-surface-variant text-lg mb-8 leading-relaxed">
+                Our engineers and designers work in tight feedback loops. We build modular, resilient systems that look
+                as good as they perform.
+              </p>
+              <div class="flex flex-wrap gap-3">
+                <span class="px-4 py-2 bg-surface-container-high rounded-full text-sm font-medium">Architecture
+                  Design</span>
+                <span class="px-4 py-2 bg-surface-container-high rounded-full text-sm font-medium">UI/UX Systems</span>
+                <span class="px-4 py-2 bg-surface-container-high rounded-full text-sm font-medium">Prototype
+                  Testing</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Step 03 -->
+      <section class="relative min-h-[716px] flex items-center overflow-hidden border-t border-outline-variant/10">
+        <div
+          class="absolute left-10 top-1/2 -translate-y-1/2 text-[24rem] font-headline font-black editorial-text-stroke opacity-30 pointer-events-none select-none">
+          03</div>
+        <div class="max-w-7xl mx-auto px-8 w-full relative z-10 grid grid-cols-12 gap-8 items-center">
+          <div class="col-span-12 md:col-span-5 order-2 md:order-1">
+            <div
+              class="bg-surface-container-lowest/60 backdrop-blur-xl p-10 rounded-xl shadow-[0_8px_48px_rgba(37,99,235,0.1)]">
+              <h2 class="text-4xl font-headline font-bold text-on-surface mb-6">Implementation</h2>
+              <p class="text-on-surface-variant text-lg mb-8 leading-relaxed">
+                Code is deployed with rigorous QA standards. We utilize CI/CD pipelines to ensure seamless transitions
+                from development to live production environments.
+              </p>
+              <div class="flex items-center gap-6">
+                <div class="text-center">
+                  <div class="text-3xl font-headline font-black text-primary">99.9%</div>
+                  <div class="text-xs uppercase tracking-widest text-on-surface-variant">Uptime Target</div>
+                </div>
+                <div class="w-[1px] h-10 bg-outline-variant"></div>
+                <div class="text-center">
+                  <div class="text-3xl font-headline font-black text-primary">0</div>
+                  <div class="text-xs uppercase tracking-widest text-on-surface-variant">Critical Bugs</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-span-12 md:col-span-7 order-1 md:order-2">
+            <div class="relative group">
+              <img alt="Futuristic robotic arm calibration in a modern lab"
+                class="relative rounded-xl w-full h-[500px] object-cover shadow-2xl grayscale hover:grayscale-0 transition-all duration-700"
+                alt="High-end editorial photography of a futuristic robotic arm being calibrated by an engineer in a clean, modern white laboratory"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDga3_oUv8ErsdNUlfXFwqsUT6-3jLyCBiAe5UbXzklMR2QkimppKS7hPQQKaBEKtQ00SOd-sVQ7m95eDTw0TWIzTrc-ebLGMgaoXMiNOrfK3K4Zo74rJrkjZ_WQUjbw80yERcnutZmND1v1RX6MQk5ibnCmEH2TRV1vIU2yCTAsjeuGqc5mzR-zGOJYOZZiW3iZnPVjYpcqcUkHhQbLxi_g03XJmohWiN8K5H8ekuhk1uWzLnEvjQlsMVcMsYJ6QhVOLTJJ6lIZ1iX" />
+              <div
+                class="absolute top-10 -right-10 bg-primary-container p-6 rounded-xl shadow-2xl text-on-primary-container hidden md:block">
+                <span class="material-symbols-outlined text-4xl mb-4">terminal</span>
+                <div class="text-sm font-mono">Deploying v2.4.0...<br />Build: SUCCESS</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Step 04 -->
+      <section
+        class="relative min-h-[716px] flex items-center overflow-hidden bg-on-background border-t border-white/10">
+        <div
+          class="absolute right-10 top-1/2 -translate-y-1/2 text-[24rem] font-headline font-black text-white/5 pointer-events-none select-none">
+          04</div>
+        <div class="max-w-7xl mx-auto px-8 w-full relative z-10 grid grid-cols-12 gap-8 items-center">
+          <div class="col-span-12 md:col-span-7">
+            <div class="grid grid-cols-2 gap-4">
+              <img alt="Data visualization" class="rounded-xl w-full h-[300px] object-cover"
+                alt="High-end data analytics dashboard visualization"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuADG3ACtgUN1Kpn7llln6A4FhMtAIaCOo-n9NAaIIZPCOBJhkGpnrUeLwlXXtW7KJ9Sffj3PajiAtDUU9ZYlFPpw94BNatxylrx7LTN7colqm0hKq-vY-Qi8bSschHSDaVou2dzYmjW6U7en0xae_GCpzOSq9D_SD4YRRrvQMyRTdjgHiQipdOmqPgrHvH3nKf_FzKtkkDp9cxXwLdFpD27xDmEcw6oUR6YNjoX48IOUJXWCAi7znL7QBjmNgNw98rDQXbBmgjwFnvN" />
+              <img alt="Analytics" class="rounded-xl w-full h-[300px] object-cover mt-12"
+                alt="Clean corporate analytics screen"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAfk01WhBMZCJzPeadQuyEg0ian4pTb17x-HjIUuU18CaSIQWkf44feKaGtr4wiIRwL7wCwlBZaI4GOzrhOGK_ydVHmmo6Z8NxW6XAHjsmhfF_KiT1Cq4yPDDF3RRPvnbQotoJGGIXzNHCjYzsVIuPRVCwEtrHBJJHrQ_xqrdjduZpnyihsIIesXQI7fCl47ZUq7m_dW98p_18a0Dp1eJ-MzEAHOIxFhZaJXybcCwpP8VVBmjd-HsWVRTGqiX5KqJ1lvTbDPcMntbbF" />
+            </div>
+          </div>
+          <div class="col-span-12 md:col-span-5">
+            <div class="bg-white/5 backdrop-blur-md p-10 rounded-xl border border-white/10">
+              <h2 class="text-4xl font-headline font-bold text-white mb-6">Optimization</h2>
+              <p class="text-slate-400 text-lg mb-8 leading-relaxed">
+                Post-launch, we monitor, refine, and optimize. Through data-driven insights, we ensure your solution
+                continues to lead the market.
+              </p>
+              <button class="flex items-center gap-2 text-white font-bold hover:gap-4 transition-all">
+                View Case Studies <span class="material-symbols-outlined">arrow_forward</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <!-- Social Proof Badges -->
+    <section class="py-32 bg-surface-container-lowest">
+      <div class="max-w-7xl mx-auto px-8">
+        <div class="text-center mb-16">
+          <span class="label-md uppercase tracking-widest text-on-surface-variant">Trusted by Industry Leaders</span>
+        </div>
+        <div
+          class="flex flex-wrap justify-center items-center gap-12 md:gap-24 opacity-50 grayscale hover:grayscale-0 transition-all duration-500">
+          <div class="text-2xl font-black font-headline tracking-tighter">TECHCORP</div>
+          <div class="text-2xl font-black font-headline tracking-tighter">NEXUS_SYS</div>
+          <div class="text-2xl font-black font-headline tracking-tighter">QUANTUM</div>
+          <div class="text-2xl font-black font-headline tracking-tighter">GLOBAL_ENG</div>
+          <div class="text-2xl font-black font-headline tracking-tighter">VANTAGE</div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <!-- Footer -->
+  <footer class="bg-[#1A3A6B] dark:bg-slate-950 text-white pt-20 pb-10 font-['Plus_Jakarta_Sans']">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-8 md:px-20 w-full mb-20">
+      <div class="col-span-1 md:col-span-1">
+        <div class="text-3xl font-black text-white mb-6">Corespec</div>
+        <p class="text-white/60 text-sm leading-relaxed">The pinnacle of technical training and AI solutions in Nigeria.
+          Empowering the next generation of global tech leaders.</p>
+      </div>
+      <div>
+        <h4 class="font-bold mb-6">Company</h4>
+        <ul class="space-y-4 text-white/60 text-sm">
+          <li><a class="hover:text-blue-400 transition-colors" href="about.html">About Us</a></li>
+          <li><a class="hover:text-blue-400 transition-colors" href="process.html">Our Process</a></li>
+          <li><a class="hover:text-blue-400 transition-colors" href="portfolio.html">Portfolio</a></li>
+          <li><a class="hover:text-blue-400 transition-colors" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-bold mb-6">Services</h4>
+        <ul class="space-y-4 text-white/60 text-sm">
+          <li><a class="hover:text-blue-400 transition-colors" href="services-ai.html">AI Implementation</a></li>
+          <li><a class="hover:text-blue-400 transition-colors" href="services-cloud.html">Cloud Migration</a></li>
+          <li><a class="hover:text-blue-400 transition-colors" href="services-cybersecurity.html">Cybersecurity</a></li>
+          <li><a class="hover:text-blue-400 transition-colors" href="services-engineering.html">Engineering
+              Consultancy</a></li>
+          <li><a class="hover:text-blue-400 transition-colors" href="services-erp.html">ERP Solutions</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-bold mb-6">Legal</h4>
+        <ul class="space-y-4 text-white/60 text-sm">
+          <li><a class="hover:text-blue-400 transition-opacity" href="privacy.html">Privacy Policy</a></li>
+          <li><a class="hover:text-blue-400 transition-opacity" href="#terms">Terms of Service</a></li>
+          <li><a class="hover:text-blue-400 transition-opacity" href="design-system.html">Design System</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="border-t border-white/10 px-8 md:px-20 pt-10 flex flex-col md:row justify-between items-center gap-6">
+      <p class="text-white/40 text-xs">© 2024 Corespec. All rights reserved.</p>
+      <div class="flex gap-6">
+        <a class="text-white/40 hover:text-white transition-colors" href="#"><span
+            class="material-symbols-outlined text-sm">share</span></a>
+        <a class="text-white/40 hover:text-white transition-colors" href="#"><span
+            class="material-symbols-outlined text-sm">alternate_email</span></a>
+      </div>
+    </div>
+  </footer>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+      const navLinks = document.querySelectorAll('nav a');
+      navLinks.forEach(link => {
+        if (link.getAttribute('href') === currentPath) {
+          link.classList.remove('text-slate-600', 'dark:text-slate-400', 'font-medium');
+          link.classList.add('text-blue-600', 'dark:text-blue-400', 'font-bold');
+          const parentGroup = link.closest('.relative.group');
+          if (parentGroup) {
+            const serviceBtn = parentGroup.querySelector('button');
+            serviceBtn.classList.remove('text-slate-600', 'dark:text-slate-400', 'font-medium');
+            serviceBtn.classList.add('text-blue-600', 'dark:text-blue-400', 'font-bold');
+          }
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>

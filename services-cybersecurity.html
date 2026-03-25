@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Corespec | Lagos' Leading Cybersecurity Training</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "on-surface-variant": "#434655",
+            "on-error": "#ffffff",
+            "error": "#ba1a1a",
+            "on-secondary-fixed-variant": "#284678",
+            "on-secondary-fixed": "#001b3f",
+            "surface-tint": "#0053db",
+            "surface-container-highest": "#e0e3e5",
+            "on-background": "#1A3A6B",
+            "surface-container-low": "#f2f4f6",
+            "background": "#ffffff",
+            "surface-container-lowest": "#ffffff",
+            "secondary-fixed-dim": "#abc7ff",
+            "primary": "#2563EB",
+            "on-surface": "#191c1e",
+            "on-primary": "#ffffff",
+            "surface-container": "#eceef0",
+            "secondary": "#415e91",
+            "on-tertiary-container": "#e4f2ff",
+            "outline-variant": "#c3c6d7",
+            "surface-container-high": "#e6e8ea",
+            "on-secondary-container": "#335083",
+            "tertiary-fixed": "#c9e6ff",
+            "inverse-surface": "#2d3133",
+            "primary-fixed": "#dbe1ff",
+            "on-primary-container": "#eeefff",
+            "error-container": "#ffdad6",
+            "surface-bright": "#f7f9fb",
+            "secondary-fixed": "#d7e2ff",
+            "tertiary-container": "#0074a6",
+            "on-error-container": "#93000a",
+            "outline": "#737686",
+            "secondary-container": "#a7c4fe",
+            "primary-fixed-dim": "#b4c5ff",
+            "tertiary": "#005a82",
+            "on-secondary": "#ffffff",
+            "on-tertiary": "#ffffff",
+            "surface-variant": "#e0e3e5",
+            "inverse-primary": "#b4c5ff",
+            "inverse-on-surface": "#eff1f3",
+            "on-tertiary-fixed": "#001e2f",
+            "on-primary-fixed": "#00174b",
+            "primary-container": "#2563eb",
+            "surface-dim": "#d8dadc",
+            "on-tertiary-fixed-variant": "#004c6e",
+            "on-primary-fixed-variant": "#003ea8",
+            "tertiary-fixed-dim": "#89ceff",
+            "surface": "#f7f9fb"
+          },
+          fontFamily: {
+            "headline": ["Space Grotesk"],
+            "body": ["Plus Jakarta Sans"],
+            "label": ["Plus Jakarta Sans"]
+          },
+          borderRadius: { "DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px" },
+        },
+      },
+    }
+  </script>
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: #ffffff;
+    }
+
+    h1,
+    h2,
+    h3 {
+      font-family: 'Space Grotesk', sans-serif;
+    }
+
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+
+    .glass-card {
+      -webkit-backdrop-filter: blur(20px);
+      backdrop-filter: blur(20px);
+      background: rgba(255, 255, 255, 0.85);
+    }
+
+    .bleed-container {
+      margin-right: -10vw;
+    }
+  </style>
+</head>
+
+<body class="text-on-background selection:bg-primary/20">
+  <!-- TopNavBar -->
+  <nav
+    class="fixed top-0 left-0 right-0 z-50 flex justify-between items-center px-8 py-3 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl rounded-full mt-6 mx-auto max-w-5xl border border-slate-100/20 shadow-[0_8px_48_rgba(37,99,235,0.15)]">
+    <a href="index.html"
+      class="text-2xl font-black text-blue-600 dark:text-blue-400 font-['Space_Grotesk'] tracking-tight">Corespec</a>
+    <div class="hidden md:flex gap-8 items-center">
+      <div class="relative group">
+        <button
+          class="flex items-center gap-1 text-slate-600 dark:text-slate-400 font-medium font-['Space_Grotesk'] tracking-tight hover:text-blue-500 transition-colors py-2">
+          Services <span class="material-symbols-outlined text-[18px]">keyboard_arrow_down</span>
+        </button>
+        <div
+          class="absolute top-full left-0 mt-1 w-64 bg-white dark:bg-slate-900 rounded-2xl shadow-xl border border-slate-100/10 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 p-4 space-y-2 z-50">
+          <a href="services-ai.html"
+            class="block p-3 rounded-xl hover:bg-blue-50 dark:hover:bg-blue-900/30 transition-colors">
+            <p class="font-bold text-sm text-slate-900 dark:text-white">AI Implementation</p>
+            <p class="text-xs text-slate-500">Custom ML & LLM pipelines</p>
+          </a>
+          <a href="services-cloud.html"
+            class="block p-3 rounded-xl hover:bg-blue-50 dark:hover:bg-blue-900/30 transition-colors">
+            <p class="font-bold text-sm text-slate-900 dark:text-white">Cloud Migration</p>
+            <p class="text-xs text-slate-500">Scalable cloud infrastructure</p>
+          </a>
+          <a href="services-cybersecurity.html"
+            class="block p-3 rounded-xl hover:bg-blue-50 dark:hover:bg-blue-900/30 transition-colors">
+            <p class="font-bold text-sm text-slate-900 dark:text-white">Cybersecurity</p>
+            <p class="text-xs text-slate-500">Threat mitigation & training</p>
+          </a>
+          <a href="services-engineering.html"
+            class="block p-3 rounded-xl hover:bg-blue-50 dark:hover:bg-blue-900/30 transition-colors">
+            <p class="font-bold text-sm text-slate-900 dark:text-white">Engineering Consultancy</p>
+            <p class="text-xs text-slate-500">Strategic technical direction</p>
+          </a>
+          <a href="services-erp.html"
+            class="block p-3 rounded-xl hover:bg-blue-50 dark:hover:bg-blue-900/30 transition-colors">
+            <p class="font-bold text-sm text-slate-900 dark:text-white">ERP Solutions</p>
+            <p class="text-xs text-slate-500">Business logic automation</p>
+          </a>
+        </div>
+      </div>
+      <a class="text-slate-600 dark:text-slate-400 font-medium font-['Space_Grotesk'] tracking-tight hover:text-blue-500 transition-colors"
+        href="portfolio.html">Portfolio</a>
+      <a class="text-slate-600 dark:text-slate-400 font-medium font-['Space_Grotesk'] tracking-tight hover:text-blue-500 transition-colors"
+        href="process.html">Process</a>
+      <a class="text-slate-600 dark:text-slate-400 font-medium font-['Space_Grotesk'] tracking-tight hover:text-blue-500 transition-colors"
+        href="about.html">About</a>
+      <a class="text-slate-600 dark:text-slate-400 font-medium font-['Space_Grotesk'] tracking-tight hover:text-blue-500 transition-colors"
+        href="insights.html">Insights</a>
+    </div>
+    <a href="contact.html"
+      class="bg-primary-container text-on-primary-container px-6 py-2 rounded-full font-bold hover:scale-95 transition-all duration-200">Book
+      a Call</a>
+  </nav>
+  <main class="overflow-x-hidden">
+    <!-- Hero Section: Editorial Asymmetry -->
+    <section class="relative pt-40 pb-20 md:pt-56 md:pb-32 px-6 md:px-16 lg:px-24">
+      <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <div class="lg:col-span-7 z-10">
+          <span
+            class="inline-block px-4 py-1.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed text-[0.7rem] font-bold tracking-widest uppercase mb-8">Professional
+            Certification</span>
+          <h1
+            class="text-5xl md:text-7xl lg:text-8xl font-black text-on-background leading-[0.9] tracking-tighter mb-10">
+            Lagos' Leading <br /><span class="text-primary">Cybersecurity</span> <br />Training.
+          </h1>
+          <p class="text-lg md:text-xl text-on-surface-variant max-w-xl mb-12 font-medium leading-relaxed">
+            Master the defensive and offensive arts with elite practitioners. We don't just teach tools; we build the
+            next generation of West Africa's security architects.
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <button
+              class="bg-primary text-white rounded-full px-10 py-5 font-bold tracking-tight shadow-lg shadow-primary/20 hover:scale-[1.02] transition-transform">Enroll
+              for Cohort 4</button>
+            <button
+              class="bg-transparent text-primary rounded-full px-8 py-5 font-bold tracking-tight border border-primary/10 hover:bg-surface-container-low transition-colors">Download
+              Syllabus</button>
+          </div>
+        </div>
+        <div class="lg:col-span-5 relative">
+          <div class="aspect-[4/5] bg-surface-container-low rounded-xl overflow-hidden relative shadow-2xl">
+            <img class="w-full h-full object-cover"
+              alt="Modern cybersecurity operations center with blue glowing monitors"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-XH26h3wLs3rbWC-YtAJEQ8OKBKyQ9gslme5bIejgS9IT8vc7VdJ5B20irglvkhqd8EC1ZG1OzJsRnUVFuWXFeaf24ytBMQcvrkJVUvA3uNppFqssKhLOt4gl39NvNxOqi3uDDX7HEjf2Kp2tgO-qL7h1YghTrYtfp6aTbKIVt6AnBXghzppOXOpu1fgh5b41_HFEFN32BtCHx6RfQbrHn4XWqN3eEeWOiDf3RnIv129lmmw1JfsUEhq4WKgvB0Zc3o4gcDZ47_Fd" />
+            <div
+              class="absolute -bottom-10 -left-10 glass-card p-8 rounded-xl border border-white/20 shadow-xl max-w-[280px]">
+              <div class="flex gap-2 mb-4">
+                <span class="material-symbols-outlined text-primary"
+                  style="font-variation-settings: 'FILL' 1;">verified</span>
+                <span class="text-xs font-bold uppercase tracking-widest text-slate-500">Global Standards</span>
+              </div>
+              <p class="font-headline font-bold text-lg text-on-background">98% Certification Pass Rate across all
+                modules.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Coverage: Bento Grid Layout -->
+    <section class="py-24 bg-surface-container-low px-6 md:px-16 lg:px-24">
+      <div class="max-w-7xl mx-auto">
+        <div class="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
+          <div class="max-w-2xl">
+            <span class="text-primary font-bold text-sm tracking-[0.2em] uppercase block mb-4">The Curriculum</span>
+            <h2 class="text-4xl md:text-5xl font-bold tracking-tighter text-on-background">Specialized Coverage for
+              High-Impact Careers.</h2>
+          </div>
+          <p class="text-on-surface-variant md:max-w-xs mb-2">Our modules are mapped directly to global industry demands
+            and the evolving threat landscape.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
+          <!-- CompTIA Security+ -->
+          <div
+            class="md:col-span-2 bg-white p-10 rounded-xl shadow-[0_8px_48px_rgba(37,99,235,0.05)] border border-slate-100 flex flex-col justify-between">
+            <div>
+              <div class="w-14 h-14 rounded-full bg-blue-50 flex items-center justify-center mb-8">
+                <span class="material-symbols-outlined text-primary text-3xl">shield</span>
+              </div>
+              <h3 class="text-2xl font-bold mb-4">CompTIA Security+</h3>
+              <p class="text-on-surface-variant leading-relaxed">The global benchmark for security professionals. Build
+                the core technical foundation required to secure networks, devices, and data.</p>
+            </div>
+            <ul class="mt-12 space-y-3">
+              <li class="flex items-center gap-3 text-sm font-semibold text-on-background">
+                <span class="material-symbols-outlined text-primary text-lg">check_circle</span>
+                Risk Identification &amp; Mitigation
+              </li>
+              <li class="flex items-center gap-3 text-sm font-semibold text-on-background">
+                <span class="material-symbols-outlined text-primary text-lg">check_circle</span>
+                Hybrid Cloud Security
+              </li>
+            </ul>
+          </div>
+          <!-- CEH -->
+          <div class="bg-primary text-white p-10 rounded-xl shadow-xl flex flex-col justify-between">
+            <div>
+              <span class="material-symbols-outlined text-4xl mb-8">psychology</span>
+              <h3 class="text-2xl font-bold mb-4">CEH</h3>
+              <p class="text-blue-100 opacity-90">Certified Ethical Hacker. Master the tools and techniques hackers use
+                to exploit vulnerabilities.</p>
+            </div>
+            <div class="mt-8 pt-8 border-t border-white/10">
+              <span class="text-[0.7rem] uppercase tracking-widest font-bold opacity-70">Master Class</span>
+            </div>
+          </div>
+          <!-- SOC Ops -->
+          <div
+            class="bg-white p-10 rounded-xl shadow-[0_8px_48px_rgba(37,99,235,0.05)] border border-slate-100 flex flex-col justify-between">
+            <div>
+              <span class="material-symbols-outlined text-primary text-4xl mb-8">monitoring</span>
+              <h3 class="text-2xl font-bold mb-4">SOC Ops</h3>
+              <p class="text-on-surface-variant">Real-world Security Operations Center training including SIEM and
+                threat hunting.</p>
+            </div>
+          </div>
+          <!-- Ethical Hacking -->
+          <div
+            class="md:col-span-2 lg:col-span-4 bg-on-background text-white p-12 rounded-xl flex flex-col md:flex-row gap-12 items-center">
+            <div class="flex-1">
+              <h3 class="text-3xl font-bold mb-6">Advanced Ethical Hacking</h3>
+              <p class="text-slate-400 text-lg max-w-xl leading-relaxed">A deep-dive laboratory experience where
+                students perform live penetration tests on simulated corporate environments. From zero-day exploits to
+                advanced persistent threats.</p>
+            </div>
+            <div class="grid grid-cols-2 gap-4 w-full md:w-auto">
+              <div class="bg-white/5 p-6 rounded-lg border border-white/10">
+                <div class="text-3xl font-bold mb-1">150+</div>
+                <div class="text-[0.6rem] uppercase tracking-widest font-bold text-primary">Lab Hours</div>
+              </div>
+              <div class="bg-white/5 p-6 rounded-lg border border-white/10">
+                <div class="text-3xl font-bold mb-1">VAPT</div>
+                <div class="text-[0.6rem] uppercase tracking-widest font-bold text-primary">Certified</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Instructor Profiles: Editorial Carousel Style -->
+    <section class="py-24 px-6 md:px-16 lg:px-24">
+      <div class="max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+          <div class="lg:col-span-4 lg:sticky lg:top-32">
+            <h2 class="text-4xl md:text-5xl font-bold tracking-tighter mb-8">Guided by the <span
+                class="text-primary italic">Elite.</span></h2>
+            <p class="text-lg text-on-surface-variant leading-relaxed mb-8">Our instructors are not just teachers; they
+              are active CISOs, Forensics experts, and security researchers currently defending major infrastructure.
+            </p>
+            <div class="flex gap-4">
+              <div
+                class="w-12 h-12 rounded-full border border-slate-200 flex items-center justify-center cursor-pointer hover:bg-primary hover:text-white transition-all">
+                <span class="material-symbols-outlined">arrow_back</span>
+              </div>
+              <div
+                class="w-12 h-12 rounded-full border border-slate-200 flex items-center justify-center cursor-pointer hover:bg-primary hover:text-white transition-all">
+                <span class="material-symbols-outlined">arrow_forward</span>
+              </div>
+            </div>
+          </div>
+          <div class="lg:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Instructor 1 -->
+            <div class="group">
+              <div
+                class="aspect-[3/4] rounded-xl overflow-hidden mb-6 bg-surface-container-low grayscale group-hover:grayscale-0 transition-all duration-500">
+                <img class="w-full h-full object-cover" alt="Professional male cybersecurity expert in a suit"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZ2CAdf82r-c-qRUK7o5BlMDraaiGoRnoak_5C9zC9_qLRQLemqYKAtL7cJXQ6tJdWwia5e1ikIcA59dLrzGq1lvD1nCOpQspYdKTC1iILEVzb1N-oJ3GtcpldQfGZBln1O8dlwSxVMv5lq4HZgNxZFu4dHdJpbQRbcUX0PBc4CEAzXwM3eUuf4Z33Ml0KHOfD3YygiHkqSsHLYcAiMd-A8aLhjC25gEunZbC2RfeTEy6rgxxyOdqnebYe6gHod6n4qdgaWpeJny1M" />
+              </div>
+              <h4 class="text-2xl font-bold">Dr. Emmanuel Adeyemi</h4>
+              <p class="text-primary font-bold text-sm uppercase tracking-widest mt-1">Lead Instructor, CISSP &amp; CEH
+              </p>
+              <p class="text-on-surface-variant mt-4 text-sm leading-relaxed">Former Head of Security for a leading
+                Tier-1 bank with 15+ years in defensive architectures.</p>
+            </div>
+            <!-- Instructor 2 -->
+            <div class="group md:mt-16">
+              <div
+                class="aspect-[3/4] rounded-xl overflow-hidden mb-6 bg-surface-container-low grayscale group-hover:grayscale-0 transition-all duration-500">
+                <img class="w-full h-full object-cover" alt="Professional female technology leader looking confident"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuBlSP8WcAccM8aqGkx8DQXssLv3iTWsuq8LjPvBh2-F4WqM464TAYn9L4Qmsez3VGX86jVUHu1Wguzm9RdssbTbGQFcM02AuVZsm_8URRLftuTZkfba81rsyVisrF6Y65_o8Yf8VoXxCoIPaI2MgiRuvehohdw43-sAuuY7vuBxtwiCHImSWPCFtTnZESm_MLiY0AxwZb3wpWzaRjL-CElAHKW8dglmj53HbyopbgBtCrhs72sXiR9DGtCi1zGzUoTClf8Z4Gsj8y48" />
+              </div>
+              <h4 class="text-2xl font-bold">Sarah Obinna</h4>
+              <p class="text-primary font-bold text-sm uppercase tracking-widest mt-1">Incident Response Lead</p>
+              <p class="text-on-surface-variant mt-4 text-sm leading-relaxed">Expert in digital forensics and rapid
+                incident mitigation for enterprise cloud environments.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Pricing: Three Tiers -->
+    <section class="py-24 bg-on-background px-6 md:px-16 lg:px-24">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-20">
+          <h2 class="text-4xl md:text-6xl font-bold text-white tracking-tighter mb-6">Invest in Your <span
+              class="text-primary">Legacy.</span></h2>
+          <p class="text-slate-400 max-w-xl mx-auto">Choose the path that aligns with your career goals. Flexible
+            payment plans available for Lagos residents.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Essential -->
+          <div class="bg-white/5 border border-white/10 p-10 rounded-xl hover:border-primary/50 transition-colors">
+            <span class="text-white/60 font-bold text-xs tracking-widest uppercase mb-4 block">Kickstart</span>
+            <h3 class="text-2xl font-bold text-white mb-2">Security Foundation</h3>
+            <div class="text-4xl font-bold text-white mb-8">₦250,000 <span class="text-sm font-normal text-slate-500">/
+                course</span></div>
+            <ul class="space-y-4 mb-10">
+              <li class="flex items-start gap-3 text-slate-300 text-sm">
+                <span class="material-symbols-outlined text-primary text-lg">check_circle</span>
+                CompTIA Security+ Syllabus
+              </li>
+              <li class="flex items-start gap-3 text-slate-300 text-sm">
+                <span class="material-symbols-outlined text-primary text-lg">check_circle</span>
+                Official Exam Prep Materials
+              </li>
+              <li class="flex items-start gap-3 text-slate-300 text-sm">
+                <span class="material-symbols-outlined text-primary text-lg">check_circle</span>
+                Weekend Virtual Sessions
+              </li>
+            </ul>
+            <button
+              class="w-full py-4 rounded-full border border-white/20 text-white font-bold hover:bg-white hover:text-on-background transition-all">Select
+              Plan</button>
+          </div>
+          <!-- Professional -->
+          <div class="bg-white p-10 rounded-xl relative overflow-hidden shadow-2xl scale-105 z-10">
+            <div
+              class="absolute top-0 right-0 bg-primary text-white text-[0.6rem] font-black uppercase px-4 py-2 rounded-bl-lg">
+              Most Popular</div>
+            <span class="text-primary font-bold text-xs tracking-widest uppercase mb-4 block">Specialist</span>
+            <h3 class="text-2xl font-bold text-on-background mb-2">Elite Practitioner</h3>
+            <div class="text-4xl font-bold text-on-background mb-8">₦650,000 <span
+                class="text-sm font-normal text-slate-500">/ full track</span></div>
+            <ul class="space-y-4 mb-10">
+              <li class="flex items-start gap-3 text-on-surface-variant text-sm font-medium">
+                <span class="material-symbols-outlined text-primary text-lg">check_circle</span>
+                Full Ethical Hacking (CEH) Course
+              </li>
+              <li class="flex items-start gap-3 text-on-surface-variant text-sm font-medium">
+                <span class="material-symbols-outlined text-primary text-lg">check_circle</span>
+                Incident Response Workshops
+              </li>
+              <li class="flex items-start gap-3 text-on-surface-variant text-sm font-medium">
+                <span class="material-symbols-outlined text-primary text-lg">check_circle</span>
+                Hybrid Learning (Physical + Remote)
+              </li>
+              <li class="flex items-start gap-3 text-on-surface-variant text-sm font-medium">
+                <span class="material-symbols-outlined text-primary text-lg">check_circle</span>
+                Career Placement Support
+              </li>
+            </ul>
+            <button
+              class="w-full py-4 rounded-full bg-primary text-white font-bold hover:bg-primary-container shadow-lg shadow-primary/20 transition-all">Start
+              Journey</button>
+          </div>
+          <!-- Enterprise -->
+          <div class="bg-white/5 border border-white/10 p-10 rounded-xl hover:border-primary/50 transition-colors">
+            <span class="text-white/60 font-bold text-xs tracking-widest uppercase mb-4 block">Corporate</span>
+            <h3 class="text-2xl font-bold text-white mb-2">SOC Team Training</h3>
+            <div class="text-4xl font-bold text-white mb-8">Custom <span class="text-sm font-normal text-slate-500">/
+                quote</span></div>
+            <ul class="space-y-4 mb-10">
+              <li class="flex items-start gap-3 text-slate-300 text-sm">
+                <span class="material-symbols-outlined text-primary text-lg">check_circle</span>
+                Custom Vulnerability Labs
+              </li>
+              <li class="flex items-start gap-3 text-slate-300 text-sm">
+                <span class="material-symbols-outlined text-primary text-lg">check_circle</span>
+                On-site Delivery in Lagos
+              </li>
+              <li class="flex items-start gap-3 text-slate-300 text-sm">
+                <span class="material-symbols-outlined text-primary text-lg">check_circle</span>
+                Strategic Policy Coaching
+              </li>
+            </ul>
+            <button
+              class="w-full py-4 rounded-full border border-white/20 text-white font-bold hover:bg-white hover:text-on-background transition-all">Contact
+              Sales</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Final CTA -->
+    <section class="py-24 px-6 md:px-16 lg:px-24 bg-surface-container-low">
+      <div class="max-w-7xl mx-auto bg-primary rounded-[2rem] p-12 md:p-20 relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-1/2 h-full opacity-20 pointer-events-none">
+          <img class="w-full h-full object-cover" alt="Abstract digital grid representing data protection"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCNF3x7XIJewv74gweaD24Bus7S9Hh6OrgPKGZrFoPaQ5J19askASBF0scQMkQ1wrQZSug-R9pX1--NQ8-GkTHaMu6lgih_RGGMiAp5ki_kBVcEqW4aiLbJxFMlv4qS4l2RqDrlv6frlkxhfYsBCQ5C-uSoqC9eco9ltUWdWL9SuTkXGg-ifFucs8aB0bdi7OxosRmzcrzOKv_XPIfY9Hs39XRzMf9dxex-K5HTM7QYKQoaI3H-9TciDlmV67pKVwDf2YtF8m1Q1wEP" />
+        </div>
+        <div class="relative z-10 max-w-2xl">
+          <h2 class="text-4xl md:text-6xl font-bold text-white leading-tight tracking-tighter mb-8">Your Cyber Defense
+            Career Starts Here.</h2>
+          <p class="text-blue-100 text-lg mb-12 opacity-80 leading-relaxed">Application window for the Q3 Cohort closes
+            in 14 days. Secure your seat among the elite.</p>
+          <div class="flex flex-col sm:flex-row gap-4">
+            <button
+              class="bg-white text-primary px-10 py-5 rounded-full font-bold shadow-xl hover:scale-105 transition-transform">Apply
+              Now</button>
+            <button
+              class="bg-white/10 backdrop-blur-md text-white border border-white/20 px-10 py-5 rounded-full font-bold hover:bg-white/20 transition-all">Talk
+              to an Advisor</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <!-- Footer -->
+  <footer class="bg-[#1A3A6B] dark:bg-slate-950 text-white pt-20 pb-10 font-['Plus_Jakarta_Sans']">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-8 md:px-20 w-full mb-20">
+      <div class="col-span-1 md:col-span-1">
+        <div class="text-3xl font-black text-white mb-6">Corespec</div>
+        <p class="text-white/60 text-sm leading-relaxed">The pinnacle of technical training and AI solutions in Nigeria.
+          Empowering the next generation of global tech leaders.</p>
+      </div>
+      <div>
+        <h4 class="font-bold mb-6">Company</h4>
+        <ul class="space-y-4 text-white/60 text-sm">
+          <li><a class="hover:text-blue-400 transition-colors" href="about.html">About Us</a></li>
+          <li><a class="hover:text-blue-400 transition-colors" href="process.html">Our Process</a></li>
+          <li><a class="hover:text-blue-400 transition-colors" href="portfolio.html">Portfolio</a></li>
+          <li><a class="hover:text-blue-400 transition-colors" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-bold mb-6">Services</h4>
+        <ul class="space-y-4 text-white/60 text-sm">
+          <li><a class="hover:text-blue-400 transition-colors" href="services-ai.html">AI Implementation</a></li>
+          <li><a class="hover:text-blue-400 transition-colors" href="services-cloud.html">Cloud Migration</a></li>
+          <li><a class="hover:text-blue-400 transition-colors" href="services-cybersecurity.html">Cybersecurity</a></li>
+          <li><a class="hover:text-blue-400 transition-colors" href="services-engineering.html">Engineering
+              Consultancy</a></li>
+          <li><a class="hover:text-blue-400 transition-colors" href="services-erp.html">ERP Solutions</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-bold mb-6">Legal</h4>
+        <ul class="space-y-4 text-white/60 text-sm">
+          <li><a class="hover:text-blue-400 transition-opacity" href="privacy.html">Privacy Policy</a></li>
+          <li><a class="hover:text-blue-400 transition-opacity" href="#terms">Terms of Service</a></li>
+          <li><a class="hover:text-blue-400 transition-opacity" href="design-system.html">Design System</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="border-t border-white/10 px-8 md:px-20 pt-10 flex flex-col md:row justify-between items-center gap-6">
+      <p class="text-white/40 text-xs">© 2024 Corespec. All rights reserved.</p>
+      <div class="flex gap-6">
+        <a class="text-white/40 hover:text-white transition-colors" href="#"><span
+            class="material-symbols-outlined text-sm">share</span></a>
+        <a class="text-white/40 hover:text-white transition-colors" href="#"><span
+            class="material-symbols-outlined text-sm">alternate_email</span></a>
+      </div>
+    </div>
+  </footer>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+      const navLinks = document.querySelectorAll('nav a');
+      navLinks.forEach(link => {
+        if (link.getAttribute('href') === currentPath) {
+          link.classList.remove('text-slate-600', 'dark:text-slate-400', 'font-medium');
+          link.classList.add('text-blue-600', 'dark:text-blue-400', 'font-bold');
+          const parentGroup = link.closest('.relative.group');
+          if (parentGroup) {
+            const serviceBtn = parentGroup.querySelector('button');
+            serviceBtn.classList.remove('text-slate-600', 'dark:text-slate-400', 'font-medium');
+            serviceBtn.classList.add('text-blue-600', 'dark:text-blue-400', 'font-bold');
+          }
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>
