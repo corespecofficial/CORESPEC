@@ -1,0 +1,820 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+    <link rel="dns-prefetch" href="https://res.cloudinary.com" />
+  <link rel="preconnect" href="https://res.cloudinary.com" crossorigin />
+<link rel="icon" type="image/png" href="https://res.cloudinary.com/detsk6uql/image/upload/v1776429608/corespec_logo_qnndex.png" />
+  <link rel="apple-touch-icon" href="https://res.cloudinary.com/detsk6uql/image/upload/v1776429608/corespec_logo_qnndex.png" />
+  <meta property="og:image" content="https://res.cloudinary.com/detsk6uql/image/upload/v1776429607/corespec_logo_sr0rjz.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:site_name" content="Corespec Engineering Limited" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://res.cloudinary.com/detsk6uql/image/upload/v1776429607/corespec_logo_sr0rjz.png" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Corespec Engineering — ICT Training &amp; Technology Solutions, Lagos Nigeria</title>
+  <meta name="description" content="Corespec Engineering Limited provides world-class ICT training (Cloud, Cybersecurity, AI, Software & Hardware), certifications, and enterprise technology solutions from Lagos, Nigeria." />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/site.css?v=1776440000" />
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: { extend: {
+        colors: { "primary":"#2563EB","primary-deep":"#1D4ED8","cyan":"#0EA5E9","navy":"#0F2C5B","ink":"#0B1220","mute":"#475569","on-surface-variant":"#434655","on-background":"#0B1220","background":"#FFFFFF" },
+        fontFamily: { "headline":["Space Grotesk"], "body":["Plus Jakarta Sans"] }
+      }}
+    }
+  </script>
+  <style>
+    /* Ticker */
+    @keyframes ticker { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+    .ticker-track { display: flex; gap: 3rem; width: max-content; animation: ticker 30s linear infinite; align-items: center; }
+    .ticker:hover .ticker-track { animation-play-state: paused; }
+    .ticker-item { display: flex; align-items: center; gap: 8px; color: #94A3B8; font-weight: 700; font-size: 14px; white-space: nowrap; }
+    .ticker-item .material-symbols-outlined { font-size: 18px; color: #CBD5E1; }
+
+    /* FAQ */
+    details.faq { background: #fff; border: 1px solid #E2E8F0; border-radius: 20px; padding: 22px 26px; transition: border-color .25s ease, box-shadow .25s ease; }
+    details.faq[open] { border-color: rgba(37,99,235,.30); box-shadow: 0 8px 32px rgba(37,99,235,.08); }
+    details.faq summary { list-style: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-weight: 700; font-size: 16px; color: #0B1220; }
+    details.faq summary::-webkit-details-marker { display: none; }
+    details.faq summary .plus { transition: transform .3s ease; color: #2563EB; flex-shrink: 0; }
+    details.faq[open] summary .plus { transform: rotate(45deg); }
+    details.faq p { margin-top: 14px; color: #475569; line-height: 1.7; font-size: 15px; }
+
+    /* Hero metric card */
+    .metric-row { display: flex; align-items: center; gap: 10px; padding: 10px 0; border-bottom: 1px solid #F1F5F9; }
+    .metric-row:last-child { border-bottom: none; }
+    .metric-bar-wrap { flex: 1; height: 6px; background: #EEF2FF; border-radius: 999px; overflow: hidden; }
+    .metric-bar {
+      height: 100%; border-radius: 999px;
+      background: linear-gradient(to right, #2563EB, #0EA5E9);
+      width: 0 !important;
+      transition: width 1.2s cubic-bezier(.25,.46,.45,.94);
+    }
+    .metric-bar.bar-animated { width: var(--bar-target) !important; }
+    .metric-pct { transition: opacity .4s ease; opacity: 0; }
+    .metric-pct.pct-visible { opacity: 1; }
+
+    /* Pulse dot */
+    .pulse-dot { width: 8px; height: 8px; border-radius: 50%; background: #10B981; flex-shrink: 0; animation: pulse-anim 1.8s infinite; }
+    @keyframes pulse-anim { 0% { box-shadow: 0 0 0 0 rgba(16,185,129,.6); } 70% { box-shadow: 0 0 0 10px rgba(16,185,129,0); } 100% { box-shadow: 0 0 0 0 rgba(16,185,129,0); } }
+
+    /* Float badge */
+    .float-badge { position: absolute; background: #fff; border: 1px solid #E2E8F0; border-radius: 16px; padding: 10px 16px; box-shadow: 0 8px 28px rgba(37,99,235,.14); display: flex; align-items: center; gap: 8px; font-weight: 700; font-size: 13px; white-space: nowrap; z-index: 10; }
+
+    /* Service card icon */
+    .svc-icon { width: 52px; height: 52px; border-radius: 16px; display: flex; align-items: center; justify-content: center; color: #fff; margin-bottom: 20px; flex-shrink: 0; }
+
+    /* Testimonial */
+    .testi-card { background: #fff; border: 1px solid #E2E8F0; border-radius: 24px; padding: 32px; box-shadow: 0 2px 8px rgba(0,0,0,.04), 0 12px 32px rgba(37,99,235,.06); transition: transform .3s ease, box-shadow .3s ease; }
+    .testi-card:hover { transform: translateY(-4px); box-shadow: 0 8px 32px rgba(37,99,235,.13); }
+
+    /* Why corespec image */
+    .why-img { width: 100%; height: 100%; object-fit: cover; border-radius: 24px; display: block; }
+  </style>
+  <link rel="canonical" href="https://corespecng.com/" />
+  <meta property="og:url" content="https://corespecng.com/" />
+  <meta property="og:title" content="Corespec Engineering — ICT Training & Technology Solutions, Lagos Nigeria" />
+  <meta property="og:description" content="Corespec Engineering Limited provides world-class ICT training (Cloud, Cybersecurity, AI, Software & Hardware), certifications, and enterprise technology solutions from Lagos, Nigeria." />
+  <meta name="twitter:title" content="Corespec Engineering — ICT Training & Technology Solutions, Lagos Nigeria" />
+  <meta name="twitter:description" content="Corespec Engineering Limited provides world-class ICT training (Cloud, Cybersecurity, AI, Software & Hardware), certifications, and enterprise technology solutions from Lagos, Nigeria." />
+  <meta name="theme-color" content="#2563EB" />
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Corespec Engineering Limited",
+  "alternateName": "Corespec",
+  "url": "https://corespecng.com",
+  "logo": "https://res.cloudinary.com/detsk6uql/image/upload/v1776429607/corespec_logo_sr0rjz.png",
+  "description": "ICT training and technology solutions provider in Lagos, Nigeria — cloud computing, cybersecurity, AI integration, engineering, and ERP systems.",
+  "telephone": "+234-803-339-5470",
+  "email": "info@corespecng.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Okota",
+    "addressLocality": "Lagos",
+    "addressRegion": "Lagos",
+    "addressCountry": "NG"
+  },
+  "sameAs": ["https://corespecng.com"],
+  "openingHours": "Mo-Fr 08:00-17:00"
+}
+</script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "@id": "https://corespecng.com/#business",
+  "name": "Corespec Engineering Limited",
+  "image": "https://res.cloudinary.com/detsk6uql/image/upload/v1776429607/corespec_logo_sr0rjz.png",
+  "url": "https://corespecng.com",
+  "telephone": "+234-803-339-5470",
+  "email": "info@corespecng.com",
+  "priceRange": "$",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Okota",
+    "addressLocality": "Lagos",
+    "addressRegion": "Lagos",
+    "addressCountry": "NG"
+  },
+  "openingHoursSpecification": [{
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+    "opens": "08:00",
+    "closes": "17:00"
+  }]
+}
+</script>
+</head>
+
+<body class="bg-white font-body text-on-background">
+
+  
+  <a href="#main" class="skip-link">Skip to main content</a>
+<!-- Mobile menu button -->
+  <button id="menu-btn" aria-label="Open menu"
+    class="fixed top-8 right-6 z-[60] md:hidden w-11 h-11 rounded-full bg-white shadow-lg border border-slate-200 flex items-center justify-center">
+    <span class="material-symbols-outlined text-primary">menu</span>
+  </button>
+
+  <!-- Mobile drawer -->
+  <div id="mobile-drawer" class="drawer" aria-hidden="true">
+    <div class="drawer-bg" data-drawer-close></div>
+    <aside class="drawer-panel" role="dialog" aria-label="Navigation">
+      <div class="flex justify-between items-center mb-4">
+        <span class="flex items-center"><img fetchpriority="high" src="https://res.cloudinary.com/detsk6uql/image/upload/v1776429607/corespec_logo_sr0rjz.png" alt="Corespec Engineering" class="h-10 object-contain rounded-lg" /></span>
+        <button data-drawer-close aria-label="Close" class="w-10 h-10 rounded-full hover:bg-slate-100 flex items-center justify-center">
+          <span class="material-symbols-outlined">close</span>
+        </button>
+      </div>
+            <a href="index.html">Home</a>
+      <details>
+        <summary>Services</summary>
+        <div class="submenu">
+          <a href="services-ai.html">AI Integration</a>
+          <a href="services-cloud.html">Cloud Computing</a>
+          <a href="services-cybersecurity.html">Cybersecurity</a>
+          <a href="services-engineering.html">Engineering</a>
+          <a href="services-erp.html">ERP Solutions</a>
+        </div>
+      </details>
+      <div class="divider-aurora my-2"></div>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="process.html">Process</a>
+      <a href="about.html">About</a>
+      <a href="insights.html">Insights</a>
+      <a href="contact.html" class="btn btn-primary btn-shimmer mt-4 justify-center">Book a Call</a>
+    </aside>
+  </div>
+
+  <!-- Nav -->
+  <header class="fixed top-0 left-0 right-0 z-50 flex justify-center w-full">
+    <nav class="bg-white/80 backdrop-blur-xl rounded-full mt-6 mx-auto w-fit px-6 py-3 border border-slate-200/50 shadow-[0_8px_48px_rgba(37,99,235,0.12)] flex items-center gap-8">
+      <a href="index.html" class="flex items-center shrink-0"><img src="https://res.cloudinary.com/detsk6uql/image/upload/v1776429608/corespec_logo_qnndex.png" alt="Corespec Engineering" class="h-14 w-14 object-contain rounded-lg" /></a>
+      <div class="hidden md:flex items-center gap-6">
+        <div class="relative group">
+          <button class="text-slate-600 hover:text-blue-600 transition-colors font-['Space_Grotesk'] font-bold tracking-tight flex items-center gap-1">
+            Services <span class="material-symbols-outlined text-sm transition-transform group-hover:rotate-180">expand_more</span>
+          </button>
+          <div class="absolute top-full left-0 mt-2 w-64 bg-white rounded-2xl border border-slate-200/50 shadow-xl opacity-0 translate-y-2 pointer-events-none group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto transition-all duration-200 z-[60]">
+            <div class="p-2 space-y-1">
+              <a href="services-ai.html" class="flex items-center gap-3 p-3 rounded-xl hover:bg-blue-50 transition-colors">
+                <span class="material-symbols-outlined text-blue-600">psychology</span>
+                <div><div class="text-sm font-bold text-slate-900">AI &amp; Automation</div><div class="text-[10px] text-slate-500">Intelligent Workflows</div></div>
+              </a>
+              <a href="services-cloud.html" class="flex items-center gap-3 p-3 rounded-xl hover:bg-blue-50 transition-colors">
+                <span class="material-symbols-outlined text-blue-600">cloud</span>
+                <div><div class="text-sm font-bold text-slate-900">Cloud Computing</div><div class="text-[10px] text-slate-500">AWS · Azure · GCP Training</div></div>
+              </a>
+              <a href="services-cybersecurity.html" class="flex items-center gap-3 p-3 rounded-xl hover:bg-blue-50 transition-colors">
+                <span class="material-symbols-outlined text-blue-600">shield</span>
+                <div><div class="text-sm font-bold text-slate-900">Cybersecurity</div><div class="text-[10px] text-slate-500">CEH · CISSP · Security+</div></div>
+              </a>
+              <a href="services-engineering.html" class="flex items-center gap-3 p-3 rounded-xl hover:bg-blue-50 transition-colors">
+                <span class="material-symbols-outlined text-blue-600">code</span>
+                <div><div class="text-sm font-bold text-slate-900">Engineering</div><div class="text-[10px] text-slate-500">Software &amp; Hardware</div></div>
+              </a>
+              <a href="services-erp.html" class="flex items-center gap-3 p-3 rounded-xl hover:bg-blue-50 transition-colors">
+                <span class="material-symbols-outlined text-blue-600">database</span>
+                <div><div class="text-sm font-bold text-slate-900">ERP Solutions</div><div class="text-[10px] text-slate-500">Enterprise Systems</div></div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <a class="text-slate-600 hover:text-blue-600 transition-colors font-['Space_Grotesk'] font-bold tracking-tight" href="portfolio.html">Portfolio</a>
+        <a class="text-slate-600 hover:text-blue-600 transition-colors font-['Space_Grotesk'] font-bold tracking-tight" href="process.html">Process</a>
+        <a class="text-slate-600 hover:text-blue-600 transition-colors font-['Space_Grotesk'] font-bold tracking-tight" href="about.html">About</a>
+        <a class="text-slate-600 hover:text-blue-600 transition-colors font-['Space_Grotesk'] font-bold tracking-tight" href="insights.html">Insights</a>
+      </div>
+      <a href="contact.html" class="bg-primary text-white px-6 py-2 rounded-full font-bold transition-all hover:bg-blue-700 hover:shadow-lg">Book a Call</a>
+    </nav>
+  </header>
+
+  <!-- ================= HERO ================= -->
+  <section id="main" class="section-white pt-36 pb-24 overflow-hidden">
+    <!-- Decorative background blobs -->
+    <div class="absolute -top-40 -left-40 w-[600px] h-[600px] rounded-full bg-blue-50 opacity-60 blur-3xl pointer-events-none"></div>
+    <div class="absolute top-20 right-0 w-[400px] h-[400px] rounded-full bg-cyan-50 opacity-50 blur-3xl pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-6 lg:px-20 relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+
+        <!-- Left: Text -->
+        <div class="page-hero-text reveal reveal-left">
+          <span class="chip-section">Nigeria's Premier ICT Training &amp; Technology Partner</span>
+          <h1 class="head-display text-ink">
+            Architecting the Future of
+            <span class="text-gradient-blue" data-words="AI,Cloud,Security,Innovation,Technology">AI</span>
+          </h1>
+          <p class="t-lead text-slate-500">Corespec Engineering Limited empowers professionals and organisations across Africa with world-class ICT training, global certifications, and enterprise technology solutions — from Lagos to the world.</p>
+          <div class="flex flex-wrap gap-4">
+            <a href="contact.html" class="btn btn-primary btn-shimmer">
+              Enrol Today <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+            </a>
+            <a href="portfolio.html" class="btn btn-outline">See Our Work</a>
+          </div>
+          <!-- Trust bar -->
+          <div class="flex flex-wrap gap-5 pt-8 mt-2 border-t border-slate-100">
+            <div class="flex items-center gap-2 text-sm text-slate-600 font-semibold">
+              <span class="material-symbols-outlined text-primary text-[18px]">verified</span>500+ Professionals Trained
+            </div>
+            <div class="flex items-center gap-2 text-sm text-slate-600 font-semibold">
+              <span class="material-symbols-outlined text-primary text-[18px]">workspace_premium</span>6 Global Certifications
+            </div>
+            <div class="flex items-center gap-2 text-sm text-slate-600 font-semibold">
+              <span class="material-symbols-outlined text-primary text-[18px]">schedule</span>10+ Years Experience
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Visual panel -->
+        <div class="relative reveal reveal-right">
+
+          <!-- Main hero image -->
+          <div class="img-wrap img-wrap-xl shadow-2xl shadow-blue-100">
+            <img
+              src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=900&q=80&auto=format&fit=crop"
+              alt="Diverse team of Black professionals collaborating in a modern workspace"
+              class="w-full aspect-[4/3] object-cover"
+              loading="eager"
+            />
+          </div>
+
+          <!-- Floating badge: rating -->
+          <div class="float-badge -top-4 -left-4 lg:-left-10 floaty">
+            <div class="flex gap-0.5">
+              <span class="material-symbols-outlined text-amber-400 text-[16px]" style="font-variation-settings:'FILL' 1">star</span>
+              <span class="material-symbols-outlined text-amber-400 text-[16px]" style="font-variation-settings:'FILL' 1">star</span>
+              <span class="material-symbols-outlined text-amber-400 text-[16px]" style="font-variation-settings:'FILL' 1">star</span>
+              <span class="material-symbols-outlined text-amber-400 text-[16px]" style="font-variation-settings:'FILL' 1">star</span>
+              <span class="material-symbols-outlined text-amber-400 text-[16px]" style="font-variation-settings:'FILL' 1">star</span>
+            </div>
+            <span class="text-ink">4.9 Graduate Rating</span>
+          </div>
+
+          <!-- Floating badge: placement -->
+          <div class="float-badge -bottom-4 -right-4 lg:-right-8 floaty" style="animation-delay:1.5s">
+            <span class="material-symbols-outlined text-green-500 text-[18px]">trending_up</span>
+            <span class="text-ink">94% Job Placement Rate</span>
+          </div>
+
+          <!-- Metric card overlay -->
+          <div class="absolute bottom-8 left-4 right-4 lg:-left-6 bg-white/95 backdrop-blur-sm rounded-2xl p-4 border border-slate-100 shadow-xl">
+            <div class="flex items-center justify-between mb-3">
+              <div class="flex items-center gap-2">
+                <span class="pulse-dot"></span>
+                <span class="text-xs font-bold uppercase tracking-widest text-slate-500">Live Training Outcomes</span>
+              </div>
+            </div>
+            <div class="space-y-0">
+              <div class="metric-row">
+                <span class="text-xs font-semibold text-slate-600 w-32 shrink-0">AWS Certified</span>
+                <div class="metric-bar-wrap"><div class="metric-bar" style="--bar-target:88%" data-target="88"></div></div>
+                <span class="metric-pct text-xs font-bold text-primary w-8 text-right" data-target="88">0%</span>
+              </div>
+              <div class="metric-row">
+                <span class="text-xs font-semibold text-slate-600 w-32 shrink-0">CEH Pass Rate</span>
+                <div class="metric-bar-wrap"><div class="metric-bar" style="--bar-target:82%" data-target="82"></div></div>
+                <span class="metric-pct text-xs font-bold text-primary w-8 text-right" data-target="82">0%</span>
+              </div>
+              <div class="metric-row">
+                <span class="text-xs font-semibold text-slate-600 w-32 shrink-0">Job Placement</span>
+                <div class="metric-bar-wrap"><div class="metric-bar" style="--bar-target:94%" data-target="94"></div></div>
+                <span class="metric-pct text-xs font-bold text-primary w-8 text-right" data-target="94">0%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= LOGO TICKER ================= -->
+  <section class="section-gray py-10 border-y border-slate-100 overflow-hidden reveal">
+    <p class="text-center text-xs font-bold uppercase tracking-[0.2em] text-slate-400 mb-6">Certified &amp; aligned with global standards</p>
+    <div class="ticker">
+      <div class="ticker-track">
+        <div class="ticker-item"><span class="material-symbols-outlined">verified_user</span>CompTIA</div>
+        <div class="ticker-item"><span class="material-symbols-outlined">security</span>EC-Council</div>
+        <div class="ticker-item"><span class="material-symbols-outlined">cloud</span>Microsoft Azure</div>
+        <div class="ticker-item"><span class="material-symbols-outlined">cloud_circle</span>Amazon AWS</div>
+        <div class="ticker-item"><span class="material-symbols-outlined">storage</span>Google Cloud</div>
+        <div class="ticker-item"><span class="material-symbols-outlined">business</span>NITDA</div>
+        <div class="ticker-item"><span class="material-symbols-outlined">lan</span>Cisco</div>
+        <div class="ticker-item"><span class="material-symbols-outlined">policy</span>ISACA</div>
+        <div class="ticker-item"><span class="material-symbols-outlined">verified_user</span>CompTIA</div>
+        <div class="ticker-item"><span class="material-symbols-outlined">security</span>EC-Council</div>
+        <div class="ticker-item"><span class="material-symbols-outlined">cloud</span>Microsoft Azure</div>
+        <div class="ticker-item"><span class="material-symbols-outlined">cloud_circle</span>Amazon AWS</div>
+        <div class="ticker-item"><span class="material-symbols-outlined">storage</span>Google Cloud</div>
+        <div class="ticker-item"><span class="material-symbols-outlined">business</span>NITDA</div>
+        <div class="ticker-item"><span class="material-symbols-outlined">lan</span>Cisco</div>
+        <div class="ticker-item"><span class="material-symbols-outlined">policy</span>ISACA</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SERVICES GRID ================= -->
+  <section id="services" class="section-white py-24 md:py-32 px-6 md:px-10 overflow-hidden">
+    <div class="max-w-7xl mx-auto">
+
+      <!-- Section header -->
+      <div class="section-header reveal">
+        <span class="chip-section">Our Services</span>
+        <h2 class="head-2 text-ink">Training &amp; Technology Solutions</h2>
+        <p class="t-lead text-slate-500">From certification bootcamps to enterprise AI integration — we deliver the skills and systems that keep African professionals and organisations competitive.</p>
+      </div>
+
+      <!-- Visual strip: 3 professional images above cards -->
+      <div class="grid grid-cols-3 gap-4 mb-12 reveal">
+        <div class="img-overlay rounded-2xl overflow-hidden h-40">
+          <img src="https://images.pexels.com/photos/1181406/pexels-photo-1181406.jpeg?auto=compress&cs=tinysrgb&w=600&h=160&fit=crop" alt="Black business leaders in professional conference meeting" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" />
+          <div class="absolute bottom-0 left-0 right-0 p-3 z-10">
+            <span class="tag tag-blue text-[10px]">Business Leaders</span>
+          </div>
+        </div>
+        <div class="img-overlay rounded-2xl overflow-hidden h-40">
+          <img src="https://images.pexels.com/photos/3861972/pexels-photo-3861972.jpeg?auto=compress&cs=tinysrgb&w=600&h=160&fit=crop" alt="Tech professionals discussing code and solutions on screen" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" />
+          <div class="absolute bottom-0 left-0 right-0 p-3 z-10">
+            <span class="tag tag-blue text-[10px]">Tech Excellence</span>
+          </div>
+        </div>
+        <div class="img-overlay rounded-2xl overflow-hidden h-40">
+          <img src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=600&h=300&fit=crop" alt="Group of women in tech meeting and collaboration" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" />
+          <div class="absolute bottom-0 left-0 right-0 p-3 z-10">
+            <span class="tag tag-blue text-[10px]">Women in Tech</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Service cards -->
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 stagger-grid">
+        <a href="services-ai.html" class="card-white group">
+          <div class="svc-icon icon-grad-ai"><span class="material-symbols-outlined">smart_toy</span></div>
+          <h3 class="text-xl font-bold text-ink mb-2">AI Integration &amp; Automation</h3>
+          <p class="text-slate-500 text-sm leading-relaxed mb-6">We implement AI workflows, chatbots, and intelligent automation that cut costs and accelerate decisions for your business.</p>
+          <span class="inline-flex items-center gap-2 text-primary font-bold text-sm group-hover:gap-3 transition-all">Explore AI services <span class="material-symbols-outlined text-sm">arrow_forward</span></span>
+        </a>
+        <a href="services-cloud.html" class="card-white group">
+          <div class="svc-icon icon-grad-cloud"><span class="material-symbols-outlined">cloud</span></div>
+          <h3 class="text-xl font-bold text-ink mb-2">Cloud Computing</h3>
+          <p class="text-slate-500 text-sm leading-relaxed mb-6">AWS, Azure, and GCP training with globally recognised certifications — Cloud Practitioner, Azure Fundamentals, Google ACE and more.</p>
+          <span class="inline-flex items-center gap-2 text-primary font-bold text-sm group-hover:gap-3 transition-all">View cloud courses <span class="material-symbols-outlined text-sm">arrow_forward</span></span>
+        </a>
+        <a href="services-cybersecurity.html" class="card-white group">
+          <div class="svc-icon icon-grad-cyber"><span class="material-symbols-outlined">security</span></div>
+          <h3 class="text-xl font-bold text-ink mb-2">Cybersecurity</h3>
+          <p class="text-slate-500 text-sm leading-relaxed mb-6">Ethical hacking, pen testing and incident response training. Prepare for CEH, CISSP and CompTIA Security+ exams.</p>
+          <span class="inline-flex items-center gap-2 text-primary font-bold text-sm group-hover:gap-3 transition-all">View security courses <span class="material-symbols-outlined text-sm">arrow_forward</span></span>
+        </a>
+        <a href="services-engineering.html" class="card-white group">
+          <div class="svc-icon icon-grad-eng"><span class="material-symbols-outlined">code</span></div>
+          <h3 class="text-xl font-bold text-ink mb-2">Software &amp; Hardware Engineering</h3>
+          <p class="text-slate-500 text-sm leading-relaxed mb-6">Full-stack development (Python, JS, Java) and hardware/embedded systems (IoT, microcontrollers, PCB design) — both tracks, one institution.</p>
+          <span class="inline-flex items-center gap-2 text-primary font-bold text-sm group-hover:gap-3 transition-all">View engineering programs <span class="material-symbols-outlined text-sm">arrow_forward</span></span>
+        </a>
+        <a href="services-erp.html" class="card-white group">
+          <div class="svc-icon icon-grad-erp"><span class="material-symbols-outlined">account_tree</span></div>
+          <h3 class="text-xl font-bold text-ink mb-2">ERP Solutions</h3>
+          <p class="text-slate-500 text-sm leading-relaxed mb-6">End-to-end ERP implementation, data migration, staff training, and ongoing support for manufacturing, logistics, and healthcare.</p>
+          <span class="inline-flex items-center gap-2 text-primary font-bold text-sm group-hover:gap-3 transition-all">Explore ERP services <span class="material-symbols-outlined text-sm">arrow_forward</span></span>
+        </a>
+        <a href="contact.html" class="card-white group" style="background:linear-gradient(135deg,#2563EB,#0EA5E9);border-color:transparent;">
+          <div class="svc-icon" style="background:rgba(255,255,255,.2);"><span class="material-symbols-outlined text-white">groups</span></div>
+          <h3 class="text-xl font-bold text-white mb-2">Corporate ICT Training</h3>
+          <p class="text-white/80 text-sm leading-relaxed mb-6">Upskill your entire team with custom cohort programs delivered on-site or online. Instructor-led, weekend, and self-paced formats.</p>
+          <span class="inline-flex items-center gap-2 text-white font-bold text-sm group-hover:gap-3 transition-all">Get a custom quote <span class="material-symbols-outlined text-sm">arrow_forward</span></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= WHY CORESPEC — FEATURE + IMAGE ================= -->
+  <section class="section-gray py-24 md:py-32 px-6 md:px-10 overflow-hidden">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-stretch">
+
+        <!-- Left: Image -->
+        <div class="reveal reveal-left order-2 lg:order-1">
+          <div class="relative h-full" style="min-height:480px;">
+            <div class="img-wrap img-wrap-xl shadow-xl shadow-blue-100/60 h-full" style="min-height:480px;">
+              <img
+                src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=900&q=80&auto=format&fit=crop"
+                alt="Black professionals in a professional training and learning environment"
+                loading="lazy"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <!-- Overlay stat cards -->
+            <div class="absolute -bottom-6 -right-4 card-white p-4 max-w-[180px] shadow-xl">
+              <div class="text-3xl font-black text-primary font-['Space_Grotesk']">500+</div>
+              <div class="text-xs text-slate-500 font-semibold mt-1">Professionals certified since founding</div>
+            </div>
+            <div class="absolute -top-4 -left-4 card-white p-4 max-w-[160px] shadow-xl floaty">
+              <div class="flex items-center gap-2 mb-1">
+                <span class="material-symbols-outlined text-primary text-[16px]">workspace_premium</span>
+                <span class="text-xs font-bold text-slate-500 uppercase tracking-wide">Formats</span>
+              </div>
+              <div class="text-sm font-bold text-ink">Weekend, Online &amp; Weekday classes</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Feature list -->
+        <div class="reveal reveal-right order-1 lg:order-2">
+          <div class="page-hero-text">
+            <span class="chip-section">Why Choose Corespec</span>
+            <h2 class="head-2 text-ink">The Standard for Tech Education in Nigeria.</h2>
+            <p class="t-lead text-slate-500">We don't just teach theory — we train the next generation of engineers, cloud architects, and cybersecurity professionals ready for real-world roles.</p>
+          </div>
+          <div class="space-y-5">
+            <div class="feature-row">
+              <div class="feature-row-icon"><span class="material-symbols-outlined text-[20px]">model_training</span></div>
+              <div class="feature-row-body">
+                <div class="feature-row-title">Industry-Aligned Curriculum</div>
+                <div class="feature-row-text">Programs mirror actual job requirements — not outdated textbooks. Updated each quarter with employer input.</div>
+              </div>
+            </div>
+            <div class="feature-row">
+              <div class="feature-row-icon"><span class="material-symbols-outlined text-[20px]">verified_user</span></div>
+              <div class="feature-row-body">
+                <div class="feature-row-title">Certified Expert Instructors</div>
+                <div class="feature-row-text">Led by practitioners with 10+ years of real-world industry experience, not just classroom teachers.</div>
+              </div>
+            </div>
+            <div class="feature-row">
+              <div class="feature-row-icon"><span class="material-symbols-outlined text-[20px]">schedule</span></div>
+              <div class="feature-row-body">
+                <div class="feature-row-title">Flexible Learning Formats</div>
+                <div class="feature-row-text">Weekday, weekend bootcamp, and online self-paced — train around your life and location.</div>
+              </div>
+            </div>
+            <div class="feature-row">
+              <div class="feature-row-icon"><span class="material-symbols-outlined text-[20px]">workspace_premium</span></div>
+              <div class="feature-row-body">
+                <div class="feature-row-title">Globally Recognised Certifications</div>
+                <div class="feature-row-text">AWS, Azure, GCP, CEH, CISSP, CompTIA — credentials employers worldwide hire for.</div>
+              </div>
+            </div>
+            <div class="feature-row">
+              <div class="feature-row-icon"><span class="material-symbols-outlined text-[20px]">handshake</span></div>
+              <div class="feature-row-body">
+                <div class="feature-row-title">Career Placement Support</div>
+                <div class="feature-row-text">Alumni network, CV reviews, mock interviews, and direct employer introductions in Nigeria and abroad.</div>
+              </div>
+            </div>
+            <div class="feature-row">
+              <div class="feature-row-icon"><span class="material-symbols-outlined text-[20px]">location_on</span></div>
+              <div class="feature-row-body">
+                <div class="feature-row-title">Lagos-Based, World-Class</div>
+                <div class="feature-row-text">Hands-on labs, live projects, and physical classrooms in Okota, Lagos — with online reach across Africa.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= HOW IT WORKS ================= -->
+  <section class="section-white py-24 md:py-32 px-6 md:px-10 overflow-hidden reveal">
+    <div class="max-w-7xl mx-auto">
+      <div class="section-header">
+        <span class="chip-section">How It Works</span>
+        <h2 class="head-2 text-ink">From Assessment to Career Launch.</h2>
+        <p class="t-lead text-slate-500">A clear, supported pathway — we walk every student from first enquiry to certified professional and career-ready graduate.</p>
+      </div>
+      <div class="steps-flow relative">
+        <div class="hidden md:block steps-rail"></div>
+        <div class="grid md:grid-cols-4 gap-8 md:gap-6 relative z-10">
+          <article class="step-card step-seq" data-step="1">
+            <div class="step-badge"><span class="material-symbols-outlined step-icon">person_search</span><span class="step-dot">01</span></div>
+            <h3 class="font-bold text-xl text-ink mb-3">Assess</h3>
+            <p class="text-[15px] text-slate-600 leading-relaxed mb-4">We evaluate your current skills and career goals to recommend the right program and format for you.</p>
+            <ul class="step-tags"><li>Skill audit</li><li>Free consult</li></ul>
+          </article>
+          <article class="step-card step-seq" data-step="2">
+            <div class="step-badge"><span class="material-symbols-outlined step-icon">edit_note</span><span class="step-dot">02</span></div>
+            <h3 class="font-bold text-xl text-ink mb-3">Enrol</h3>
+            <p class="text-[15px] text-slate-600 leading-relaxed mb-4">Choose your format — instructor-led, weekend bootcamp, or online self-paced — and secure your place today.</p>
+            <ul class="step-tags"><li>Flexible formats</li><li>Payment plans</li></ul>
+          </article>
+          <article class="step-card step-seq" data-step="3">
+            <div class="step-badge"><span class="material-symbols-outlined step-icon">model_training</span><span class="step-dot">03</span></div>
+            <h3 class="font-bold text-xl text-ink mb-3">Train &amp; Certify</h3>
+            <p class="text-[15px] text-slate-600 leading-relaxed mb-4">Hands-on labs, live projects, and expert instructors prepare you for globally recognised certification exams.</p>
+            <ul class="step-tags"><li>Live labs</li><li>Exam prep</li></ul>
+          </article>
+          <article class="step-card step-seq" data-step="4">
+            <div class="step-badge"><span class="material-symbols-outlined step-icon">workspace_premium</span><span class="step-dot">04</span></div>
+            <h3 class="font-bold text-xl text-ink mb-3">Launch Career</h3>
+            <p class="text-[15px] text-slate-600 leading-relaxed mb-4">Career support, alumni network, and employer introductions to help you land and grow in your new role.</p>
+            <ul class="step-tags"><li>Job support</li><li>Alumni network</li></ul>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= STATS (DARK) ================= -->
+  <section class="reveal bg-navy-deep py-24 md:py-32 px-6 md:px-12 lg:px-20 relative overflow-hidden">
+    <div class="absolute -top-40 right-0 w-96 h-96 rounded-full bg-primary/25 blur-3xl pointer-events-none drift"></div>
+    <div class="absolute bottom-0 left-0 w-80 h-80 rounded-full bg-cyan/20 blur-3xl pointer-events-none drift" style="animation-delay:2s"></div>
+    <div class="max-w-7xl mx-auto relative z-10">
+      <div class="text-center mb-16">
+        <span class="chip chip-light mb-6">By the Numbers</span>
+        <h2 class="head-1 text-white">Real outcomes. Real professionals.</h2>
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+        <div>
+          <div class="text-white text-5xl md:text-7xl font-headline font-bold mb-3 leading-none" data-count="500" data-suffix="+" data-final="500+">0+</div>
+          <p class="text-white/60 text-xs font-bold uppercase tracking-widest">Professionals trained</p>
+        </div>
+        <div class="md:border-l md:border-white/10">
+          <div class="text-white text-5xl md:text-7xl font-headline font-bold mb-3 leading-none" data-count="6" data-suffix="" data-final="6">0</div>
+          <p class="text-white/60 text-xs font-bold uppercase tracking-widest">Global certifications</p>
+        </div>
+        <div class="md:border-l md:border-white/10">
+          <div class="text-white text-5xl md:text-7xl font-headline font-bold mb-3 leading-none" data-count="94" data-suffix="%" data-final="94%">0%</div>
+          <p class="text-white/60 text-xs font-bold uppercase tracking-widest">Job placement rate</p>
+        </div>
+        <div class="md:border-l md:border-white/10">
+          <div class="text-white text-5xl md:text-7xl font-headline font-bold mb-3 leading-none" data-count="10" data-suffix="+" data-final="10+">0+</div>
+          <p class="text-white/60 text-xs font-bold uppercase tracking-widest">Years in operation</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= TESTIMONIALS ================= -->
+  <section class="section-white py-24 md:py-32 px-6 md:px-10 overflow-hidden">
+    <!-- Background image with low opacity -->
+    <div class="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+      <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1600&q=60&auto=format&fit=crop" alt="" aria-hidden="true" loading="lazy" class="w-full h-full object-cover opacity-[0.04]" />
+    </div>
+
+    <div class="max-w-7xl mx-auto relative z-10">
+      <div class="section-header reveal">
+        <span class="chip-section">Student Stories</span>
+        <h2 class="head-2 text-ink">Trusted by professionals across Nigeria.</h2>
+        <p class="t-lead text-slate-500">Our graduates go on to lead technical teams, pass global certifications, and drive transformation in their organisations.</p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6 stagger-grid">
+        <figure class="testi-card">
+          <div class="flex items-center gap-1 mb-4">
+            <span class="material-symbols-outlined text-amber-400 text-[18px]" style="font-variation-settings:'FILL' 1">star</span>
+            <span class="material-symbols-outlined text-amber-400 text-[18px]" style="font-variation-settings:'FILL' 1">star</span>
+            <span class="material-symbols-outlined text-amber-400 text-[18px]" style="font-variation-settings:'FILL' 1">star</span>
+            <span class="material-symbols-outlined text-amber-400 text-[18px]" style="font-variation-settings:'FILL' 1">star</span>
+            <span class="material-symbols-outlined text-amber-400 text-[18px]" style="font-variation-settings:'FILL' 1">star</span>
+          </div>
+          <blockquote class="text-ink font-medium text-[16px] leading-relaxed mb-6 type-target" data-type="Corespec's AWS training was the most hands-on I have experienced. I passed my Cloud Practitioner exam on the first attempt and landed a cloud engineer role within two months."></blockquote>
+          <figcaption class="flex items-center gap-3 pt-5 border-t border-slate-100 testimonial-author">
+            <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?w=120&q=80&auto=format&fit=crop&crop=face" alt="Adebayo - Cloud Engineer" loading="lazy" class="avatar-img" />
+            <div><div class="font-bold text-sm text-ink">Adebayo O.</div><div class="text-xs text-slate-500 mt-0.5">Cloud Engineer, Lagos</div></div>
+          </figcaption>
+        </figure>
+
+        <figure class="testi-card">
+          <div class="flex items-center gap-1 mb-4">
+            <span class="material-symbols-outlined text-amber-400 text-[18px]" style="font-variation-settings:'FILL' 1">star</span>
+            <span class="material-symbols-outlined text-amber-400 text-[18px]" style="font-variation-settings:'FILL' 1">star</span>
+            <span class="material-symbols-outlined text-amber-400 text-[18px]" style="font-variation-settings:'FILL' 1">star</span>
+            <span class="material-symbols-outlined text-amber-400 text-[18px]" style="font-variation-settings:'FILL' 1">star</span>
+            <span class="material-symbols-outlined text-amber-400 text-[18px]" style="font-variation-settings:'FILL' 1">star</span>
+          </div>
+          <blockquote class="text-ink font-medium text-[16px] leading-relaxed mb-6 type-target" data-type="The cybersecurity curriculum mapped exactly to the CEH exam. The lab simulations made all the difference — I felt fully prepared and confident walking into the exam centre."></blockquote>
+          <figcaption class="flex items-center gap-3 pt-5 border-t border-slate-100 testimonial-author">
+            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=120&q=80&auto=format&fit=crop&crop=face" alt="Ngozi - Cybersecurity Analyst" loading="lazy" class="avatar-img" />
+            <div><div class="font-bold text-sm text-ink">Ngozi A.</div><div class="text-xs text-slate-500 mt-0.5">Cybersecurity Analyst, Abuja</div></div>
+          </figcaption>
+        </figure>
+
+        <figure class="testi-card">
+          <div class="flex items-center gap-1 mb-4">
+            <span class="material-symbols-outlined text-amber-400 text-[18px]" style="font-variation-settings:'FILL' 1">star</span>
+            <span class="material-symbols-outlined text-amber-400 text-[18px]" style="font-variation-settings:'FILL' 1">star</span>
+            <span class="material-symbols-outlined text-amber-400 text-[18px]" style="font-variation-settings:'FILL' 1">star</span>
+            <span class="material-symbols-outlined text-amber-400 text-[18px]" style="font-variation-settings:'FILL' 1">star</span>
+            <span class="material-symbols-outlined text-amber-400 text-[18px]" style="font-variation-settings:'FILL' 1">star</span>
+          </div>
+          <blockquote class="text-ink font-medium text-[16px] leading-relaxed mb-6 type-target" data-type="We don't just hire talent — we hire Corespec graduates. The quality and consistency of every cohort speaks for itself. These are professionals ready from day one."></blockquote>
+          <figcaption class="flex items-center gap-3 pt-5 border-t border-slate-100 testimonial-author">
+            <img src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=120&h=120&fit=crop" alt="Emeka - CTO" loading="lazy" class="avatar-img" />
+            <div><div class="font-bold text-sm text-ink">Emeka K.</div><div class="text-xs text-slate-500 mt-0.5">CTO, Fintech Company, Lagos</div></div>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FEATURED IMAGE STRIP ================= -->
+  <section class="section-gray py-12 px-6 md:px-10 overflow-hidden reveal">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div class="img-wrap rounded-2xl overflow-hidden h-48">
+          <img src="https://images.pexels.com/photos/7988079/pexels-photo-7988079.jpeg?auto=compress&cs=tinysrgb&w=500&h=192&fit=crop" alt="Black professionals in a formal business conference meeting" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110" />
+        </div>
+        <div class="img-wrap rounded-2xl overflow-hidden h-48">
+          <img src="https://images.pexels.com/photos/1181622/pexels-photo-1181622.jpeg?auto=compress&cs=tinysrgb&w=500&h=350&fit=crop" alt="Students working on laptops in tech training session" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110" />
+        </div>
+        <div class="img-wrap rounded-2xl overflow-hidden h-48">
+          <img src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=500&h=192&fit=crop" alt="Diverse tech team collaborating around a laptop" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110" />
+        </div>
+        <div class="img-wrap rounded-2xl overflow-hidden h-48">
+          <img src="https://images.pexels.com/photos/3182812/pexels-photo-3182812.jpeg?auto=compress&cs=tinysrgb&w=500&h=350&fit=crop" alt="Group training workshop with instructor and participants" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FAQ ================= -->
+  <section class="section-white py-24 md:py-32 px-6 md:px-12 lg:px-20 overflow-hidden reveal">
+    <div class="max-w-3xl mx-auto">
+      <div class="section-header">
+        <span class="chip-section">FAQ</span>
+        <h2 class="head-2 text-ink">Common questions.</h2>
+      </div>
+      <div class="space-y-4">
+        <details class="faq"><summary>Are your certifications globally recognised? <span class="material-symbols-outlined plus">add</span></summary>
+          <p>Yes. Our training programs are aligned to CompTIA, EC-Council, Microsoft Azure, and Google Cloud certification tracks. Graduates sit official exams at accredited testing centres and receive vendor-issued credentials accepted worldwide.</p>
+        </details>
+        <details class="faq"><summary>What training formats do you offer? <span class="material-symbols-outlined plus">add</span></summary>
+          <p>We offer instructor-led classes (Mon–Fri), weekend bootcamps for working professionals, and online self-paced learning — so you can train around your schedule and location anywhere in Nigeria.</p>
+        </details>
+        <details class="faq"><summary>Do you offer corporate group training? <span class="material-symbols-outlined plus">add</span></summary>
+          <p>Yes. We regularly deliver on-site and virtual training for corporate teams across Nigeria. Contact us at <a href="mailto:info@corespecng.com" class="text-primary font-semibold">info@corespecng.com</a> to discuss a custom program for your organisation.</p>
+        </details>
+        <details class="faq"><summary>Where is Corespec located? <span class="material-symbols-outlined plus">add</span></summary>
+          <p>Our main office and training centre is in Okota, Lagos, Nigeria. We are open Monday to Friday, 8am–5pm. Online and weekend programs are available nationwide across Nigeria.</p>
+        </details>
+        <details class="faq"><summary>What is the AI Integration service? <span class="material-symbols-outlined plus">add</span></summary>
+          <p>Beyond training, Corespec helps businesses implement AI into their operations — automating workflows, deploying intelligent document processing, building chatbots, and more. Contact us for a free AI Readiness Audit to see where AI can add the most value to your business.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FINAL CTA ================= -->
+  <section class="reveal py-24 md:py-32 px-6 md:px-10 overflow-hidden">
+    <div class="max-w-7xl mx-auto bg-cta-loop rounded-[2.5rem] px-6 md:px-14 py-20 md:py-28 relative overflow-hidden">
+      <div class="absolute -top-28 -right-28 w-96 h-96 rounded-full bg-primary/40 blur-3xl pointer-events-none"></div>
+      <div class="absolute -bottom-28 -left-28 w-96 h-96 rounded-full bg-cyan/30 blur-3xl pointer-events-none"></div>
+      <!-- Background image with overlay -->
+      <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1400&q=60&auto=format&fit=crop" alt="" aria-hidden="true" loading="lazy" class="absolute inset-0 w-full h-full object-cover opacity-[0.08]" />
+      <div class="cta-stack">
+        <div class="cta-chip-wrap"><span class="chip chip-light">Ready to start?</span></div>
+        <h2 class="cta-h2">Your next certification — or your company's AI transformation — starts here.</h2>
+        <p class="cta-p">Speak to our team for a free 30-minute consultation. No commitment, just clarity on the best path forward for you or your organisation.</p>
+        <div class="cta-buttons">
+          <a href="contact.html" class="btn btn-primary btn-shimmer">Book a Free Consultation <span class="material-symbols-outlined text-[18px]">arrow_forward</span></a>
+          <a href="services-ai.html" class="btn btn-ghost">Explore AI Services</a>
+        </div>
+        <p class="text-white/50 text-xs mt-8">Okota, Lagos · <a href="mailto:info@corespecng.com" class="hover:text-white/80 transition">info@corespecng.com</a> · <a href="tel:08033395470" class="hover:text-white/80 transition">08033395470</a> · Mon–Fri 8am–5pm</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <div class="footer-top"></div>
+  <footer class="bg-navy-deep text-white pt-20 pb-10 font-['Plus_Jakarta_Sans']">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 px-6 md:px-12 lg:px-20 mb-16">
+      <div>
+        <div class="mb-4"><div class="bg-white rounded-xl p-2 inline-block"><img src="https://res.cloudinary.com/detsk6uql/image/upload/v1776429607/corespec_logo_sr0rjz.png" alt="Corespec Engineering Limited" class="h-12 object-contain" /></div></div>
+        <p class="text-white/50 text-xs mb-4">Corespec Engineering Limited</p>
+        <p class="text-white/60 text-sm leading-relaxed mb-4">Providing Value Through Innovation and Technology — Lagos, Nigeria's premier ICT training and technology solutions company.</p>
+        <div class="flex gap-3">
+          <a href="mailto:info@corespecng.com" aria-label="Email" class="w-10 h-10 rounded-full bg-white/5 hover:bg-white/15 border border-white/10 flex items-center justify-center transition"><span class="material-symbols-outlined text-[18px]">alternate_email</span></a>
+          <a href="tel:08033395470" aria-label="Phone" class="w-10 h-10 rounded-full bg-white/5 hover:bg-white/15 border border-white/10 flex items-center justify-center transition"><span class="material-symbols-outlined text-[18px]">phone</span></a>
+          <a href="#" aria-label="LinkedIn" class="w-10 h-10 rounded-full bg-white/5 hover:bg-white/15 border border-white/10 flex items-center justify-center transition"><span class="material-symbols-outlined text-[18px]">link</span></a>
+        </div>
+      </div>
+      <div>
+        <h4 class="font-bold mb-5">Company</h4>
+        <ul class="space-y-3 text-white/60 text-sm">
+          <li><a class="hover:text-white transition" href="about.html">About Us</a></li>
+          <li><a class="hover:text-white transition" href="process.html">Our Process</a></li>
+          <li><a class="hover:text-white transition" href="portfolio.html">Portfolio</a></li>
+          <li><a class="hover:text-white transition" href="insights.html">Insights</a></li>
+          <li><a class="hover:text-white transition" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-bold mb-5">Services</h4>
+        <ul class="space-y-3 text-white/60 text-sm">
+          <li><a class="hover:text-white transition" href="services-ai.html">AI Integration &amp; Automation</a></li>
+          <li><a class="hover:text-white transition" href="services-cloud.html">Cloud Computing</a></li>
+          <li><a class="hover:text-white transition" href="services-cybersecurity.html">Cybersecurity</a></li>
+          <li><a class="hover:text-white transition" href="services-engineering.html">Software &amp; Hardware Engineering</a></li>
+          <li><a class="hover:text-white transition" href="services-erp.html">ERP Solutions</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-bold mb-5">Get in Touch</h4>
+        <ul class="space-y-3 text-white/60 text-sm mb-6">
+          <li class="flex items-start gap-2"><span class="material-symbols-outlined text-[16px] mt-0.5">location_on</span>Okota, Lagos, Nigeria</li>
+          <li class="flex items-start gap-2"><span class="material-symbols-outlined text-[16px] mt-0.5">phone</span><a href="tel:08033395470" class="hover:text-white transition">08033395470</a></li>
+          <li class="flex items-start gap-2"><span class="material-symbols-outlined text-[16px] mt-0.5">mail</span><a href="mailto:info@corespecng.com" class="hover:text-white transition">info@corespecng.com</a></li>
+          <li class="flex items-start gap-2"><span class="material-symbols-outlined text-[16px] mt-0.5">schedule</span>Mon–Fri 8am–5pm</li>
+        </ul>
+        <ul class="space-y-2 text-white/40 text-xs">
+          <li><a class="hover:text-white/80 transition" href="privacy.html">Privacy Policy</a></li>
+          <li><a class="hover:text-white/80 transition" href="terms.html">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="border-t border-white/10 max-w-7xl mx-auto px-6 md:px-12 lg:px-20 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+      <p class="text-white/40 text-xs">© 2026 Corespec Engineering Limited. All rights reserved. Okota, Lagos, Nigeria.</p>
+      <p class="text-white/40 text-xs">Providing Value Through Innovation and Technology.</p>
+    </div>
+  </footer>
+
+  <script src="assets/site.js?v=1776440000" defer></script>
+
+  <script>
+    /* ── Metric bar + percentage count-up animation ── */
+    (function () {
+      var bars = document.querySelectorAll('.metric-bar[data-target]');
+      var pcts = document.querySelectorAll('.metric-pct[data-target]');
+      if (!bars.length) return;
+
+      var triggered = false;
+      function runAnimations() {
+        if (triggered) return;
+        triggered = true;
+
+        /* Animate bars with staggered delay */
+        bars.forEach(function (bar, i) {
+          setTimeout(function () {
+            bar.classList.add('bar-animated');
+          }, i * 180);
+        });
+
+        /* Count-up percentages */
+        pcts.forEach(function (el, i) {
+          var target = parseInt(el.getAttribute('data-target'), 10);
+          var delay  = i * 180 + 100;
+          setTimeout(function () {
+            el.classList.add('pct-visible');
+            var start = 0;
+            var duration = 1100;
+            var startTime = null;
+            function step(ts) {
+              if (!startTime) startTime = ts;
+              var progress = Math.min((ts - startTime) / duration, 1);
+              var ease = 1 - Math.pow(1 - progress, 3); /* ease-out cubic */
+              el.textContent = Math.round(ease * target) + '%';
+              if (progress < 1) requestAnimationFrame(step);
+              else el.textContent = target + '%';
+            }
+            requestAnimationFrame(step);
+          }, delay);
+        });
+      }
+
+      /* Trigger when the card scrolls into view */
+      var card = bars[0].closest('.metric-bar-wrap') &&
+                 bars[0].closest('.metric-bar-wrap').closest('[class*="absolute"]') ||
+                 bars[0].closest('div');
+      var observer = new IntersectionObserver(function (entries) {
+        if (entries[0].isIntersecting) { runAnimations(); observer.disconnect(); }
+      }, { threshold: 0.4 });
+      /* Observe the metric section wrapper */
+      var wrapper = document.querySelector('.metric-row');
+      if (wrapper) observer.observe(wrapper.parentElement);
+      else runAnimations(); /* fallback: run immediately */
+    })();
+  </script>
+</body>
+</html>

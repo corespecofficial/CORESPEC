@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /_template.html
+Disallow: /design-system.html
+
+Sitemap: https://corespecng.com/sitemap.xml

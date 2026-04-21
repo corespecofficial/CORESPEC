@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" type="image/png" href="https://res.cloudinary.com/detsk6uql/image/upload/v1776429608/corespec_logo_qnndex.png" />
+  <link rel="apple-touch-icon" href="https://res.cloudinary.com/detsk6uql/image/upload/v1776429608/corespec_logo_qnndex.png" />
+  <meta property="og:image" content="https://res.cloudinary.com/detsk6uql/image/upload/v1776429607/corespec_logo_sr0rjz.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:site_name" content="Corespec Engineering Limited" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://res.cloudinary.com/detsk6uql/image/upload/v1776429607/corespec_logo_sr0rjz.png" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>{{TITLE}} | Corespec</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+  <style>
+    .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+    .glass-card { background: rgba(255,255,255,0.8); -webkit-backdrop-filter: blur(20px); backdrop-filter: blur(20px); }
+    .text-gradient-blue { background: linear-gradient(to right, #2563EB, #0EA5E9); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+    .reveal { opacity: 0; transform: translateY(32px); transition: opacity .9s cubic-bezier(.2,.7,.2,1), transform .9s cubic-bezier(.2,.7,.2,1); }
+    .reveal.in-view { opacity: 1; transform: none; }
+    @media (prefers-reduced-motion: reduce) { .reveal { opacity:1 !important; transform:none !important; transition:none !important; } }
+  </style>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: { extend: {
+        colors: {
+          "inverse-surface":"#2d3133","secondary-container":"#a7c4fe","tertiary-container":"#0074a6","tertiary-fixed":"#c9e6ff","tertiary-fixed-dim":"#89ceff","inverse-on-surface":"#eff1f3","on-tertiary":"#ffffff","on-primary-container":"#eeefff","error":"#ba1a1a","on-secondary-fixed":"#001b3f","surface-container-highest":"#e0e3e5","on-surface":"#191c1e","outline":"#737686","error-container":"#ffdad6","on-primary-fixed-variant":"#003ea8","outline-variant":"#c3c6d7","primary-fixed":"#dbe1ff","on-background":"#191c1e","on-tertiary-fixed":"#001e2f","surface-variant":"#e0e3e5","on-error-container":"#93000a","on-tertiary-fixed-variant":"#004c6e","surface":"#f7f9fb","surface-container-low":"#f2f4f6","surface-container-lowest":"#ffffff","secondary-fixed-dim":"#abc7ff","on-secondary-container":"#335083","surface-container-high":"#e6e8ea","on-secondary-fixed-variant":"#284678","surface-bright":"#f7f9fb","on-tertiary-container":"#e4f2ff","inverse-primary":"#b4c5ff","on-error":"#ffffff","primary-fixed-dim":"#b4c5ff","surface-dim":"#d8dadc","tertiary":"#005a82","secondary":"#415e91","on-primary-fixed":"#00174b","surface-container":"#eceef0","on-secondary":"#ffffff","primary-container":"#2563eb","background":"#f7f9fb","on-surface-variant":"#434655","secondary-fixed":"#d7e2ff","primary":"#004ac6","on-primary":"#ffffff","surface-tint":"#0053db"
+        },
+        fontFamily: { "headline":["Space Grotesk"], "body":["Plus Jakarta Sans"], "label":["Plus Jakarta Sans"] },
+        borderRadius: { "DEFAULT":"1rem", "lg":"2rem", "xl":"3rem", "full":"9999px" }
+      }}
+    }
+  </script>
+</head>
+
+<body class="bg-background font-body text-on-background">
+
+  <!-- TopNavBar -->
+  <nav class="fixed top-0 left-0 right-0 z-50 flex justify-between items-center px-8 py-3 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl rounded-full mt-6 mx-auto max-w-5xl border border-slate-100/20 shadow-[0_8px_48px_rgba(37,99,235,0.15)]">
+    <a href="index.html" class="flex items-center shrink-0"><img src="https://res.cloudinary.com/detsk6uql/image/upload/v1776429608/corespec_logo_qnndex.png" alt="Corespec Engineering" class="h-14 w-14 object-contain rounded-lg" /></a>
+    <div class="hidden md:flex gap-8 items-center">
+      <div class="relative group">
+        <button class="flex items-center gap-1 text-blue-600 dark:text-blue-400 font-bold font-['Space_Grotesk'] tracking-tight hover:text-blue-500 transition-colors py-2">
+          Services <span class="material-symbols-outlined text-[18px]">keyboard_arrow_down</span>
+        </button>
+        <div class="absolute top-full left-0 mt-1 w-64 bg-white dark:bg-slate-900 rounded-2xl shadow-xl border border-slate-100/10 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 p-4 space-y-2 z-50">
+          <a href="services-ai.html" class="block p-3 rounded-xl hover:bg-blue-50 dark:hover:bg-blue-900/30 transition-colors"><p class="font-bold text-sm text-slate-900 dark:text-white">AI Implementation</p><p class="text-xs text-slate-500">Custom ML &amp; LLM pipelines</p></a>
+          <a href="services-cloud.html" class="block p-3 rounded-xl hover:bg-blue-50 dark:hover:bg-blue-900/30 transition-colors"><p class="font-bold text-sm text-slate-900 dark:text-white">Cloud Migration</p><p class="text-xs text-slate-500">Scalable cloud infrastructure</p></a>
+          <a href="services-cybersecurity.html" class="block p-3 rounded-xl hover:bg-blue-50 dark:hover:bg-blue-900/30 transition-colors"><p class="font-bold text-sm text-slate-900 dark:text-white">Cybersecurity</p><p class="text-xs text-slate-500">Threat mitigation &amp; training</p></a>
+          <a href="services-engineering.html" class="block p-3 rounded-xl hover:bg-blue-50 dark:hover:bg-blue-900/30 transition-colors"><p class="font-bold text-sm text-slate-900 dark:text-white">Engineering Consultancy</p><p class="text-xs text-slate-500">Strategic technical direction</p></a>
+          <a href="services-erp.html" class="block p-3 rounded-xl hover:bg-blue-50 dark:hover:bg-blue-900/30 transition-colors"><p class="font-bold text-sm text-slate-900 dark:text-white">ERP Solutions</p><p class="text-xs text-slate-500">Business logic automation</p></a>
+        </div>
+      </div>
+      <a class="text-slate-600 dark:text-slate-400 font-medium font-['Space_Grotesk'] tracking-tight hover:text-blue-500 transition-colors" href="portfolio.html">Portfolio</a>
+      <a class="text-slate-600 dark:text-slate-400 font-medium font-['Space_Grotesk'] tracking-tight hover:text-blue-500 transition-colors" href="process.html">Process</a>
+      <a class="text-slate-600 dark:text-slate-400 font-medium font-['Space_Grotesk'] tracking-tight hover:text-blue-500 transition-colors" href="about.html">About</a>
+      <a class="text-slate-600 dark:text-slate-400 font-medium font-['Space_Grotesk'] tracking-tight hover:text-blue-500 transition-colors" href="insights.html">Insights</a>
+    </div>
+    <a href="contact.html" class="bg-primary-container text-on-primary-container px-6 py-2 rounded-full font-bold hover:scale-95 transition-all duration-200">Book a Call</a>
+  </nav>
+
+  <!-- Page Hero Placeholder -->
+  <section class="reveal pt-48 pb-20 px-8 md:px-20 max-w-[1440px] mx-auto overflow-hidden">
+    <span class="inline-block bg-tertiary-fixed text-on-tertiary-fixed px-4 py-1 rounded-full text-[12px] font-bold tracking-widest uppercase mb-8">{{EYEBROW}}</span>
+    <h1 class="font-headline font-bold text-[56px] md:text-[88px] leading-[1] text-on-background mb-8 max-w-4xl">
+      {{H1}}
+    </h1>
+    <p class="text-on-surface-variant text-lg max-w-2xl leading-relaxed">{{INTRO}}</p>
+  </section>
+
+  <!-- Main Content Placeholder -->
+  <main class="reveal px-8 md:px-20 max-w-[1440px] mx-auto pb-32">
+    <div class="bg-white rounded-[28px] border border-[#E5E7EB] p-12 text-on-surface-variant">
+      <p class="text-sm uppercase tracking-widest text-primary font-bold mb-3">{{EYEBROW}}</p>
+      <p>Page content goes here. Build out sections for <strong>{{TITLE}}</strong> following the design patterns used on the home page (cards, glass effect, stat strips, testimonial staggers, dark feature bands).</p>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-[#1A3A6B] dark:bg-slate-950 text-white pt-20 pb-10 font-['Plus_Jakarta_Sans']">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-8 md:px-20 w-full mb-20">
+      <div>
+        <div class="mb-4"><div class="bg-white rounded-xl p-2 inline-block"><img src="https://res.cloudinary.com/detsk6uql/image/upload/v1776429607/corespec_logo_sr0rjz.png" alt="Corespec Engineering Limited" class="h-12 object-contain" /></div></div>
+        <p class="text-white/60 text-sm leading-relaxed">The pinnacle of technical training and AI solutions in Nigeria. Empowering the next generation of global tech leaders.</p>
+      </div>
+      <div>
+        <h4 class="font-bold mb-6">Company</h4>
+        <ul class="space-y-4 text-white/60 text-sm">
+          <li><a class="hover:text-blue-400 transition-colors" href="about.html">About Us</a></li>
+          <li><a class="hover:text-blue-400 transition-colors" href="process.html">Our Process</a></li>
+          <li><a class="hover:text-blue-400 transition-colors" href="portfolio.html">Portfolio</a></li>
+          <li><a class="hover:text-blue-400 transition-colors" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-bold mb-6">Services</h4>
+        <ul class="space-y-4 text-white/60 text-sm">
+          <li><a class="hover:text-blue-400 transition-colors" href="services-ai.html">AI Implementation</a></li>
+          <li><a class="hover:text-blue-400 transition-colors" href="services-cloud.html">Cloud Migration</a></li>
+          <li><a class="hover:text-blue-400 transition-colors" href="services-cybersecurity.html">Cybersecurity</a></li>
+          <li><a class="hover:text-blue-400 transition-colors" href="services-engineering.html">Engineering Consultancy</a></li>
+          <li><a class="hover:text-blue-400 transition-colors" href="services-erp.html">ERP Solutions</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-bold mb-6">Legal</h4>
+        <ul class="space-y-4 text-white/60 text-sm">
+          <li><a class="hover:text-blue-400 transition-opacity" href="privacy.html">Privacy Policy</a></li>
+          <li><a class="hover:text-blue-400 transition-opacity" href="#terms">Terms of Service</a></li>
+          <li><a class="hover:text-blue-400 transition-opacity" href="design-system.html">Design System</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="border-t border-white/10 px-8 md:px-20 pt-10 flex flex-col md:flex-row justify-between items-center gap-4">
+      <p class="text-white/40 text-xs">© 2024 Corespec. All rights reserved.</p>
+      <div class="flex gap-6">
+        <a class="text-white/40 hover:text-white transition-colors" href="#"><span class="material-symbols-outlined text-sm">share</span></a>
+        <a class="text-white/40 hover:text-white transition-colors" href="#"><span class="material-symbols-outlined text-sm">alternate_email</span></a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in-view'); io.unobserve(e.target); } });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  </script>
+
+</body>
+</html>

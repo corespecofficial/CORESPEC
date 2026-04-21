@@ -1,0 +1,414 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+    <link rel="dns-prefetch" href="https://res.cloudinary.com" />
+  <link rel="preconnect" href="https://res.cloudinary.com" crossorigin />
+<link rel="icon" type="image/png" href="https://res.cloudinary.com/detsk6uql/image/upload/v1776429608/corespec_logo_qnndex.png" />
+  <link rel="apple-touch-icon" href="https://res.cloudinary.com/detsk6uql/image/upload/v1776429608/corespec_logo_qnndex.png" />
+  <meta property="og:image" content="https://res.cloudinary.com/detsk6uql/image/upload/v1776429607/corespec_logo_sr0rjz.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:site_name" content="Corespec Engineering Limited" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://res.cloudinary.com/detsk6uql/image/upload/v1776429607/corespec_logo_sr0rjz.png" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Cloud Migration Case Study — Nexus Cloud | Corespec Engineering</title>
+  <meta name="description" content="How Corespec Engineering helped a fintech scale to 10M users with a multi-region cloud migration, 60% lower infrastructure spend, and 99.99% SLA." />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/site.css?v=1776440000" />
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: { extend: {
+        colors: { "primary":"#2563EB","primary-deep":"#1D4ED8","cyan":"#0EA5E9","navy":"#0F2C5B","ink":"#0B1220","mute":"#475569","on-surface-variant":"#434655","on-background":"#0B1220","background":"#FFFFFF" },
+        fontFamily: { "headline":["Space Grotesk"], "body":["Plus Jakarta Sans"] }
+      }}
+    }
+  </script>
+  <style>
+    .outcome-bar-wrap { height: 8px; background: #EEF2FF; border-radius: 999px; overflow: hidden; margin-top: 6px; }
+    .outcome-bar { height: 100%; border-radius: 999px; background: linear-gradient(to right, #2563EB, #0EA5E9); }
+    .tech-chip { display: inline-flex; align-items: center; gap: 5px; padding: 5px 12px; border-radius: 999px; background: #EFF6FF; color: #2563EB; font-size: 11px; font-weight: 700; border: 1px solid rgba(37,99,235,.15); }
+    .timeline-dot { width: 12px; height: 12px; border-radius: 50%; background: #2563EB; border: 3px solid #fff; box-shadow: 0 0 0 2px #2563EB; flex-shrink: 0; margin-top: 4px; }
+  </style>
+  <link rel="canonical" href="https://corespecng.com/portfolio-nexus-cloud.html" />
+  <meta property="og:url" content="https://corespecng.com/portfolio-nexus-cloud.html" />
+  <meta property="og:title" content="Cloud Migration Case Study — Nexus Cloud | Corespec Engineering" />
+  <meta property="og:description" content="How Corespec Engineering helped a fintech scale to 10M users with a multi-region cloud migration, 60% lower infrastructure spend, and 99.99% SLA." />
+  <meta name="twitter:title" content="Cloud Migration Case Study — Nexus Cloud | Corespec Engineering" />
+  <meta name="twitter:description" content="How Corespec Engineering helped a fintech scale to 10M users with a multi-region cloud migration, 60% lower infrastructure spend, and 99.99% SLA." />
+  <meta name="theme-color" content="#2563EB" />
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Corespec Engineering Limited",
+  "alternateName": "Corespec",
+  "url": "https://corespecng.com",
+  "logo": "https://res.cloudinary.com/detsk6uql/image/upload/v1776429607/corespec_logo_sr0rjz.png",
+  "description": "ICT training and technology solutions provider in Lagos, Nigeria — cloud computing, cybersecurity, AI integration, engineering, and ERP systems.",
+  "telephone": "+234-803-339-5470",
+  "email": "info@corespecng.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Okota",
+    "addressLocality": "Lagos",
+    "addressRegion": "Lagos",
+    "addressCountry": "NG"
+  },
+  "sameAs": ["https://corespecng.com"],
+  "openingHours": "Mo-Fr 08:00-17:00"
+}
+</script>
+</head>
+
+<body class="bg-white font-body text-on-background">
+
+  
+  <a href="#main" class="skip-link">Skip to main content</a>
+<!-- Mobile menu button -->
+  <button id="menu-btn" aria-label="Open menu" class="fixed top-8 right-6 z-[60] md:hidden w-11 h-11 rounded-full bg-white shadow-lg border border-slate-200 flex items-center justify-center">
+    <span class="material-symbols-outlined text-primary">menu</span>
+  </button>
+
+  <!-- Mobile drawer -->
+  <div id="mobile-drawer" class="drawer" aria-hidden="true">
+    <div class="drawer-bg" data-drawer-close></div>
+    <aside class="drawer-panel" role="dialog" aria-label="Navigation">
+      <div class="flex justify-between items-center mb-4">
+        <span class="flex items-center"><img fetchpriority="high" src="https://res.cloudinary.com/detsk6uql/image/upload/v1776429607/corespec_logo_sr0rjz.png" alt="Corespec Engineering" class="h-10 object-contain rounded-lg" /></span>
+        <button data-drawer-close aria-label="Close" class="w-10 h-10 rounded-full hover:bg-slate-100 flex items-center justify-center"><span class="material-symbols-outlined">close</span></button>
+      </div>
+      <a href="index.html">Home</a>
+      <details>
+        <summary>Services</summary>
+        <div class="submenu">
+          <a href="services-ai.html">AI Integration</a>
+          <a href="services-cloud.html">Cloud Computing</a>
+          <a href="services-cybersecurity.html">Cybersecurity</a>
+          <a href="services-engineering.html">Engineering</a>
+          <a href="services-erp.html">ERP Solutions</a>
+        </div>
+      </details>
+      <div class="divider-aurora my-2"></div>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="process.html">Process</a>
+      <a href="about.html">About</a>
+      <a href="insights.html">Insights</a>
+      <a href="contact.html" class="btn btn-primary btn-shimmer mt-4 justify-center">Book a Call</a>
+    </aside>
+  </div>
+
+  <!-- Nav -->
+  <nav class="fixed top-0 left-0 right-0 z-50 flex justify-between items-center px-6 md:px-8 py-3 bg-white/90 backdrop-blur-xl rounded-full mt-6 mx-4 md:mx-auto max-w-5xl border border-slate-200/80 shadow-[0_4px_24px_rgba(37,99,235,0.10)]">
+    <a href="index.html" class="flex items-center shrink-0"><img src="https://res.cloudinary.com/detsk6uql/image/upload/v1776429608/corespec_logo_qnndex.png" alt="Corespec Engineering" class="h-14 w-14 object-contain rounded-lg" /></a>
+    <div class="hidden md:flex gap-7 items-center">
+      <div class="relative group">
+        <button class="flex items-center gap-1 text-primary font-bold font-['Space_Grotesk'] hover:opacity-80 transition py-2">
+          Services <span class="material-symbols-outlined text-[18px]">keyboard_arrow_down</span>
+        </button>
+        <div class="absolute top-full left-0 mt-2 w-72 bg-white rounded-2xl shadow-xl border border-slate-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 p-3 space-y-1 z-50">
+          <a href="services-ai.html" class="block p-3 rounded-xl hover:bg-blue-50 transition"><p class="font-bold text-sm text-ink">AI Integration &amp; Automation</p><p class="text-xs text-slate-500">AI workflows for businesses</p></a>
+          <a href="services-cloud.html" class="block p-3 rounded-xl hover:bg-blue-50 transition"><p class="font-bold text-sm text-ink">Cloud Computing</p><p class="text-xs text-slate-500">AWS, Azure &amp; GCP training</p></a>
+          <a href="services-cybersecurity.html" class="block p-3 rounded-xl hover:bg-blue-50 transition"><p class="font-bold text-sm text-ink">Cybersecurity</p><p class="text-xs text-slate-500">CEH, CISSP &amp; Security+</p></a>
+          <a href="services-engineering.html" class="block p-3 rounded-xl hover:bg-blue-50 transition"><p class="font-bold text-sm text-ink">Software &amp; Hardware Engineering</p><p class="text-xs text-slate-500">Full-stack &amp; embedded systems</p></a>
+          <a href="services-erp.html" class="block p-3 rounded-xl hover:bg-blue-50 transition"><p class="font-bold text-sm text-ink">ERP Solutions</p><p class="text-xs text-slate-500">Enterprise system implementation</p></a>
+        </div>
+      </div>
+      <a class="nav-link text-slate-600 font-medium font-['Space_Grotesk'] hover:text-primary" href="portfolio.html">Portfolio</a>
+      <a class="nav-link text-slate-600 font-medium font-['Space_Grotesk'] hover:text-primary" href="process.html">Process</a>
+      <a class="nav-link text-slate-600 font-medium font-['Space_Grotesk'] hover:text-primary" href="about.html">About</a>
+      <a class="nav-link text-slate-600 font-medium font-['Space_Grotesk'] hover:text-primary" href="insights.html">Insights</a>
+    </div>
+    <a href="contact.html" class="btn btn-primary btn-shimmer !py-2 !px-5 !text-sm hidden md:inline-flex">Book a Call</a>
+  </nav>
+
+  <!-- ================= HERO ================= -->
+  <section id="main" class="section-white pt-36 pb-20 px-6 overflow-hidden">
+    <div class="max-w-7xl mx-auto">
+
+      <!-- Breadcrumb -->
+      <div class="flex items-center gap-2 text-xs text-slate-400 font-semibold mb-10 reveal">
+        <a href="portfolio.html" class="hover:text-primary transition">Portfolio</a>
+        <span class="material-symbols-outlined text-[14px]">chevron_right</span>
+        <span class="text-slate-600">Nexus Cloud Migration</span>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <!-- Left -->
+        <div class="page-hero-text reveal reveal-left">
+          <span class="chip-section">Cloud Computing · Fintech</span>
+          <h1 class="head-1 text-ink">Nexus Cloud: Scaling to 10M Users with Zero Downtime.</h1>
+          <p class="t-lead text-slate-500">A Lagos fintech needed to migrate from a single-region legacy setup to a resilient, multi-region cloud architecture — without taking the platform offline during peak trading hours.</p>
+          <div class="flex flex-wrap gap-3">
+            <span class="tech-chip"><span class="material-symbols-outlined text-[14px]">cloud</span>AWS</span>
+            <span class="tech-chip">Multi-region</span>
+            <span class="tech-chip">Terraform</span>
+            <span class="tech-chip">Kubernetes</span>
+            <span class="tech-chip">PostgreSQL RDS</span>
+            <span class="tech-chip">CloudFront CDN</span>
+            <span class="tech-chip">Datadog</span>
+          </div>
+        </div>
+
+        <!-- Right: Key metrics -->
+        <div class="reveal reveal-right">
+          <div class="card-white p-8">
+            <p class="text-xs font-bold uppercase tracking-widest text-slate-400 mb-6">Engagement outcomes</p>
+            <div class="space-y-5">
+              <div>
+                <div class="flex justify-between text-sm mb-1">
+                  <span class="font-semibold text-slate-600">Infrastructure cost reduction</span>
+                  <span class="font-bold text-primary">60%</span>
+                </div>
+                <div class="outcome-bar-wrap"><div class="outcome-bar" style="width:60%"></div></div>
+              </div>
+              <div>
+                <div class="flex justify-between text-sm mb-1">
+                  <span class="font-semibold text-slate-600">API response time improvement</span>
+                  <span class="font-bold text-primary">72%</span>
+                </div>
+                <div class="outcome-bar-wrap"><div class="outcome-bar" style="width:72%"></div></div>
+              </div>
+              <div>
+                <div class="flex justify-between text-sm mb-1">
+                  <span class="font-semibold text-slate-600">Uptime SLA achieved</span>
+                  <span class="font-bold text-primary">99.99%</span>
+                </div>
+                <div class="outcome-bar-wrap"><div class="outcome-bar" style="width:99%"></div></div>
+              </div>
+              <div>
+                <div class="flex justify-between text-sm mb-1">
+                  <span class="font-semibold text-slate-600">Deployment frequency increase</span>
+                  <span class="font-bold text-primary">8×</span>
+                </div>
+                <div class="outcome-bar-wrap"><div class="outcome-bar" style="width:80%"></div></div>
+              </div>
+            </div>
+            <div class="grid grid-cols-3 gap-4 mt-8 pt-6 border-t border-slate-100 text-center">
+              <div><div class="text-2xl font-black text-ink font-['Space_Grotesk']">18</div><div class="text-xs text-slate-500 mt-1">Weeks delivery</div></div>
+              <div class="border-x border-slate-100"><div class="text-2xl font-black text-ink font-['Space_Grotesk']">3</div><div class="text-xs text-slate-500 mt-1">AWS regions</div></div>
+              <div><div class="text-2xl font-black text-ink font-['Space_Grotesk']">0</div><div class="text-xs text-slate-500 mt-1">Minutes downtime</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CHALLENGE / APPROACH / OUTCOME ================= -->
+  <section class="section-gray py-20 px-6 overflow-hidden reveal">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-8">
+
+      <div class="card-white p-7 reveal reveal-zoom" data-delay="0">
+        <div class="w-12 h-12 rounded-2xl bg-red-50 flex items-center justify-center mb-5">
+          <span class="material-symbols-outlined text-red-500">report_problem</span>
+        </div>
+        <h3 class="font-bold text-xl text-ink mb-3">The Challenge</h3>
+        <p class="text-slate-500 text-sm leading-relaxed mb-4">The client — a high-growth fintech serving 400,000 active users — was running a monolithic application on a single Lagos VPS. As transaction volumes tripled in 12 months, the platform suffered weekly outages and peak-hour slowdowns that were directly eroding customer trust and revenue.</p>
+        <p class="text-slate-500 text-sm leading-relaxed">They needed to migrate to the cloud, adopt a microservices architecture, and prepare for 10M users — without a single minute of planned downtime during the cutover.</p>
+      </div>
+
+      <div class="card-white p-7 reveal reveal-zoom" data-delay="120">
+        <div class="w-12 h-12 rounded-2xl bg-blue-50 flex items-center justify-center mb-5">
+          <span class="material-symbols-outlined text-primary">architecture</span>
+        </div>
+        <h3 class="font-bold text-xl text-ink mb-3">Our Approach</h3>
+        <ul class="text-slate-500 text-sm leading-relaxed space-y-3">
+          <li class="flex items-start gap-2">
+            <div class="timeline-dot mt-1"></div>
+            <span><strong class="text-ink">Discovery (Weeks 1–2):</strong> Full audit of the existing stack, traffic patterns, and database schemas. Identified 12 services ready for extraction.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <div class="timeline-dot mt-1"></div>
+            <span><strong class="text-ink">Parallel build (Weeks 3–12):</strong> Containerised each service with Docker, deployed on EKS across Lagos, London, and Dublin AWS regions. Set up PostgreSQL RDS with automated failover.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <div class="timeline-dot mt-1"></div>
+            <span><strong class="text-ink">Blue-green cutover (Week 16):</strong> Live traffic shifted gradually from legacy to cloud via AWS Route 53 weighted routing — 5% → 25% → 100% over 4 hours with real-time monitoring in Datadog.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <div class="timeline-dot mt-1"></div>
+            <span><strong class="text-ink">Optimise (Weeks 17–18):</strong> CloudFront CDN tuned, auto-scaling policies configured, runbooks and alerting handed to the client engineering team.</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="card-white p-7 reveal reveal-zoom" data-delay="240">
+        <div class="w-12 h-12 rounded-2xl bg-green-50 flex items-center justify-center mb-5">
+          <span class="material-symbols-outlined text-green-600">verified</span>
+        </div>
+        <h3 class="font-bold text-xl text-ink mb-3">The Outcome</h3>
+        <ul class="text-slate-500 text-sm leading-relaxed space-y-3">
+          <li class="flex items-center gap-2">
+            <span class="material-symbols-outlined text-green-500 text-[16px]">check_circle</span>
+            <span>Zero minutes of downtime during cutover — the first deployment in the company's history that caused no customer tickets.</span>
+          </li>
+          <li class="flex items-center gap-2">
+            <span class="material-symbols-outlined text-green-500 text-[16px]">check_circle</span>
+            <span>60% reduction in monthly cloud spend vs. legacy VPS, with headroom to scale to 25M users without re-architecture.</span>
+          </li>
+          <li class="flex items-center gap-2">
+            <span class="material-symbols-outlined text-green-500 text-[16px]">check_circle</span>
+            <span>API p95 latency dropped from 1.8s to 420ms — a 72% improvement experienced by every user on every transaction.</span>
+          </li>
+          <li class="flex items-center gap-2">
+            <span class="material-symbols-outlined text-green-500 text-[16px]">check_circle</span>
+            <span>Deployment frequency went from once every 3 weeks to daily — the team shipped 8× more features in the quarter after launch.</span>
+          </li>
+          <li class="flex items-center gap-2">
+            <span class="material-symbols-outlined text-green-500 text-[16px]">check_circle</span>
+            <span>99.99% uptime measured over the first 6 months post-migration — exceeding the contracted SLA.</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CLIENT QUOTE ================= -->
+  <section class="section-white py-20 px-6 overflow-hidden reveal">
+    <div class="max-w-3xl mx-auto text-center">
+      <span class="material-symbols-outlined text-primary text-5xl mb-6 block">format_quote</span>
+      <blockquote class="text-2xl md:text-3xl font-bold text-ink leading-snug mb-8 type-target" data-type="We expected disruption. We got none. Corespec moved our entire platform to the cloud while our users continued transacting without a single error message."></blockquote>
+      <div class="flex items-center justify-center gap-4">
+        <div class="w-14 h-14 rounded-full bg-blue-100 flex items-center justify-center font-black text-primary text-lg">CF</div>
+        <div class="text-left">
+          <div class="font-bold text-ink">Chukwuemeka F.</div>
+          <div class="text-sm text-slate-500">CTO, Nexus Fintech — Lagos</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= STATS BAND ================= -->
+  <section class="reveal bg-navy-deep py-20 px-6 relative overflow-hidden">
+    <div class="absolute -top-32 -right-32 w-80 h-80 rounded-full bg-primary/20 blur-3xl pointer-events-none drift"></div>
+    <div class="max-w-5xl mx-auto relative z-10">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+        <div>
+          <div class="text-white text-4xl md:text-5xl font-headline font-bold mb-2" data-count="60" data-suffix="%" data-final="60%">0%</div>
+          <p class="text-white/60 text-xs font-bold uppercase tracking-widest">Cost reduction</p>
+        </div>
+        <div class="md:border-l md:border-white/10">
+          <div class="text-white text-4xl md:text-5xl font-headline font-bold mb-2" data-count="99" data-suffix="%" data-final="99.99%">0%</div>
+          <p class="text-white/60 text-xs font-bold uppercase tracking-widest">Uptime SLA</p>
+        </div>
+        <div class="md:border-l md:border-white/10">
+          <div class="text-white text-4xl md:text-5xl font-headline font-bold mb-2" data-count="0" data-suffix="min" data-final="0min">0min</div>
+          <p class="text-white/60 text-xs font-bold uppercase tracking-widest">Cutover downtime</p>
+        </div>
+        <div class="md:border-l md:border-white/10">
+          <div class="text-white text-4xl md:text-5xl font-headline font-bold mb-2" data-count="18" data-suffix="wk" data-final="18wk">0wk</div>
+          <p class="text-white/60 text-xs font-bold uppercase tracking-widest">Weeks to production</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= RELATED ARTICLES ================= -->
+  <section class="section-gray py-20 px-6 overflow-hidden reveal">
+    <div class="max-w-7xl mx-auto">
+      <div class="section-header" style="margin-bottom:40px">
+        <span class="chip-section">Related Reading</span>
+        <h2 class="head-3 text-ink">Deepen your cloud knowledge.</h2>
+      </div>
+      <div class="grid md:grid-cols-3 gap-6">
+        <a href="insights.html" class="card-white group p-6">
+          <span class="chip-section" style="margin-bottom:14px;display:inline-flex;">Cloud</span>
+          <h4 class="font-bold text-ink text-lg mb-2 group-hover:text-primary transition">AWS vs Azure vs GCP: Which Cloud Platform Is Right for African Businesses?</h4>
+          <p class="text-slate-500 text-sm">A practical comparison of the three major platforms, with Africa-specific latency, pricing, and compliance considerations.</p>
+        </a>
+        <a href="insights.html" class="card-white group p-6">
+          <span class="chip-section" style="margin-bottom:14px;display:inline-flex;">DevOps</span>
+          <h4 class="font-bold text-ink text-lg mb-2 group-hover:text-primary transition">Blue-Green Deployments Explained: Ship Features Without Fear</h4>
+          <p class="text-slate-500 text-sm">The traffic-splitting technique that lets you test in production, roll back in seconds, and eliminate cutover anxiety.</p>
+        </a>
+        <a href="services-cloud.html" class="card-white group p-6">
+          <span class="chip-section" style="margin-bottom:14px;display:inline-flex;">Training</span>
+          <h4 class="font-bold text-ink text-lg mb-2 group-hover:text-primary transition">Become an AWS-Certified Cloud Engineer — Corespec's Cloud Computing Program</h4>
+          <p class="text-slate-500 text-sm">Our instructor-led and weekend bootcamp programs prepare you for AWS Cloud Practitioner, Solutions Architect, and more.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CTA ================= -->
+  <section class="reveal py-20 px-6 overflow-hidden">
+    <div class="max-w-7xl mx-auto bg-cta-loop rounded-[2.5rem] px-6 md:px-14 py-20 md:py-24 relative overflow-hidden">
+      <div class="absolute -top-28 -right-28 w-96 h-96 rounded-full bg-primary/40 blur-3xl pointer-events-none"></div>
+      <div class="absolute -bottom-28 -left-28 w-96 h-96 rounded-full bg-cyan/30 blur-3xl pointer-events-none"></div>
+      <div class="cta-stack">
+        <div class="cta-chip-wrap"><span class="chip chip-light">Start Your Migration</span></div>
+        <h2 class="cta-h2">Ready to migrate your infrastructure — without the risk?</h2>
+        <p class="cta-p">Book a free cloud readiness assessment. We'll map your current stack, identify the right migration strategy, and give you a clear timeline and cost estimate.</p>
+        <div class="cta-buttons">
+          <a href="contact.html" class="btn btn-primary btn-shimmer">Book a Free Assessment <span class="material-symbols-outlined text-[18px]">arrow_forward</span></a>
+          <a href="portfolio.html" class="btn btn-ghost">See More Case Studies</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <div class="footer-top"></div>
+  <footer class="bg-navy-deep text-white pt-20 pb-10 font-['Plus_Jakarta_Sans']">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 px-6 md:px-12 lg:px-20 mb-16">
+      <div>
+        <div class="mb-4"><div class="bg-white rounded-xl p-2 inline-block"><img src="https://res.cloudinary.com/detsk6uql/image/upload/v1776429607/corespec_logo_sr0rjz.png" alt="Corespec Engineering Limited" class="h-12 object-contain" /></div></div>
+        <p class="text-white/50 text-xs mb-4">Corespec Engineering Limited</p>
+        <p class="text-white/60 text-sm leading-relaxed mb-4">Providing Value Through Innovation and Technology — Lagos, Nigeria.</p>
+        <div class="flex gap-3">
+          <a href="mailto:info@corespecng.com" class="w-10 h-10 rounded-full bg-white/5 hover:bg-white/15 border border-white/10 flex items-center justify-center transition"><span class="material-symbols-outlined text-[18px]">alternate_email</span></a>
+          <a href="tel:08033395470" class="w-10 h-10 rounded-full bg-white/5 hover:bg-white/15 border border-white/10 flex items-center justify-center transition"><span class="material-symbols-outlined text-[18px]">phone</span></a>
+        </div>
+      </div>
+      <div>
+        <h4 class="font-bold mb-5">Company</h4>
+        <ul class="space-y-3 text-white/60 text-sm">
+          <li><a class="hover:text-white transition" href="about.html">About Us</a></li>
+          <li><a class="hover:text-white transition" href="process.html">Our Process</a></li>
+          <li><a class="hover:text-white transition" href="portfolio.html">Portfolio</a></li>
+          <li><a class="hover:text-white transition" href="insights.html">Insights</a></li>
+          <li><a class="hover:text-white transition" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-bold mb-5">Services</h4>
+        <ul class="space-y-3 text-white/60 text-sm">
+          <li><a class="hover:text-white transition" href="services-ai.html">AI Integration &amp; Automation</a></li>
+          <li><a class="hover:text-white transition" href="services-cloud.html">Cloud Computing</a></li>
+          <li><a class="hover:text-white transition" href="services-cybersecurity.html">Cybersecurity</a></li>
+          <li><a class="hover:text-white transition" href="services-engineering.html">Software &amp; Hardware Engineering</a></li>
+          <li><a class="hover:text-white transition" href="services-erp.html">ERP Solutions</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-bold mb-5">Get in Touch</h4>
+        <ul class="space-y-3 text-white/60 text-sm mb-6">
+          <li class="flex items-start gap-2"><span class="material-symbols-outlined text-[16px] mt-0.5">location_on</span>Okota, Lagos, Nigeria</li>
+          <li class="flex items-start gap-2"><span class="material-symbols-outlined text-[16px] mt-0.5">phone</span><a href="tel:08033395470" class="hover:text-white transition">08033395470</a></li>
+          <li class="flex items-start gap-2"><span class="material-symbols-outlined text-[16px] mt-0.5">mail</span><a href="mailto:info@corespecng.com" class="hover:text-white transition">info@corespecng.com</a></li>
+          <li class="flex items-start gap-2"><span class="material-symbols-outlined text-[16px] mt-0.5">schedule</span>Mon–Fri 8am–5pm</li>
+        </ul>
+        <ul class="space-y-2 text-white/40 text-xs">
+          <li><a class="hover:text-white/80 transition" href="privacy.html">Privacy Policy</a></li>
+          <li><a class="hover:text-white/80 transition" href="terms.html">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="border-t border-white/10 max-w-7xl mx-auto px-6 md:px-12 lg:px-20 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+      <p class="text-white/40 text-xs">© 2026 Corespec Engineering Limited. All rights reserved. Okota, Lagos, Nigeria.</p>
+      <p class="text-white/40 text-xs">Providing Value Through Innovation and Technology.</p>
+    </div>
+  </footer>
+
+  <script src="assets/site.js?v=1776440000" defer></script>
+</body>
+</html>
